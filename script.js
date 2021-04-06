@@ -85,3 +85,4 @@ $(window).on('hashchange', function (e) {
 });
 
 */
+history.pushState("", document.title, window.location.pathname);
