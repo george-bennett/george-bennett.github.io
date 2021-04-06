@@ -20,6 +20,7 @@ function showWork() {
         getAboutSection.style.display = "none";
         getUXGamesSection.style.display = "none";
     }
+    return false;
 }
 
 function showAbout() {
@@ -35,6 +36,7 @@ function showAbout() {
         getUXGamesSection.style.display = "none";
         
     }
+    return false;
 }
 
 function showUXinGames() {
@@ -48,7 +50,8 @@ function showUXinGames() {
         getWorkSection.style.display = "none";
         getAboutSection.style.display = "none";
     }
-}
+    return false;
+} 
 
 /*
 //Toggle Fade on About Nav element
@@ -75,7 +78,10 @@ $('.nav-link').click(function (event) {
     
 });
 */
+/*
 $(window).on('hashchange', function (e) {
     window.history.pushState("", document.title, window.location.pathname);
     // do something...
 });
+
+*/
