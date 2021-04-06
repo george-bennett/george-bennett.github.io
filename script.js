@@ -1,5 +1,5 @@
 // This will contain JavaScript Stuff for Website / Bootstrap 5
-
+history.pushState(null, null, window.location.href.split('#')[0]);
 // This is not a function
 const getAboutSection = document.getElementById('about');
 const getWorkSection = document.getElementById('work');
