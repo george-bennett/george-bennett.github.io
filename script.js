@@ -69,7 +69,13 @@ $(document).ready(function () {
     });
 });
 */
-
+/*
 $('.nav-link').click(function (event) {
     event.preventDefault();
+    
+});
+*/
+$(window).on('hashchange', function (e) {
+    window.history.pushState("", document.title, window.location.pathname);
+    // do something...
 });
