@@ -72,12 +72,12 @@ $(document).ready(function () {
     });
 });
 */
-/*
+
 $('.nav-link').click(function (event) {
-    event.preventDefault();
-    
+    //event.preventDefault();
+    return false;
 });
-*/
+
 /*
 $(window).on('hashchange', function (e) {
     window.history.pushState("", document.title, window.location.pathname);
@@ -85,4 +85,4 @@ $(window).on('hashchange', function (e) {
 });
 
 */
-history.pushState("", document.title, window.location.pathname);
+//history.pushState("", document.title, window.location.pathname);
