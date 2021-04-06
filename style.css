@@ -10,7 +10,24 @@ margin-left: 1em;
 margin-right: 1em;
 }
 
-#navHead{
-    padding-bottom: 0.5em;
-    padding-top: 0.25em;
+
+#about {
+display: none;
 }
+
+#uxGames {
+display: none;
+}
+
+
+/*
+#about:target {
+        -webkit-transition: opacity 2.0s ease-in;
+        -moz-transition: opacity 2.0s ease-in;
+        -o-transition: opacity 2.0s ease-in;
+        
+        opacity: 1; 
+
+}
+*/
+
