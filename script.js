@@ -1,9 +1,11 @@
 // This will contain JavaScript Stuff for Website / Bootstrap 5
 //Temporary until I can figure out how to load href without the # symbol
+/*
 $('.nav-link').click(function (event) {
     event.preventDefault();
 
 });
+*/
 // This is not a function
 const getAboutSection = document.getElementById('about');
 const getWorkSection = document.getElementById('work');
