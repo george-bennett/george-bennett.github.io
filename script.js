@@ -35,7 +35,8 @@ function showAbout() {
         getWorkSection.style.display = "none";
         getUXGamesSection.style.display = "none";
         console.log(window.location)
-        history.replaceState(null, null, ' ');
+        console.log(window.location.hostname)
+        console.log(window.location.href)
     }
     return false;
 }
@@ -47,11 +48,16 @@ function showUXinGames() {
         navBarUXGames.className += " active"
         navBarWork.className = "nav-link"
         navBarAbout.className = "nav-link"
-        console.log(window.location)
+
+       
+
         getWorkSection.style.display = "none";
         getAboutSection.style.display = "none";
+
+      
+
     }
-    return false;
+  
 } 
 
 /*
