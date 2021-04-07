@@ -81,6 +81,63 @@ function showUXinGames() {
   
 } 
 
+
+let myTestDiv = document.getElementById('test');
+document.getElementById('testNav').onclick = function () {
+    myTestDiv.classList.toggle('fade');
+    getWorkSection.classList.toggle('fade');
+    getAboutSection.classList.toggle('fade');
+    getUXGamesSection.classList.toggle('fade');
+}
+
+
+
+
+//work
+document.getElementById('workNav').onclick = function () {
+    getWorkSection.classList.remove('hide');
+    getWorkSection.classList.add('fadeIn');
+
+
+    getAboutSection.classList.add('hide');
+    getAboutSection.classList.remove('fadeIn');
+    getUXGamesSection.classList.add('hide');
+    getUxGamesSection.classList.remove('fadeIn');
+}
+//about
+document.getElementById('aboutNav').onclick = function () {
+    getAboutSection.classList.remove('hide');
+    getAboutSection.classList.add('fadeIn')
+  
+    getWorkSection.classList.add('hide');
+    getWorkSection.classList.remove('fadeIn');
+    getUXGamesSection.classList.add('hide');
+    getUXGamesSection.classList.remove('fadeIn');
+
+}
+//ux
+document.getElementById('uxGamesNav').onclick = function () {
+    getUXGamesSection.classList.remove('hide');
+    getUXGamesSection.classList.add('fadeIn');
+
+    getAboutSection.classList.add('hide');
+    getAboutSection.classList.remove('fadeIn');
+    getWorkSection.classList.add('hide');
+    getWorkSection.classList.remove('fadeIn');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 //Toggle Fade on About Nav element
 $(document).ready(function () {
