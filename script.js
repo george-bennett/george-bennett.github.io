@@ -1,5 +1,9 @@
 // This will contain JavaScript Stuff for Website / Bootstrap 5
+//Temporary until I can figure out how to load href without the # symbol
+$('.nav-link').click(function (event) {
+    event.preventDefault();
 
+});
 // This is not a function
 const getAboutSection = document.getElementById('about');
 const getWorkSection = document.getElementById('work');
@@ -24,6 +28,7 @@ function showWork() {
         console.log("WORK LINKED CLICKED Window Hostname = " + window.location.hostname)
         console.log("WORK LINKED CLICKED Window Href = " + window.location.href)
 
+        history.pushState("", document.title, window.location.pathname);
     }
 
 }
@@ -42,8 +47,10 @@ function showAbout() {
         console.log("ABOUT LINK CLICKED Window Location = " + window.location)
         console.log("ABOUT LINK CLICKED Window Hostname = " + window.location.hostname)
         console.log("ABOUT LINK CLICKED Window Href = " + window.location.href)
+
+        history.pushState("", document.title, window.location.pathname);
     }
-    return false;
+  
 }
 
 function showUXinGames() {
@@ -62,6 +69,8 @@ function showUXinGames() {
         console.log("UX GAMES LINK CLICKED Window Location = " + window.location)
         console.log("UX GAMES LINK CLICKED Window Hostname = " + window.location.hostname)
         console.log("UX GAMES LINK CLICKED Window Href = " + window.location.href)
+
+        history.pushState("", document.title, window.location.pathname);
 
     }
   
@@ -87,11 +96,7 @@ $(document).ready(function () {
 });
 */
 
-//Temporary until I can figure out how to load href without the # symbol
-$('.nav-link').click(function (event) {
-    event.preventDefault();
-    
-});
+
 
 
 
