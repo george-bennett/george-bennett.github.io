@@ -16,7 +16,7 @@ function showWork() {
         navBarWork.className += " active";
         navBarAbout.className = "nav-link";
         navBarUXGames.className = "nav-link";
-        console.log(window.location)
+        
         getAboutSection.style.display = "none";
         getUXGamesSection.style.display = "none";
 
