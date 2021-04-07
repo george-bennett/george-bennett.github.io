@@ -1,5 +1,11 @@
 // This will contain JavaScript Stuff for Website / Bootstrap 5
+// remove fragment as much as it can go without adding an entry in browser history:
+window.location.replace("#");
 
+// slice off the remaining '#' in HTML5:    
+if (typeof window.history.replaceState == 'function') {
+    history.replaceState({}, '', window.location.href.slice(0, -1));
+}
 // This is not a function
 const getAboutSection = document.getElementById('about');
 const getWorkSection = document.getElementById('work');
@@ -88,10 +94,4 @@ $(window).on('hashchange', function (e) {
 //history.pushState("", document.title, window.location.pathname);
 //window.history.pushState(null, "", window.location.href.replace("#", ""));
 
-// remove fragment as much as it can go without adding an entry in browser history:
-window.location.replace("#");
 
-// slice off the remaining '#' in HTML5:    
-if (typeof window.history.replaceState == 'function') {
-    history.replaceState({}, '', window.location.href.slice(0, -1));
-}
