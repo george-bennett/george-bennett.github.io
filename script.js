@@ -3,7 +3,7 @@
 
 $('.nav-link').click(function (event) {
     event.preventDefault();
-  
+    window.location.hash = '';
 });
 
 // This is not a function
@@ -17,7 +17,7 @@ const navBarUXGames = document.getElementById('uxGamesNav');
 
 function showWork() {
     if (getWorkSection.style.display === "none") {
-        window.location.hash = '';
+   
         getWorkSection.style.display = "block";
 
         navBarWork.className += " active";
@@ -31,14 +31,14 @@ function showWork() {
         console.log("WORK LINKED CLICKED Window Hostname = " + window.location.hostname)
         console.log("WORK LINKED CLICKED Window Href = " + window.location.href)
 
-        window.location.hash = '';
+       
     }
 
 }
 
 function showAbout() {
     if (getAboutSection.style.display === "none") {
-        window.location.hash = '';
+      
         getAboutSection.style.display = "block";
 
         navBarAbout.className += " active";
@@ -58,7 +58,7 @@ function showAbout() {
 
 function showUXinGames() {
     if (getUXGamesSection.style.display === "none") {
-        window.location.hash = '';
+
 
         getUXGamesSection.style.display = "block";
 
