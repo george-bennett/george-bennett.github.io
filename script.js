@@ -15,99 +15,28 @@ const navBarAbout = document.getElementById('aboutNav');
 const navBarWork = document.getElementById('workNav');
 const navBarUXGames = document.getElementById('uxGamesNav');
 
-function showWork() {
-    if (getWorkSection.style.display === "none") {
-   
-        getWorkSection.style.display = "block";
-
-        navBarWork.className += " active";
-        navBarAbout.className = "nav-link";
-        navBarUXGames.className = "nav-link";
-        
-        getAboutSection.style.display = "none";
-        getUXGamesSection.style.display = "none";
-
-        console.log("WORK LINKED CLICKED Window Location = " + window.location)
-        console.log("WORK LINKED CLICKED Window Hostname = " + window.location.hostname)
-        console.log("WORK LINKED CLICKED Window Href = " + window.location.href)
-
-       
-    }
-
-}
-
-function showAbout() {
-    if (getAboutSection.style.display === "none") {
-      
-        getAboutSection.style.display = "block";
-
-        navBarAbout.className += " active";
-        navBarWork.className = "nav-link";
-        navBarUXGames.className = "nav-link";
-
-        getWorkSection.style.display = "none";
-        getUXGamesSection.style.display = "none";
-        console.log("ABOUT LINK CLICKED Window Location = " + window.location)
-        console.log("ABOUT LINK CLICKED Window Hostname = " + window.location.hostname)
-        console.log("ABOUT LINK CLICKED Window Href = " + window.location.href)
-
-       
-    }
-  
-}
-
-function showUXinGames() {
-    if (getUXGamesSection.style.display === "none") {
-
-
-        getUXGamesSection.style.display = "block";
-
-        navBarUXGames.className += " active"
-        navBarWork.className = "nav-link"
-        navBarAbout.className = "nav-link"
-
-       
-
-        getWorkSection.style.display = "none";
-        getAboutSection.style.display = "none";
-
-        console.log("UX GAMES LINK CLICKED Window Location = " + window.location)
-        console.log("UX GAMES LINK CLICKED Window Hostname = " + window.location.hostname)
-        console.log("UX GAMES LINK CLICKED Window Href = " + window.location.href)
-
-       
-
-    }
-  
-} 
-
-
-let myTestDiv = document.getElementById('test');
-document.getElementById('testNav').onclick = function () {
-    myTestDiv.classList.toggle('fade');
-    getWorkSection.classList.toggle('fade');
-    getAboutSection.classList.toggle('fade');
-    getUXGamesSection.classList.toggle('fade');
-}
-
-
-
-
 //work
 document.getElementById('workNav').onclick = function () {
     getWorkSection.classList.remove('hide');
     getWorkSection.classList.add('fadeIn');
 
+    navBarWork.className += " active";
+    navBarAbout.className = "nav-link";
+    navBarUXGames.className = "nav-link";
 
     getAboutSection.classList.add('hide');
     getAboutSection.classList.remove('fadeIn');
     getUXGamesSection.classList.add('hide');
-    getUxGamesSection.classList.remove('fadeIn');
+    getUXGamesSection.classList.remove('fadeIn');
 }
 //about
 document.getElementById('aboutNav').onclick = function () {
     getAboutSection.classList.remove('hide');
     getAboutSection.classList.add('fadeIn')
+
+    navBarAbout.className += " active";
+    navBarWork.className = "nav-link";
+    navBarUXGames.className = "nav-link";
   
     getWorkSection.classList.add('hide');
     getWorkSection.classList.remove('fadeIn');
@@ -119,6 +48,10 @@ document.getElementById('aboutNav').onclick = function () {
 document.getElementById('uxGamesNav').onclick = function () {
     getUXGamesSection.classList.remove('hide');
     getUXGamesSection.classList.add('fadeIn');
+
+    navBarUXGames.className += " active"
+    navBarWork.className = "nav-link"
+    navBarAbout.className = "nav-link"
 
     getAboutSection.classList.add('hide');
     getAboutSection.classList.remove('fadeIn');

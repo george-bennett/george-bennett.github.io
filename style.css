@@ -10,34 +10,53 @@ margin-left: 1em;
 margin-right: 1em;
 }
 
+#main{
+    margin-top 20em;
+}
+
 
 
 #work {
     opacity: 1;
-    -webkit-transition: opacity 1s ease-in;
+    padding-top: 2.5em;
+    /*-webkit-transition: opacity 1s ease-in;
     -moz-transition: opacity 1s ease-in;
     -o-transition: opacity 1s ease-in;
     transition: opacity 1s ease-in;
+    */
 }
 
 #about, #uxGames {
     opacity: 0;
-    -webkit-transition: opacity 1s ease-in;
-    -moz-transition: opacity 1s ease-in;
-    -o-transition: opacity 1s ease-in;
-    transition: opacity 1s ease-in;
+    padding-top: 2.5em;
+    /* -webkit-transition: opacity 0.3s ease-in;
+    -moz-transition: opacity 0.3s ease-in;
+    -o-transition: opacity 0.3s ease-in;
+    transition: opacity 0.3s ease-in; */
 }
 
     #work.fadeIn, #about.fadeIn, #uxGames.fadeIn {
 
         opacity: 1;
-        -webkit-transition: opacity 1s ease-in;
-        -moz-transition: opacity 1s ease-in;
-        -o-transition: opacity 1s ease-in;
-        transition: opacity 1s ease-in;
+        -webkit-transition: opacity 1.75s ease-in-out;
+        -moz-transition: opacity 1.75s ease-in-out;
+        -o-transition: opacity 1.75s ease-in-out;
+        transition: opacity 1.75s ease-in-out;
     }
 
     #work.hide, #about.hide, #uxGames.hide {
-        
+        height: 10px;
+        padding: 10px;
         opacity: 0;
+
     }
+
+#nav-bar {
+background-color: darkseagreen;
+}
+
+
+/*Navbar/ link colours*/
+nav .navbar-nav li a:hover {
+    color: crimson !important;
+}
