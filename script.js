@@ -87,20 +87,12 @@ $(document).ready(function () {
     });
 });
 */
-/*
+
+//Temporary until I can figure out how to load href without the # symbol
 $('.nav-link').click(function (event) {
-    //event.preventDefault();
-    return false;
-});
-*/
-/*
-$(window).on('hashchange', function (e) {
-    window.history.pushState("", document.title, window.location.pathname);
-    // do something...
+    event.preventDefault();
+    
 });
 
-*/
-//history.pushState("", document.title, window.location.pathname);
-//window.history.pushState(null, "", window.location.href.replace("#", ""));
 
 
