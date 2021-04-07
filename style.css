@@ -4,9 +4,15 @@ border-radius: 3%;
 
 }
 
-
 .navbar {
     font-family: 'LEMON MILK';
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+#myNavbar {
+    margin-left: 1em;
+margin-right: 4em;
 }
 
 .nav-link {
@@ -15,9 +21,22 @@ margin-left: 1em;
 margin-right: 1em;
 }
 
+#nav-bar {
+    background-color: darkseagreen;
+}
+
+
+/*Navbar/ link colours*/
+nav .navbar-nav li a:hover {
+    color: crimson !important;
+}
+
 #main{
     margin-top: 1.5em;
     font-family: 'LEMON MILK';
+    font-style: normal;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 
@@ -56,13 +75,3 @@ margin-right: 1em;
         opacity: 0;
 
     }
-
-#nav-bar {
-background-color: darkseagreen;
-}
-
-
-/*Navbar/ link colours*/
-nav .navbar-nav li a:hover {
-    color: crimson !important;
-}
