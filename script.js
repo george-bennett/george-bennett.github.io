@@ -20,9 +20,9 @@ function showWork() {
         getAboutSection.style.display = "none";
         getUXGamesSection.style.display = "none";
 
-        console.log("Window Location = " + window.location)
-        console.log("Window Hostname = " + window.location.hostname)
-        console.log("Window Href = " + window.location.href)
+        console.log("WORK LINKED CLICKED Window Location = " + window.location)
+        console.log("WORK LINKED CLICKED Window Hostname = " + window.location.hostname)
+        console.log("WORK LINKED CLICKED Window Href = " + window.location.href)
 
     }
 
@@ -39,9 +39,9 @@ function showAbout() {
 
         getWorkSection.style.display = "none";
         getUXGamesSection.style.display = "none";
-        console.log("Window Location = " + window.location)
-        console.log("Window Hostname = " + window.location.hostname)
-        console.log("Window Href = " + window.location.href)
+        console.log("ABOUT LINK CLICKED Window Location = " + window.location)
+        console.log("ABOUT LINK CLICKED Window Hostname = " + window.location.hostname)
+        console.log("ABOUT LINK CLICKED Window Href = " + window.location.href)
     }
     return false;
 }
@@ -59,9 +59,9 @@ function showUXinGames() {
         getWorkSection.style.display = "none";
         getAboutSection.style.display = "none";
 
-        console.log("Window Location = " + window.location)
-        console.log("Window Hostname = " + window.location.hostname)
-        console.log("Window Href = " + window.location.href)
+        console.log("UX GAMES LINK CLICKED Window Location = " + window.location)
+        console.log("UX GAMES LINK CLICKED Window Hostname = " + window.location.hostname)
+        console.log("UX GAMES LINK CLICKED Window Href = " + window.location.href)
 
     }
   
