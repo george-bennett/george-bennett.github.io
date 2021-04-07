@@ -19,8 +19,13 @@ function showWork() {
         console.log(window.location)
         getAboutSection.style.display = "none";
         getUXGamesSection.style.display = "none";
+
+        console.log("Window Location = " + window.location)
+        console.log("Window Hostname = " + window.location.hostname)
+        console.log("Window Href = " + window.location.href)
+
     }
-    return false;
+
 }
 
 function showAbout() {
@@ -34,9 +39,9 @@ function showAbout() {
 
         getWorkSection.style.display = "none";
         getUXGamesSection.style.display = "none";
-        console.log(window.location)
-        console.log(window.location.hostname)
-        console.log(window.location.href)
+        console.log("Window Location = " + window.location)
+        console.log("Window Hostname = " + window.location.hostname)
+        console.log("Window Href = " + window.location.href)
     }
     return false;
 }
@@ -54,7 +59,9 @@ function showUXinGames() {
         getWorkSection.style.display = "none";
         getAboutSection.style.display = "none";
 
-      
+        console.log("Window Location = " + window.location)
+        console.log("Window Hostname = " + window.location.hostname)
+        console.log("Window Href = " + window.location.href)
 
     }
   
