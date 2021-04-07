@@ -29,6 +29,7 @@ document.getElementById('workNav').onclick = function () {
     getUXGamesSection.classList.add('hide');
     getUXGamesSection.classList.remove('fadeIn');
 }
+
 //about
 document.getElementById('aboutNav').onclick = function () {
     getAboutSection.classList.remove('hide');
@@ -44,8 +45,10 @@ document.getElementById('aboutNav').onclick = function () {
     getUXGamesSection.classList.remove('fadeIn');
 
 }
+
 //ux
 document.getElementById('uxGamesNav').onclick = function () {
+  
     getUXGamesSection.classList.remove('hide');
     getUXGamesSection.classList.add('fadeIn');
 
@@ -62,9 +65,21 @@ document.getElementById('uxGamesNav').onclick = function () {
 
 
 
+$(document).ready(function () {
+    $("#aboutNav").click(function () {
+        $("#about").removeAttr("style");
+        $("#uxGames").removeAttr("style");
+    });
+});
 
 
+$(document).ready(function () {
+    $("#uxGamesNav").click(function () {
+        $("#uxGames").removeAttr("style");
+        $("#about").removeAttr("style");
 
+    });
+});
 
 
 
