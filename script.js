@@ -6,7 +6,9 @@ $('.nav-link').click(function (event) {
     window.location.hash = '';
 });
 
-// This is not a function
+document.getElementById("work").className += " fadeIn";
+
+
 const getAboutSection = document.getElementById('about');
 const getWorkSection = document.getElementById('work');
 const getUXGamesSection = document.getElementById('uxGames');
@@ -32,6 +34,10 @@ document.getElementById('workNav').onclick = function () {
 
 //about
 document.getElementById('aboutNav').onclick = function () {
+
+    getWorkSection.classList.add('hide');
+    getWorkSection.classList.remove('fadeIn');
+
     getAboutSection.classList.remove('hide');
     getAboutSection.classList.add('fadeIn')
 
@@ -39,8 +45,7 @@ document.getElementById('aboutNav').onclick = function () {
     navBarWork.className = "nav-link";
     navBarUXGames.className = "nav-link";
   
-    getWorkSection.classList.add('hide');
-    getWorkSection.classList.remove('fadeIn');
+    
     getUXGamesSection.classList.add('hide');
     getUXGamesSection.classList.remove('fadeIn');
 
