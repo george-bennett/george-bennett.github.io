@@ -74,6 +74,11 @@ nav .navbar-nav li a:hover {
     color: rgb(73 72 72);
 }
 
+
+.col-lg-6 {
+    transition: all 2s;
+}
+
 p {
 padding-top: 1em;
 padding-bottom: 1em;
@@ -110,11 +115,13 @@ padding-bottom: 1em;
     height: 10px;
     padding: 10px;
     opacity: 0;
+    transition: 2s;
 }
 
 .showEle {
     height: 100%;
     opacity: 1;
+    transition: all 2s;
 }
 .gametxt {
 text-align: center;
@@ -144,7 +151,6 @@ text-align: center;
     }
 
 .content:hover .content-overlay {
-
         opacity: 1
 }
 

@@ -52,7 +52,6 @@ document.getElementById('aboutNav').onclick = function () {
     
     getUXGamesSection.classList.add('hide');
     getUXGamesSection.classList.remove('fadeIn');
-
 }
 
 //ux
@@ -78,7 +77,6 @@ document.getElementById('uxGamesNav').onclick = function () {
 const getGameMaster_cn = document.getElementById('gameMaster-cn');
 
 
-
 const getGame1_overlay = document.getElementById('game1-overlay');
 const getGame1_cn = document.getElementById('game1-cn');
 const getGame1_img = document.getElementById('gm1_img')
@@ -93,17 +91,18 @@ document.getElementById('game1-overlay').onclick = function () {
 
         getGame1_cn.classList.remove('col-lg');
         getGame1_cn.classList.add('col-lg-12');
-        getGame1_img.classList.remove('img-fluid');
-        getGame1_img.classList.add('img-fluid-limited');
-        getGame1_overlay.classList.add('col-lg-6');
+        //getGame1_img.classList.remove('img-fluid');
+        //getGame1_img.classList.add('img-fluid-limited');
+        //getGame1_overlay.classList.add('col-lg-11');
 
         //SHOW TEXT ABOUT GAME 1
         getGame1_txt.classList.remove('hideEle');
-        //getGame1_txt.classList.add('showEle');
+        getGame1_txt.classList.add('showEle');
 
 
         //HIDE OTHER IMAGES
         getGame2_cn.classList.add('hideEle');
+        getGame2_cn.classList.remove('showEle');
     }
     else {
         getGameMaster_cn.classList.remove('col-lg-12');
@@ -112,17 +111,20 @@ document.getElementById('game1-overlay').onclick = function () {
 
         getGame1_cn.classList.remove('col-lg-12');
         getGame1_cn.classList.add('col-lg');
-        getGame1_img.classList.remove('img-fluid-limited');
-        getGame1_img.classList.add('img-fluid');
-        getGame1_overlay.classList.remove('col-lg-6');
+       //getGame1_img.classList.remove('img-fluid-limited');
+       //getGame1_img.classList.add('img-fluid');
+       // getGame1_overlay.classList.remove('col-lg-11');
 
 
         //REMOVE GAME 1 TXT
+        getGame1_txt.classList.remove('showEle');
         getGame1_txt.classList.add('hideEle');
 
 
         //RETURN OTHER IMAGES
         getGame2_cn.classList.remove('hideEle');
+        getGame2_cn.classList.add('showEle');
+       
     }
 
 
