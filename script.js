@@ -13,9 +13,13 @@ const getAboutSection = document.getElementById('about');
 const getWorkSection = document.getElementById('work');
 const getUXGamesSection = document.getElementById('uxGames');
 
+const getTestSection = document.getElementById('test');
+
+
 const navBarAbout = document.getElementById('aboutNav');
 const navBarWork = document.getElementById('workNav');
 const navBarUXGames = document.getElementById('uxGamesNav');
+const navBarTest = document.getElementById('testNav');
 
 //work
 document.getElementById('workNav').onclick = function () {
@@ -67,24 +71,26 @@ document.getElementById('uxGamesNav').onclick = function () {
     getWorkSection.classList.remove('fadeIn');
 }
 
+//test
+document.getElementById('testNav').onclick = function () {
+
+    getTestSection.classList.remove('hide');
+    getTestSection.classList.add('fadeIn');
+
+    navBarTest.className += " active";
+    navBarUXGames.className = "nav-link";
+    navBarWork.className = "nav-link";
+    navBarAbout.className = "nav-link";
+
+    getAboutSection.classList.add('hide');
+    getAboutSection.classList.remove('fadeIn');
+    getWorkSection.classList.add('hide');
+    getWorkSection.classList.remove('fadeIn');
+    getUXGamesSection.classList.add('hide');
+    getUXGamesSection.classList.remove('fadeIn');
+}
 
 
-
-$(document).ready(function () {
-    $("#aboutNav").click(function () {
-        $("#about").removeAttr("style");
-        $("#uxGames").removeAttr("style");
-    });
-});
-
-
-$(document).ready(function () {
-    $("#uxGamesNav").click(function () {
-        $("#uxGames").removeAttr("style");
-        $("#about").removeAttr("style");
-
-    });
-});
 
 
 

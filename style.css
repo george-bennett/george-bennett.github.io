@@ -5,10 +5,17 @@
 
 body {
     background-color:rgb(245 245 245);
+    /*background-color:rgb(32 32 32) black*/
     /*
     background-image: url("images/background_white.jpg");
     background-size: cover;
     */
+}
+
+.row {
+    padding-top: 1em;
+    padding-bottom: 1em;
+
 }
 
 .img-fluid {
@@ -53,6 +60,7 @@ nav .navbar-nav li a:hover {
     /*background-color: white;*/
     /*border-radius: 10px;*/
     min-height: 200px;
+    color: rgb(73 72 72);
 }
 /*
 .t-box{
@@ -73,13 +81,13 @@ padding-bottom: 1em;
     padding-top: 1.5em;
 }
 
-#about, #uxGames {
+#about, #uxGames, #test {
     opacity: 0;
     padding-top: 1.0em;
 
 }
 
-    #work.fadeIn, #about.fadeIn, #uxGames.fadeIn {
+    #work.fadeIn, #about.fadeIn, #uxGames.fadeIn, #test.fadeIn {
         opacity: 1;
         -webkit-transition: opacity 1.5s ease-in-out;
         -moz-transition: opacity 1.5s ease-in-out;
@@ -87,7 +95,7 @@ padding-bottom: 1em;
         transition: opacity 1.5s ease-in-out;
     }
 
-    #work.hide, #about.hide, #uxGames.hide {
+    #work.hide, #about.hide, #uxGames.hide, #test.hide {
         height: 10px;
         padding: 10px;
         opacity: 0;
@@ -96,7 +104,7 @@ padding-bottom: 1em;
 
 
 
-
+/*For image overlay command interactivity*/
 .content {
     position: relative;
     margin: auto;
