@@ -71,6 +71,80 @@ document.getElementById('uxGamesNav').onclick = function () {
     getWorkSection.classList.remove('fadeIn');
 }
 
+
+
+
+/*CHANGE UXGAMES ON CLICK OF IMAGE TO DISPLAY TEXT AND RESIZED IMAGE*/
+const getGameMaster_cn = document.getElementById('gameMaster-cn');
+
+
+
+const getGame1_overlay = document.getElementById('game1-overlay');
+const getGame1_cn = document.getElementById('game1-cn');
+const getGame1_img = document.getElementById('gm1_img')
+const getGame1_txt = document.getElementById('game1_txt');
+
+const getGame2_cn = document.getElementById('game2-cn');
+
+document.getElementById('game1-overlay').onclick = function () {
+    if (getGame1_cn.className === 'col-lg') {
+        getGameMaster_cn.classList.remove('col-lg');
+        getGameMaster_cn.classList.add('col-lg-12');
+
+        getGame1_cn.classList.remove('col-lg');
+        getGame1_cn.classList.add('col-lg-12');
+        getGame1_img.classList.remove('img-fluid');
+        getGame1_img.classList.add('img-fluid-limited');
+        getGame1_overlay.classList.add('col-lg-6');
+
+        //SHOW TEXT ABOUT GAME 1
+        getGame1_txt.classList.remove('hideEle');
+        //getGame1_txt.classList.add('showEle');
+
+
+        //HIDE OTHER IMAGES
+        getGame2_cn.classList.add('hideEle');
+    }
+    else {
+        getGameMaster_cn.classList.remove('col-lg-12');
+        getGameMaster_cn.classList.add('col-lg');
+
+
+        getGame1_cn.classList.remove('col-lg-12');
+        getGame1_cn.classList.add('col-lg');
+        getGame1_img.classList.remove('img-fluid-limited');
+        getGame1_img.classList.add('img-fluid');
+        getGame1_overlay.classList.remove('col-lg-6');
+
+
+        //REMOVE GAME 1 TXT
+        getGame1_txt.classList.add('hideEle');
+
+
+        //RETURN OTHER IMAGES
+        getGame2_cn.classList.remove('hideEle');
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 //test
 document.getElementById('testNav').onclick = function () {
 
@@ -89,7 +163,7 @@ document.getElementById('testNav').onclick = function () {
     getUXGamesSection.classList.add('hide');
     getUXGamesSection.classList.remove('fadeIn');
 }
-
+*/
 
 
 

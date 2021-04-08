@@ -3,6 +3,13 @@
     text-align: center;
 }
 
+.center_align {
+align-content: center;
+text-align: center;
+
+}
+
+
 body {
     background-color:rgb(245 245 245);
     /*background-color:rgb(32 32 32) black*/
@@ -20,6 +27,10 @@ body {
 
 .img-fluid {
 border-radius: 3%;
+}
+.img-fluid-limited {
+    max-width: 50%;
+    height: auto;
 }
 
 .navbar {
@@ -62,13 +73,6 @@ nav .navbar-nav li a:hover {
     min-height: 200px;
     color: rgb(73 72 72);
 }
-/*
-.t-box{
-    background: rgba(235, 235, 235,0.75);
-
-
-}
-*/
 
 p {
 padding-top: 1em;
@@ -102,45 +106,63 @@ padding-bottom: 1em;
 
     }
 
+.hideEle {
+    height: 10px;
+    padding: 10px;
+    opacity: 0;
+}
 
-
+.showEle {
+    height: 100%;
+    opacity: 1;
+}
+.gametxt {
+text-align: center;
+}
 /*For image overlay command interactivity*/
 .content {
     position: relative;
     margin: auto;
-    overflow: hidden
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
 }
 
-.content .content-overlay {
-      background: rgba(0, 0, 0, 0.7);
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      opacity: 0;
-      -webkit-transition: all 0.5s ease-in-out 0s;
-      -moz-transition: all 0.5s ease-in-out 0s;
-      transition: all 0.5s ease-in-out 0s
+    .content .content-overlay {
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+        align-items: center;
+        text-align: center;
+        -webkit-transition: all 0.5s ease-in-out 0s;
+        -moz-transition: all 0.5s ease-in-out 0s;
+        transition: all 0.5s ease-in-out 0s
     }
 
 .content:hover .content-overlay {
+
         opacity: 1
 }
+
 
 .content-image {
     width: 100%
 }
 
+.image-width{
+    width: 50%;
+}
 
 .content-details {
     position: absolute;
     text-align: center;
     padding-left: 1em;
     padding-right: 1em;
-    width: 100%;
+    width: 75%;
     top: 50%;
     left: 50%;
     opacity: 0;
@@ -159,16 +181,18 @@ padding-bottom: 1em;
 }
 
 .content-details h3 {
+    font-family: 'LEMON MILK';
     color: #fff;
     font-weight: 500;
-    letter-spacing: 0.15em;
-    margin-bottom: 0.5em;
-    text-transform: uppercase
+    letter-spacing: 0.1em;
+    margin: 0.5em;
+    text-transform: uppercase;
+    font-size: 1.2em;
 }
 
 .content-details p {
     color: #fff;
-    font-size: 0.8em
+    font-size: 0.8em;
 }
 
 .fadeIn-bottom {
