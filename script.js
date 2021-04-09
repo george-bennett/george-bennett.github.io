@@ -82,38 +82,39 @@ const getGame1_cn = document.getElementById('game1-cn');
 const getGame1_img = document.getElementById('gm1_img')
 const getGame1_txt = document.getElementById('game1_txt');
 
+const getGame2_overlay = document.getElementById('game2-overlay');
 const getGame2_cn = document.getElementById('game2-cn');
+const getGame2_img = document.getElementById('game2_img');
+const getGame2_txt = document.getElementById('game2_txt');
 
+//Manage Row 1- Image 1
 document.getElementById('game1-overlay').onclick = function () {
-    if (getGame1_cn.className === 'col-lg') {
-        getGameMaster_cn.classList.remove('col-lg');
-        getGameMaster_cn.classList.add('col-lg-12');
+    if (getGame1_cn.className === 'col-lg' || getGame1_cn.className === 'col-lg showEle ') {
+        
 
+        //Game 1 Container
         getGame1_cn.classList.remove('col-lg');
         getGame1_cn.classList.add('col-lg-12');
-        //getGame1_img.classList.remove('img-fluid');
-        //getGame1_img.classList.add('img-fluid-limited');
-        //getGame1_overlay.classList.add('col-lg-11');
+
+        //HIDE OTHER IMAGES
+       // getGame2_cn.classList.remove('showEle');
+        getGame2_cn.classList.add('hideEle');
 
         //SHOW TEXT ABOUT GAME 1
         getGame1_txt.classList.remove('hideEle');
         getGame1_txt.classList.add('showEle');
 
-
-        //HIDE OTHER IMAGES
-        getGame2_cn.classList.add('hideEle');
-        getGame2_cn.classList.remove('showEle');
     }
     else {
-        getGameMaster_cn.classList.remove('col-lg-12');
-        getGameMaster_cn.classList.add('col-lg');
 
+        //RETURN OTHER IMAGES
+        getGame2_cn.classList.remove('hideEle');
+        //getGame2_cn.classList.add('showEle');
+        
 
         getGame1_cn.classList.remove('col-lg-12');
         getGame1_cn.classList.add('col-lg');
-       //getGame1_img.classList.remove('img-fluid-limited');
-       //getGame1_img.classList.add('img-fluid');
-       // getGame1_overlay.classList.remove('col-lg-11');
+
 
 
         //REMOVE GAME 1 TXT
@@ -121,16 +122,47 @@ document.getElementById('game1-overlay').onclick = function () {
         getGame1_txt.classList.add('hideEle');
 
 
-        //RETURN OTHER IMAGES
-        getGame2_cn.classList.remove('hideEle');
-        getGame2_cn.classList.add('showEle');
        
     }
-
-
 }
 
 
+//Manage Row 1- Image 2
+document.getElementById('game2-overlay').onclick = function () {
+    if (getGame2_cn.className === 'col-lg' || getGame2_cn.className === 'col-lg showEle') {
+
+
+        getGame2_cn.classList.remove('col-lg');
+        getGame2_cn.classList.add('col-lg-12');
+
+        //HIDE OTHER IMAGES
+        getGame1_cn.classList.add('hideEle');
+        //getGame1_cn.classList.remove('showEle');
+
+        //SHOW TEXT ABOUT GAME 2
+        getGame2_txt.classList.remove('hideEle');
+        getGame2_txt.classList.add('showEle');
+
+
+ 
+    }
+    else {
+        //RETURN OTHER IMAGES
+        getGame1_cn.classList.remove('hideEle');
+        //getGame1_cn.classList.add('showEle');
+
+        getGame2_cn.classList.remove('col-lg-12');
+        getGame2_cn.classList.add('col-lg');
+
+
+
+        //REMOVE GAME 2 TXT
+        getGame2_txt.classList.remove('showEle');
+        getGame2_txt.classList.add('hideEle');
+
+
+    }
+}
 
 
 
