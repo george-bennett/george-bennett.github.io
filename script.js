@@ -74,7 +74,9 @@ document.getElementById('uxGamesNav').onclick = function () {
 
 
 /*CHANGE UXGAMES ON CLICK OF IMAGE TO DISPLAY TEXT AND RESIZED IMAGE*/
-const getGameMaster_cn = document.getElementById('gameMaster-cn');
+const getMasterRow = document.getElementById('gm-row-master');
+const getRow1 = document.getElementById('gm-row-1');
+const getRow2 = document.getElementById('gm-row-2');
 
 
 const getGame1_overlay = document.getElementById('game1-overlay');
@@ -87,80 +89,139 @@ const getGame2_cn = document.getElementById('game2-cn');
 const getGame2_img = document.getElementById('game2_img');
 const getGame2_txt = document.getElementById('game2_txt');
 
+
+const getGame3_overlay = document.getElementById('game3-overlay');
+const getGame3_cn = document.getElementById('game3-cn');
+const getGame3_img = document.getElementById('game3_img');
+const getGame3_txt = document.getElementById('game3_txt');
+
+
+const getGame4_overlay = document.getElementById('game4-overlay');
+const getGame4_cn = document.getElementById('game4-cn');
+const getGame4_img = document.getElementById('game4_img');
+const getGame4_txt = document.getElementById('game4_txt');
+
 //Manage Row 1- Image 1
 document.getElementById('game1-overlay').onclick = function () {
-    if (getGame1_cn.className === 'col-lg' || getGame1_cn.className === 'col-lg showEle ') {
-        
+    if (getGame1_cn.className === 'col-lg-6') {   
 
-        //Game 1 Container
-        getGame1_cn.classList.remove('col-lg');
+        //Game 1 Container - enlarge
+        getGame1_cn.classList.remove('col-lg-6');
         getGame1_cn.classList.add('col-lg-12');
 
-        //HIDE OTHER IMAGES
-       // getGame2_cn.classList.remove('showEle');
+        //HIDE OTHER IMAGES;
         getGame2_cn.classList.add('hideEle');
+        getGame3_cn.classList.add('hideEle');
+        getGame4_cn.classList.add('hideEle');
 
         //SHOW TEXT ABOUT GAME 1
         getGame1_txt.classList.remove('hideEle');
-        getGame1_txt.classList.add('showEle');
-
     }
     else {
-
-        //RETURN OTHER IMAGES
         getGame2_cn.classList.remove('hideEle');
-        //getGame2_cn.classList.add('showEle');
-        
+        getGame3_cn.classList.remove('hideEle');
+        getGame4_cn.classList.remove('hideEle');
 
+        //Return Container to Normal Size
         getGame1_cn.classList.remove('col-lg-12');
-        getGame1_cn.classList.add('col-lg');
-
-
+        getGame1_cn.classList.add('col-lg-6');
 
         //REMOVE GAME 1 TXT
-        getGame1_txt.classList.remove('showEle');
         getGame1_txt.classList.add('hideEle');
-
-
-       
     }
 }
 
-
 //Manage Row 1- Image 2
 document.getElementById('game2-overlay').onclick = function () {
-    if (getGame2_cn.className === 'col-lg' || getGame2_cn.className === 'col-lg showEle') {
+    if (getGame2_cn.className === 'col-lg-6') {
 
-
-        getGame2_cn.classList.remove('col-lg');
+        //Game Container 2 - enlarge
+        getGame2_cn.classList.remove('col-lg-6');
         getGame2_cn.classList.add('col-lg-12');
 
         //HIDE OTHER IMAGES
         getGame1_cn.classList.add('hideEle');
-        //getGame1_cn.classList.remove('showEle');
+        getGame3_cn.classList.add('hideEle');
+        getGame4_cn.classList.add('hideEle');
 
         //SHOW TEXT ABOUT GAME 2
         getGame2_txt.classList.remove('hideEle');
-        getGame2_txt.classList.add('showEle');
+    }
+    else {
 
+        //RETURN OTHER IMAGES
+        getGame1_cn.classList.remove('hideEle');
+        getGame3_cn.classList.remove('hideEle');
+        getGame4_cn.classList.remove('hideEle');
+      
+        //Return Container to Normal Size
+        getGame2_cn.classList.remove('col-lg-12');
+        getGame2_cn.classList.add('col-lg-6');
 
- 
+        //REMOVE GAME 2 TXT
+        getGame2_txt.classList.add('hideEle');
+    }
+}
+
+//Manage Row 2- Image 3
+document.getElementById('game3-overlay').onclick = function () {
+    if (getGame3_cn.className === 'col-lg-6') {
+
+        //Game 1 Container - enlarge
+        getGame3_cn.classList.remove('col-lg-6');
+        getGame3_cn.classList.add('col-lg-12');
+
+        //HIDE OTHER IMAGES;
+        getGame1_cn.classList.add('hideEle');
+        getGame2_cn.classList.add('hideEle');
+        getGame4_cn.classList.add('hideEle');
+
+        //SHOW TEXT ABOUT GAME 1
+        getGame3_txt.classList.remove('hideEle');
     }
     else {
         //RETURN OTHER IMAGES
         getGame1_cn.classList.remove('hideEle');
-        //getGame1_cn.classList.add('showEle');
+        getGame2_cn.classList.remove('hideEle');
+        getGame4_cn.classList.remove('hideEle');
 
-        getGame2_cn.classList.remove('col-lg-12');
-        getGame2_cn.classList.add('col-lg');
+        //Return Container to Normal Size
+        getGame3_cn.classList.remove('col-lg-12');
+        getGame3_cn.classList.add('col-lg-6');
 
+        //REMOVE GAME 1 TXT
+        getGame3_txt.classList.add('hideEle');
+    }
+}
 
+//Manage Row 2- Image 4
+document.getElementById('game4-overlay').onclick = function () {
+    if (getGame4_cn.className === 'col-lg-6') {
+
+        //Game Container 2 - enlarge
+        getGame4_cn.classList.remove('col-lg-6');
+        getGame4_cn.classList.add('col-lg-12');
+
+        //HIDE OTHER IMAGES
+        getGame1_cn.classList.add('hideEle');
+        getGame2_cn.classList.add('hideEle');
+        getGame3_cn.classList.add('hideEle');
+
+        //SHOW TEXT ABOUT GAME 2
+        getGame4_txt.classList.remove('hideEle');
+    }
+    else {
+        //RETURN OTHER IMAGES
+        getGame1_cn.classList.remove('hideEle');
+        getGame2_cn.classList.remove('hideEle');
+        getGame3_cn.classList.remove('hideEle');
+
+        //Return Container to Normal Size
+        getGame4_cn.classList.remove('col-lg-12');
+        getGame4_cn.classList.add('col-lg-6');
 
         //REMOVE GAME 2 TXT
-        getGame2_txt.classList.remove('showEle');
-        getGame2_txt.classList.add('hideEle');
-
-
+        getGame4_txt.classList.add('hideEle');
     }
 }
 
@@ -176,6 +237,11 @@ document.getElementById('game2-overlay').onclick = function () {
 
 
 
+
+
+
+
+//fluff code for testing
 
 
 /*

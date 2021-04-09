@@ -18,15 +18,16 @@ body {
     background-size: cover;
     */
 }
-
+/*
 .row {
-    padding-top: 1em;
-    padding-bottom: 1em;
+   padding-top: 0.5em;
+   padding-bottom: 0.5em;
 
 }
-
+*/
 .img-fluid {
-border-radius: 3%;
+    border-radius: 3%;
+    box-shadow: 1px 3px;
 }
 .img-fluid-limited {
     max-width: 50%;
@@ -75,8 +76,8 @@ nav .navbar-nav li a:hover {
 }
 
 p {
-padding-top: 1em;
-padding-bottom: 1em;
+padding-top: 0.5em;
+padding-bottom: 0.5em;
 
 }
 
@@ -99,7 +100,7 @@ padding-bottom: 1em;
         transition: opacity 1.5s ease-in-out;
     }
 
-    #work.hide, #about.hide, #uxGames.hide, #test.hide {
+    #work.hide, #about.hide, #uxGames.hide, #test.hide{
         height: 10px;
         padding: 10px;
         opacity: 0;
@@ -108,24 +109,15 @@ padding-bottom: 1em;
 
 .hideEle {
     height: 0;
+    font-size: 0;
     opacity: 0;
+    transition: all 3s;
 }
 
-.showEle {
-    height: 100%;
-    opacity: 1;
-    transition: all 2s;
-    webkit-transition: all 2s ease-out;
-}
-
-
-.transition {
-    transition: all 2s ease-out;
-    webkit-transition: all 2s ease-out;
-} 
 .gametxt {
 text-align: center;
 }
+
 
 
 /*For image overlay command interactivity*/
@@ -135,6 +127,8 @@ text-align: center;
     overflow: hidden;
     align-items: center;
     text-align: center;
+    border-radius: 3%;
+    box-shadow: 1.5px 5px;
 }
 
     .content .content-overlay {
