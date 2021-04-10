@@ -59,7 +59,7 @@ $(document).ready(function () {
 document.getElementById('workNav').onclick = function () {
 
 
-    
+
 
     
     getAboutSection.classList.remove('fadeIn');
@@ -375,16 +375,30 @@ $(function () {
     $(window).bind("load", function () {
         console.log($(this).width())
         if ($(this).width() < 500) {
-            $('#content-1').removeClass('content')
-            $('#content-2').removeClass('content')
-            $('#content-3').removeClass('content')
-            $('#content-4').removeClass('content')
+            $('#game1-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
+            $('#game1-overlay-details').removeClass('content-details').addClass('content-details-hidden');
+
+            $('#game2-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
+            $('#game2-overlay-details').removeClass('content-details').addClass('content-details-hidden');
+
+            $('#game3-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
+            $('#game3-overlay-details').removeClass('content-details').addClass('content-details-hidden');
+
+            $('#game4-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
+            $('#game4-overlay-details').removeClass('content-details').addClass('content-details-hidden');
         }
         else {
-            $('#content-1').addClass('content')
-            $('#content-2').addClass('content')
-            $('#content-3').addClass('content')
-            $('#content-4').addClass('content')
+            $('game1-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
+            $('game1-overlay-details').removeClass('content-details-hidden').addClass('content-details');
+
+            $('game2-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
+            $('game2-overlay-details').removeClass('content-details-hidden').addClass('content-details');
+
+            $('game3-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
+            $('game3-overlay-details').removeClass('content-details-hidden').addClass('content-details');
+
+            $('game4-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
+            $('game4-overlay-details').removeClass('content-details-hidden').addClass('content-details');
         }
     })
 })
@@ -393,16 +407,30 @@ $(function () {
     $(window).bind("resize", function () {
         console.log($(this).width())
         if ($(this).width() < 500) {
-            $('#content-1').removeClass('content')
-            $('#content-2').removeClass('content')
-            $('#content-3').removeClass('content')
-            $('#content-4').removeClass('content')
+            $('#game1-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
+            $('#game1-overlay-details').removeClass('content-details').addClass('content-details-hidden');
+
+            $('#game2-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
+            $('#game2-overlay-details').removeClass('content-details').addClass('content-details-hidden');
+
+            $('#game3-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
+            $('#game3-overlay-details').removeClass('content-details').addClass('content-details-hidden');
+
+            $('#game4-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
+            $('#game4-overlay-details').removeClass('content-details').addClass('content-details-hidden');
         }
         else {
-            $('#content-1').addClass('content')
-            $('#content-2').addClass('content')
-            $('#content-3').addClass('content')
-            $('#content-4').addClass('content')
+            $('game1-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
+            $('game1-overlay-details').removeClass('content-details-hidden').addClass('content-details');
+
+            $('game2-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
+            $('game2-overlay-details').removeClass('content-details-hidden').addClass('content-details');
+
+            $('game3-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
+            $('game3-overlay-details').removeClass('content-details-hidden').addClass('content-details');
+
+            $('game4-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
+            $('game4-overlay-details').removeClass('content-details-hidden').addClass('content-details');
         }
     })
 })

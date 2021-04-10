@@ -109,6 +109,7 @@ padding-bottom: 0.5em;
 
 
 
+
 .fadeIn {
     opacity: 1;
     visibility: visible;
@@ -119,13 +120,14 @@ padding-bottom: 0.5em;
     transition: opacity 5.5s ease-in-out;
 }
 
-.hide {
+.hideElement {
     opacity: 0;
     visibility: hidden;
     display: none;
     height: 0;
     font-size: 0;
 }
+
 
 
 
