@@ -6,7 +6,7 @@ $('.nav-link').click(function (event) {
     window.location.hash = '';
 });
 
-document.getElementById("work").className += " fadeIn";
+//document.getElementById("work").className += " fadeIn";
 
 
 
@@ -14,34 +14,74 @@ const getAboutSection = document.getElementById('about');
 const getWorkSection = document.getElementById('work');
 const getUXGamesSection = document.getElementById('uxGames');
 
-const getTestSection = document.getElementById('test');
-
 
 const navBarAbout = document.getElementById('aboutNav');
 const navBarWork = document.getElementById('workNav');
 const navBarUXGames = document.getElementById('uxGamesNav');
 const navBarTest = document.getElementById('testNav');
 
+//getWorkSection.classList.remove('hide');
+getWorkSection.classList.add('fadeIn');
+
+$(document).ready(function () {
+
+    /*! Fades in page on load */
+    $('#work').css('display', 'none');
+    $('#work').fadeIn(100);
+
+});
+
+/*
+$(document).ready(function () {
+    $("#workNav").click(function () {   
+       // $('#work').css('display', 'none');
+        $('#work').fadeIn(1000);
+    });
+});
+
+$(document).ready(function () {
+    $("#aboutNav").click(function () {
+     //   $('#work').css('display', 'none');
+        $('#work').fadeIn(1000);
+    });
+});
+
+$(document).ready(function () {
+    $("#uxGamesNav").click(function () {
+     //   $('#uxGames').css('display', 'none');
+        $('#uxGames').fadeIn(1000);
+    });
+});
+*/
+
+
 //work
 document.getElementById('workNav').onclick = function () {
+
+
+    
+
+    
+    getAboutSection.classList.remove('fadeIn');
+    getAboutSection.classList.add('hide');
+   
+    getUXGamesSection.classList.remove('fadeIn');
+    getUXGamesSection.classList.add('hide');
+
     getWorkSection.classList.remove('hide');
     getWorkSection.classList.add('fadeIn');
-
-    navBarWork.className += " active";
-    navBarAbout.className = "nav-link";
-    navBarUXGames.className = "nav-link";
-
-    getAboutSection.classList.add('hide');
-    getAboutSection.classList.remove('fadeIn');
-    getUXGamesSection.classList.add('hide');
-    getUXGamesSection.classList.remove('fadeIn');
+    
 }
 
 //about
 document.getElementById('aboutNav').onclick = function () {
-
-    getWorkSection.classList.add('hide');
+   
     getWorkSection.classList.remove('fadeIn');
+    getWorkSection.classList.add('hide');
+
+    getUXGamesSection.classList.remove('fadeIn');
+    getUXGamesSection.classList.add('hide');
+   
 
     getAboutSection.classList.remove('hide');
     getAboutSection.classList.add('fadeIn')
@@ -49,26 +89,24 @@ document.getElementById('aboutNav').onclick = function () {
     navBarAbout.className += " active";
     navBarWork.className = "nav-link";
     navBarUXGames.className = "nav-link";
-  
-    
-    getUXGamesSection.classList.add('hide');
-    getUXGamesSection.classList.remove('fadeIn');
+ 
 }
 
 //ux
 document.getElementById('uxGamesNav').onclick = function () {
-  
+
+    getAboutSection.classList.remove('fadeIn');
+    getAboutSection.classList.add('hide');
+
+    getWorkSection.classList.remove('fadeIn');
+    getWorkSection.classList.add('hide');
+
     getUXGamesSection.classList.remove('hide');
     getUXGamesSection.classList.add('fadeIn');
 
-    navBarUXGames.className += " active"
-    navBarWork.className = "nav-link"
-    navBarAbout.className = "nav-link"
-
-    getAboutSection.classList.add('hide');
-    getAboutSection.classList.remove('fadeIn');
-    getWorkSection.classList.add('hide');
-    getWorkSection.classList.remove('fadeIn');
+    navBarUXGames.className += " active";
+    navBarWork.className = "nav-link";
+    navBarAbout.className = "nav-link";
 }
 
 
@@ -341,32 +379,12 @@ $(function () {
             $('#content-2').removeClass('content')
             $('#content-3').removeClass('content')
             $('#content-4').removeClass('content')
-            /*
-            $('#game1-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
-            $('#game1-overlay-details').removeClass('content-details').addClass('content-details-hidden');   
-            $('#game2-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
-            $('#game2-overlay-details').removeClass('content-details').addClass('content-details-hidden');   
-            $('#game3-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
-            $('#game3-overlay-details').removeClass('content-details').addClass('content-details-hidden');   
-            $('#game4-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
-            $('#game4-overlay-details').removeClass('content-details').addClass('content-details-hidden');   
-            */
         }
         else {
             $('#content-1').addClass('content')
             $('#content-2').addClass('content')
             $('#content-3').addClass('content')
             $('#content-4').addClass('content')
-            /*
-            $('#game1-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
-            $('#game1-overlay-details').removeClass('content-details-hidden').addClass('content-details');
-            $('#game2-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
-            $('#game2-overlay-details').removeClass('content-details-hidden').addClass('content-details');
-            $('#game3-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
-            $('#game3-overlay-details').removeClass('content-details-hidden').addClass('content-details');
-            $('#game4-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
-            $('#game4-overlay-details').removeClass('content-details-hidden').addClass('content-details');
-            */
         }
     })
 })
@@ -388,7 +406,6 @@ $(function () {
         }
     })
 })
-
 
 
 

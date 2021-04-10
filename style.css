@@ -86,26 +86,28 @@ padding-bottom: 0.5em;
     padding-top: 1.5em;
 }
 
-#about, #uxGames, #test {
+#about, #uxGames {
     opacity: 0;
     padding-top: 1.0em;
 
 }
 
-#work.fadeIn, #about.fadeIn, #uxGames.fadeIn, #test.fadeIn {
+#work.fadeIn, #about.fadeIn, #uxGames.fadeIn{
         opacity: 1;
         -webkit-transition: opacity 1.5s ease-in-out;
         -moz-transition: opacity 1.5s ease-in-out;
         -o-transition: opacity 1.5s ease-in-out;
         transition: opacity 1.5s ease-in-out;
 }
-
-#work.hide, #about.hide, #uxGames.hide, #test.hide{
+#work.hide, #about.hide, #uxGames.hide {
         height: 10px;
         padding: 10px;
         opacity: 0;
+    }
 
- }
+
+
+
 
 .fadeIn {
     opacity: 1;
@@ -136,8 +138,13 @@ padding-bottom: 0.5em;
 
 }
 
+.show{
+    display: block;
+}
+.hidden{
+display: none;
 
-
+}
 
 
 /*
