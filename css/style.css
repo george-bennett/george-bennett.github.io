@@ -11,7 +11,8 @@ text-align: center;
 
 
 body {
-    background-color:rgb(245 245 245);
+    background-color: #FCF6F5FF;
+    /*background-color: rgb(245 245 245);*/
     /*background-color:rgb(32 32 32) black*/
     /*
     background-image: url("images/background_white.jpg");
@@ -34,14 +35,12 @@ body {
 }
 
 .navbar {
-   font-family: Roboto;
+   font-family: 'Roboto';
+   font-weight: 700;
     margin-left: 1em;
     margin-right: 1em;
 }
 
-    .navbar a {
-        color: blue;
-    }
 #myNavbar {
     margin-left: 1em;
     margin-right: 4em;
@@ -82,11 +81,11 @@ nav .navbar-nav li a:hover {
 
 #main {
     margin-top: 1.5em;
-    font-family: Roboto;
-    font-style: normal; 
+    font-family: 'Roboto';
+    font-weight: 500;
     padding-left: 2em;
     padding-right: 2em;
-    background-color: #FCF6F5FF;
+    
     /*border-radius: 10px;*/
     min-height: 200px;
     /*  color: rgb(73 72 72);*/
@@ -201,7 +200,7 @@ text-align: center;
     box-shadow: 1.5px 5px;
 }
 
-    .content .content-overlay {
+.content .content-overlay {
         background: rgba(0, 0, 0, 0.7);
         position: absolute;
         top: 0;
@@ -214,8 +213,7 @@ text-align: center;
         -webkit-transition: all 0.5s ease-in-out 0s;
         -moz-transition: all 0.5s ease-in-out 0s;
         transition: all 0.5s ease-in-out 0s
-    }
-
+}
 
 
 .content:hover .content-overlay {
@@ -227,8 +225,6 @@ text-align: center;
         opacity: 0;
         
 }
-
-
 
 .content-image {
     width: 100%
@@ -269,7 +265,7 @@ text-align: center;
 }
 
 .content-details h3 {
-    font-family: 'LEMON MILK';
+    font-family: 'Roboto';
     color: #fff;
     font-weight: 500;
     letter-spacing: 0.1em;
@@ -279,6 +275,7 @@ text-align: center;
 }
 
 .content-details p {
+    font-family: 'Roboto';
     color: #fff;
     font-size: 0.8em;
 }
