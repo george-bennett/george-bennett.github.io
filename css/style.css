@@ -34,7 +34,7 @@ body {
 }
 
 .navbar {
-    font-family: 'LEMON MILK';
+   font-family: Roboto;
     margin-left: 1em;
     margin-right: 1em;
 }
@@ -82,8 +82,8 @@ nav .navbar-nav li a:hover {
 
 #main {
     margin-top: 1.5em;
-    font-family: 'LEMON MILK';
-    font-style: normal;
+    font-family: Roboto;
+    font-style: normal; 
     padding-left: 2em;
     padding-right: 2em;
     background-color: #FCF6F5FF;
@@ -91,6 +91,8 @@ nav .navbar-nav li a:hover {
     min-height: 200px;
     /*  color: rgb(73 72 72);*/
     color: #2BAE66FF
+
+
 }
 
 p {
@@ -283,7 +285,7 @@ text-align: center;
 
 
 .content-details-hidden h3 {
-    font-family: 'LEMON MILK';
+    font-family: 'Roboto';
     color: #fff;
     font-weight: 500;
     letter-spacing: 0.1em;
@@ -301,4 +303,10 @@ text-align: center;
 
 .fadeIn-bottom {
     top: 80%;
+}
+
+
+@font-face {
+    font-family: 'roboto';
+    src: url('https://www.george-bennett.co.uk/css/fonts/Roboto.tff') format('truetype');
 }
