@@ -336,7 +336,16 @@ $(document).ready(function () {
 $(function () {
     $(window).bind("load resize", function () {
         console.log($(this).width())
-        if ($(this).width() < 450) {
+        if ($(this).width() < 500) {
+            $('#content-1').removeClass('content')
+            $('#content-2').removeClass('content')
+            $('#content-3').removeClass('content')
+            $('#content-4').removeClass('content')
+
+
+
+
+            /*
             $('#game1-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
             $('#game1-overlay-details').removeClass('content-details').addClass('content-details-hidden');   
             $('#game2-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
@@ -345,9 +354,14 @@ $(function () {
             $('#game3-overlay-details').removeClass('content-details').addClass('content-details-hidden');   
             $('#game4-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
             $('#game4-overlay-details').removeClass('content-details').addClass('content-details-hidden');   
-
+            */
         }
         else {
+            $('#content-1').addClass('content')
+            $('#content-2').addClass('content')
+            $('#content-3').addClass('content')
+            $('#content-4').addClass('content')
+            /*
             $('#game1-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
             $('#game1-overlay-details').removeClass('content-details-hidden').addClass('content-details');
             $('#game2-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
@@ -356,6 +370,7 @@ $(function () {
             $('#game3-overlay-details').removeClass('content-details-hidden').addClass('content-details');
             $('#game4-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
             $('#game4-overlay-details').removeClass('content-details-hidden').addClass('content-details');
+            */
         }
     })
 })
