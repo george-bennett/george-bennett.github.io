@@ -146,14 +146,14 @@ const getGame4_txt = document.getElementById('game4_txt');
 $(document).ready(function () {
     $("#game1-overlay").click(function () {
         if (getGame1_cn.className === 'col-lg-6') {
-            $("#game1-cn").fadeOut(10);
-            $("#game2-cn").fadeOut(100);
-            $("#game3-cn").fadeOut(100);
-            $("#game4-cn").fadeOut(100);
+            $("#game1-cn").fadeOut(1);
+            $("#game2-cn").fadeOut(1);
+            $("#game3-cn").fadeOut(1);
+            $("#game4-cn").fadeOut(1);
 
             getGame1_cn.classList.remove('col-lg-6');
             //getGame1_cn.classList.add('col-lg-12');
-            $("#game1-cn").fadeIn(2000);
+            $("#game1-cn").fadeIn(1000);
             //SHOW TEXT ABOUT GAME 1
             getGame1_txt.classList.remove('hideEle');
         }
@@ -161,10 +161,10 @@ $(document).ready(function () {
             //REMOVE GAME 1 TXT
             getGame1_txt.classList.add('hideEle');
             getGame1_cn.classList.add('col-lg-6');
-            $("#game1-cn").fadeIn(800);
-            $("#game2-cn").fadeIn(1000);
-            $("#game3-cn").fadeIn(1000);
-            $("#game4-cn").fadeIn(1000);
+            $("#game1-cn").fadeIn(400);
+            $("#game2-cn").fadeIn(500);
+            $("#game3-cn").fadeIn(500);
+            $("#game4-cn").fadeIn(500);
        }
     });
 });
@@ -173,14 +173,14 @@ $(document).ready(function () {
 $(document).ready(function () {
     $("#gm1_img").click(function () {
         if (getGame1_cn.className === 'col-lg-6') {
-            $("#game1-cn").fadeOut(10);
-            $("#game2-cn").fadeOut(10);
-            $("#game3-cn").fadeOut(10);
-            $("#game4-cn").fadeOut(10);
+            $("#game1-cn").fadeOut(1);
+            $("#game2-cn").fadeOut(1);
+            $("#game3-cn").fadeOut(1);
+            $("#game4-cn").fadeOut(1);
 
             getGame1_cn.classList.remove('col-lg-6');
             //getGame1_cn.classList.add('col-lg-12');
-            $("#game1-cn").fadeIn(2000);
+            $("#game1-cn").fadeIn(1000);
             //SHOW TEXT ABOUT GAME 1
             getGame1_txt.classList.remove('hideEle');
         }
@@ -188,10 +188,10 @@ $(document).ready(function () {
             //REMOVE GAME 1 TXT
             getGame1_txt.classList.add('hideEle');
             getGame1_cn.classList.add('col-lg-6');
-            $("#game1-cn").fadeIn(800);
-            $("#game2-cn").fadeIn(1000);
-            $("#game3-cn").fadeIn(1000);
-            $("#game4-cn").fadeIn(1000);
+            $("#game1-cn").fadeIn(400);
+            $("#game2-cn").fadeIn(500);
+            $("#game3-cn").fadeIn(500);
+            $("#game4-cn").fadeIn(500);
         }
     });
 });
@@ -200,14 +200,14 @@ $(document).ready(function () {
 $(document).ready(function () {
     $("#game2-overlay").click(function () {
         if (getGame2_cn.className === 'col-lg-6') {
-            $("#game1-cn").fadeOut(10);
-            $("#game2-cn").fadeOut(10);
-            $("#game3-cn").fadeOut(10);
-            $("#game4-cn").fadeOut(10);
+            $("#game1-cn").fadeOut(1);
+            $("#game2-cn").fadeOut(1);
+            $("#game3-cn").fadeOut(1);
+            $("#game4-cn").fadeOut(1);
 
             getGame2_cn.classList.remove('col-lg-6');
             //getGame1_cn.classList.add('col-lg-12');
-            $("#game2-cn").fadeIn(2000);
+            $("#game2-cn").fadeIn(1000);
             //SHOW TEXT ABOUT GAME 2
             getGame2_txt.classList.remove('hideEle');
         }
@@ -217,10 +217,10 @@ $(document).ready(function () {
             getGame2_txt.classList.add('hideEle');
 
             getGame2_cn.classList.add('col-lg-6');
-            $("#game1-cn").fadeIn(1000);
-            $("#game2-cn").fadeIn(800);
-            $("#game3-cn").fadeIn(1000);
-            $("#game4-cn").fadeIn(1000);
+            $("#game1-cn").fadeIn(500);
+            $("#game2-cn").fadeIn(400);
+            $("#game3-cn").fadeIn(500);
+            $("#game4-cn").fadeIn(500);
 
  
 
@@ -231,14 +231,14 @@ $(document).ready(function () {
 $(document).ready(function () {
     $("#gm2_img").click(function () {
         if (getGame2_cn.className === 'col-lg-6') {
-            $("#game1-cn").fadeOut(10);
-            $("#game2-cn").fadeOut(10);
-            $("#game3-cn").fadeOut(10);
-            $("#game4-cn").fadeOut(10);
+            $("#game1-cn").fadeOut(1);
+            $("#game2-cn").fadeOut(1);
+            $("#game3-cn").fadeOut(1);
+            $("#game4-cn").fadeOut(1);
 
             getGame2_cn.classList.remove('col-lg-6');
            
-            $("#game2-cn").fadeIn(2000);
+            $("#game2-cn").fadeIn(1000);
             //SHOW TEXT ABOUT GAME 2
             getGame2_txt.classList.remove('hideEle');
         }
@@ -246,10 +246,10 @@ $(document).ready(function () {
             //REMOVE GAME 2 TXT
             getGame2_txt.classList.add('hideEle');
             getGame2_cn.classList.add('col-lg-6');
-            $("#game1-cn").fadeIn(1000);
-            $("#game2-cn").fadeIn(800);
-            $("#game3-cn").fadeIn(1000);
-            $("#game4-cn").fadeIn(1000);
+            $("#game1-cn").fadeIn(500);
+            $("#game2-cn").fadeIn(400);
+            $("#game3-cn").fadeIn(500);
+            $("#game4-cn").fadeIn(500);
         }
     });
 });
@@ -257,14 +257,14 @@ $(document).ready(function () {
 $(document).ready(function () {
     $("#game3-overlay").click(function () {
         if (getGame3_cn.className === 'col-lg-6') {
-            $("#game1-cn").fadeOut(10);
-            $("#game2-cn").fadeOut(10);
-            $("#game3-cn").fadeOut(10);
-            $("#game4-cn").fadeOut(10);
+            $("#game1-cn").fadeOut(1);
+            $("#game2-cn").fadeOut(1);
+            $("#game3-cn").fadeOut(1);
+            $("#game4-cn").fadeOut(1);
 
             getGame3_cn.classList.remove('col-lg-6');
-            //getGame1_cn.classList.add('col-lg-12');
-            $("#game3-cn").fadeIn(2000);
+ 
+            $("#game3-cn").fadeIn(1000);
 
             //SHOW TEXT ABOUT GAME 3
             getGame3_txt.classList.remove('hideEle');
@@ -275,10 +275,10 @@ $(document).ready(function () {
             getGame3_txt.classList.add('hideEle');
 
             getGame3_cn.classList.add('col-lg-6');
-            $("#game1-cn").fadeIn(1000);
-            $("#game2-cn").fadeIn(1000);
-            $("#game3-cn").fadeIn(800);
-            $("#game4-cn").fadeIn(1000);
+            $("#game1-cn").fadeIn(500);
+            $("#game2-cn").fadeIn(500);
+            $("#game3-cn").fadeIn(400);
+            $("#game4-cn").fadeIn(500);
 
            
         }
@@ -288,14 +288,14 @@ $(document).ready(function () {
 $(document).ready(function () {
     $("#gm3_img").click(function () {
         if (getGame3_cn.className === 'col-lg-6') {
-            $("#game1-cn").fadeOut(10);
-            $("#game2-cn").fadeOut(10);
-            $("#game3-cn").fadeOut(10);
-            $("#game4-cn").fadeOut(10);
+            $("#game1-cn").fadeOut(1);
+            $("#game2-cn").fadeOut(1);
+            $("#game3-cn").fadeOut(1);
+            $("#game4-cn").fadeOut(1);
 
             getGame3_cn.classList.remove('col-lg-6');
             //getGame1_cn.classList.add('col-lg-12');
-            $("#game3-cn").fadeIn(2000);
+            $("#game3-cn").fadeIn(1000);
             //SHOW TEXT ABOUT GAME 3
             getGame3_txt.classList.remove('hideEle');
         }
@@ -303,10 +303,10 @@ $(document).ready(function () {
             //REMOVE GAME 3 TXT
             getGame3_txt.classList.add('hideEle');
             getGame3_cn.classList.add('col-lg-6');
-            $("#game1-cn").fadeIn(1000);
-            $("#game2-cn").fadeIn(1000);
-            $("#game3-cn").fadeIn(800);
-            $("#game4-cn").fadeIn(1000);
+            $("#game1-cn").fadeIn(500);
+            $("#game2-cn").fadeIn(500);
+            $("#game3-cn").fadeIn(400);
+            $("#game4-cn").fadeIn(500);
         }
     });
 });
@@ -314,14 +314,14 @@ $(document).ready(function () {
 $(document).ready(function () {
     $("#game4-overlay").click(function () {
         if (getGame4_cn.className === 'col-lg-6') {
-            $("#game1-cn").fadeOut(10);
-            $("#game2-cn").fadeOut(10);
-            $("#game3-cn").fadeOut(10);
-            $("#game4-cn").fadeOut(10);
+            $("#game1-cn").fadeOut(1);
+            $("#game2-cn").fadeOut(1);
+            $("#game3-cn").fadeOut(1);
+            $("#game4-cn").fadeOut(1);
 
             getGame4_cn.classList.remove('col-lg-6');
             //getGame1_cn.classList.add('col-lg-12');
-            $("#game4-cn").fadeIn(2000);
+            $("#game4-cn").fadeIn(1000);
 
             //SHOW TEXT ABOUT GAME 4
             getGame4_txt.classList.remove('hideEle');
@@ -331,10 +331,10 @@ $(document).ready(function () {
             getGame4_txt.classList.add('hideEle');
 
             getGame4_cn.classList.add('col-lg-6');
-            $("#game1-cn").fadeIn(1000);
-            $("#game2-cn").fadeIn(1000);
-            $("#game3-cn").fadeIn(1000);
-            $("#game4-cn").fadeIn(800);
+            $("#game1-cn").fadeIn(500);
+            $("#game2-cn").fadeIn(500);
+            $("#game3-cn").fadeIn(500);
+            $("#game4-cn").fadeIn(400);
 
         
         }
@@ -344,14 +344,14 @@ $(document).ready(function () {
 $(document).ready(function () {
     $("#gm4_img").click(function () {
         if (getGame4_cn.className === 'col-lg-6') {
-            $("#game1-cn").fadeOut(10);
-            $("#game2-cn").fadeOut(10);
-            $("#game3-cn").fadeOut(10);
-            $("#game4-cn").fadeOut(10);
+            $("#game1-cn").fadeOut(1);
+            $("#game2-cn").fadeOut(1);
+            $("#game3-cn").fadeOut(1);
+            $("#game4-cn").fadeOut(1);
 
             getGame4_cn.classList.remove('col-lg-6');
             //getGame1_cn.classList.add('col-lg-12');
-            $("#game4-cn").fadeIn(2000);
+            $("#game4-cn").fadeIn(1000);
             //SHOW TEXT ABOUT GAME 4
             getGame4_txt.classList.remove('hideEle');
         }
@@ -359,10 +359,10 @@ $(document).ready(function () {
             //REMOVE GAME 4 TXT
             getGame4_txt.classList.add('hideEle');
             getGame4_cn.classList.add('col-lg-6');
-            $("#game1-cn").fadeIn(1000);
-            $("#game2-cn").fadeIn(1000);
-            $("#game3-cn").fadeIn(1000);
-            $("#game4-cn").fadeIn(800);
+            $("#game1-cn").fadeIn(500);
+            $("#game2-cn").fadeIn(500);
+            $("#game3-cn").fadeIn(500);
+            $("#game4-cn").fadeIn(400);
         }
     });
 });
