@@ -5,6 +5,7 @@ $('.nav-link').click(function (event) {
     event.preventDefault();
     window.location.hash = '';
 });
+
 document.getElementById("work").className += " fadeIn";
 
 
@@ -224,11 +225,30 @@ $(document).ready(function () {
 
         
         }
-
-
-
     });
 });
+
+
+$(function () {
+    $(window).bind("resize", function () {
+        console.log($(this).width())
+        if ($(this).width() < 450) {
+            $('#game1-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
+            $('#game1-overlay-details').removeClass('content-details').addClass('content-details-hidden');
+           // $('#game1-title').removeClass('content-details').addClass('content-details-hidden');
+            //$('#game1-text').removeClass('content-details').addClass('content-details-hidden');
+        }
+        else {
+            $('#game1-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
+            $('#game1-overlay-details').removeClass('content-details-hidden').addClass('content-details');
+        }
+    })
+})
+
+
+
+
+
 
 
 /*
