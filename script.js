@@ -334,17 +334,13 @@ $(document).ready(function () {
 
 //Disable Overlay in Mobile Formats
 $(function () {
-    $(window).bind("load resize", function () {
+    $(window).bind("load", function () {
         console.log($(this).width())
         if ($(this).width() < 500) {
             $('#content-1').removeClass('content')
             $('#content-2').removeClass('content')
             $('#content-3').removeClass('content')
             $('#content-4').removeClass('content')
-
-
-
-
             /*
             $('#game1-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
             $('#game1-overlay-details').removeClass('content-details').addClass('content-details-hidden');   
@@ -375,7 +371,23 @@ $(function () {
     })
 })
 
-
+$(function () {
+    $(window).bind("resize", function () {
+        console.log($(this).width())
+        if ($(this).width() < 500) {
+            $('#content-1').removeClass('content')
+            $('#content-2').removeClass('content')
+            $('#content-3').removeClass('content')
+            $('#content-4').removeClass('content')
+        }
+        else {
+            $('#content-1').addClass('content')
+            $('#content-2').addClass('content')
+            $('#content-3').addClass('content')
+            $('#content-4').addClass('content')
+        }
+    })
+})
 
 
 
