@@ -104,7 +104,7 @@ const getGame4_txt = document.getElementById('game4_txt');
 
 
 
-
+//Desktop - 1
 $(document).ready(function () {
     $("#game1-overlay").click(function () {
         if (getGame1_cn.className === 'col-lg-6') {
@@ -122,19 +122,43 @@ $(document).ready(function () {
         else {
             //REMOVE GAME 1 TXT
             getGame1_txt.classList.add('hideEle');
-
             getGame1_cn.classList.add('col-lg-6');
             $("#game1-cn").fadeIn(800);
             $("#game2-cn").fadeIn(1000);
             $("#game3-cn").fadeIn(1000);
             $("#game4-cn").fadeIn(1000);
+       }
+    });
+});
 
+//Mobile -1 
+$(document).ready(function () {
+    $("#gm1_img").click(function () {
+        if (getGame1_cn.className === 'col-lg-6') {
+            $("#game1-cn").fadeOut(10);
+            $("#game2-cn").fadeOut(10);
+            $("#game3-cn").fadeOut(10);
+            $("#game4-cn").fadeOut(10);
 
+            getGame1_cn.classList.remove('col-lg-6');
+            //getGame1_cn.classList.add('col-lg-12');
+            $("#game1-cn").fadeIn(2000);
+            //SHOW TEXT ABOUT GAME 1
+            getGame1_txt.classList.remove('hideEle');
+        }
+        else {
+            //REMOVE GAME 1 TXT
+            getGame1_txt.classList.add('hideEle');
+            getGame1_cn.classList.add('col-lg-6');
+            $("#game1-cn").fadeIn(800);
+            $("#game2-cn").fadeIn(1000);
+            $("#game3-cn").fadeIn(1000);
+            $("#game4-cn").fadeIn(1000);
         }
     });
 });
 
-
+//Desktop - 2
 $(document).ready(function () {
     $("#game2-overlay").click(function () {
         if (getGame2_cn.className === 'col-lg-6') {
@@ -165,7 +189,33 @@ $(document).ready(function () {
         }
     });
 });
+//Mobile - 2
+$(document).ready(function () {
+    $("#gm2_img").click(function () {
+        if (getGame2_cn.className === 'col-lg-6') {
+            $("#game1-cn").fadeOut(10);
+            $("#game2-cn").fadeOut(10);
+            $("#game3-cn").fadeOut(10);
+            $("#game4-cn").fadeOut(10);
 
+            getGame2_cn.classList.remove('col-lg-6');
+           
+            $("#game2-cn").fadeIn(2000);
+            //SHOW TEXT ABOUT GAME 2
+            getGame2_txt.classList.remove('hideEle');
+        }
+        else {
+            //REMOVE GAME 2 TXT
+            getGame2_txt.classList.add('hideEle');
+            getGame2_cn.classList.add('col-lg-6');
+            $("#game1-cn").fadeIn(1000);
+            $("#game2-cn").fadeIn(800);
+            $("#game3-cn").fadeIn(1000);
+            $("#game4-cn").fadeIn(1000);
+        }
+    });
+});
+// Desktop - 3
 $(document).ready(function () {
     $("#game3-overlay").click(function () {
         if (getGame3_cn.className === 'col-lg-6') {
@@ -196,8 +246,33 @@ $(document).ready(function () {
         }
     });
 });
+//Mobile - 3 
+$(document).ready(function () {
+    $("#gm3_img").click(function () {
+        if (getGame3_cn.className === 'col-lg-6') {
+            $("#game1-cn").fadeOut(10);
+            $("#game2-cn").fadeOut(10);
+            $("#game3-cn").fadeOut(10);
+            $("#game4-cn").fadeOut(10);
 
-
+            getGame3_cn.classList.remove('col-lg-6');
+            //getGame1_cn.classList.add('col-lg-12');
+            $("#game3-cn").fadeIn(2000);
+            //SHOW TEXT ABOUT GAME 3
+            getGame3_txt.classList.remove('hideEle');
+        }
+        else {
+            //REMOVE GAME 3 TXT
+            getGame3_txt.classList.add('hideEle');
+            getGame3_cn.classList.add('col-lg-6');
+            $("#game1-cn").fadeIn(1000);
+            $("#game2-cn").fadeIn(1000);
+            $("#game3-cn").fadeIn(800);
+            $("#game4-cn").fadeIn(1000);
+        }
+    });
+});
+//Desktop - 4
 $(document).ready(function () {
     $("#game4-overlay").click(function () {
         if (getGame4_cn.className === 'col-lg-6') {
@@ -227,20 +302,60 @@ $(document).ready(function () {
         }
     });
 });
+//Mobile -4
+$(document).ready(function () {
+    $("#gm4_img").click(function () {
+        if (getGame4_cn.className === 'col-lg-6') {
+            $("#game1-cn").fadeOut(10);
+            $("#game2-cn").fadeOut(10);
+            $("#game3-cn").fadeOut(10);
+            $("#game4-cn").fadeOut(10);
+
+            getGame4_cn.classList.remove('col-lg-6');
+            //getGame1_cn.classList.add('col-lg-12');
+            $("#game4-cn").fadeIn(2000);
+            //SHOW TEXT ABOUT GAME 4
+            getGame4_txt.classList.remove('hideEle');
+        }
+        else {
+            //REMOVE GAME 4 TXT
+            getGame4_txt.classList.add('hideEle');
+            getGame4_cn.classList.add('col-lg-6');
+            $("#game1-cn").fadeIn(1000);
+            $("#game2-cn").fadeIn(1000);
+            $("#game3-cn").fadeIn(1000);
+            $("#game4-cn").fadeIn(800);
+        }
+    });
+});
 
 
+
+
+//Disable Overlay in Mobile Formats
 $(function () {
-    $(window).bind("resize", function () {
+    $(window).bind("load resize", function () {
         console.log($(this).width())
         if ($(this).width() < 450) {
             $('#game1-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
-            $('#game1-overlay-details').removeClass('content-details').addClass('content-details-hidden');
-           // $('#game1-title').removeClass('content-details').addClass('content-details-hidden');
-            //$('#game1-text').removeClass('content-details').addClass('content-details-hidden');
+            $('#game1-overlay-details').removeClass('content-details').addClass('content-details-hidden');   
+            $('#game2-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
+            $('#game2-overlay-details').removeClass('content-details').addClass('content-details-hidden');   
+            $('#game3-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
+            $('#game3-overlay-details').removeClass('content-details').addClass('content-details-hidden');   
+            $('#game4-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
+            $('#game4-overlay-details').removeClass('content-details').addClass('content-details-hidden');   
+
         }
         else {
             $('#game1-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
             $('#game1-overlay-details').removeClass('content-details-hidden').addClass('content-details');
+            $('#game2-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
+            $('#game2-overlay-details').removeClass('content-details-hidden').addClass('content-details');
+            $('#game3-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
+            $('#game3-overlay-details').removeClass('content-details-hidden').addClass('content-details');
+            $('#game4-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
+            $('#game4-overlay-details').removeClass('content-details-hidden').addClass('content-details');
         }
     })
 })
@@ -251,8 +366,13 @@ $(function () {
 
 
 
-/*
 
+
+
+
+
+
+/*
 //Manage Row 1- Image 1
 document.getElementById('game1-overlay').onclick = function () {
     if (getGame1_cn.className === 'col-lg-6') {   

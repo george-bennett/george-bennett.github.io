@@ -1,5 +1,5 @@
 /*This will be some CSS for a website*/
-#center-text{
+.center-text{
     text-align: center;
 }
 
@@ -196,7 +196,7 @@ text-align: center;
 
 .content:hover .content-overlay-hidden {
         opacity: 0;
-
+        
 }
 
 
@@ -223,21 +223,20 @@ text-align: center;
     -webkit-transition: all 0.3s ease-in-out 0s;
     -moz-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
-    visibility: hidden;
 }
 
 .content:hover .content-details {
     top: 50%;
     left: 50%;
     opacity: 1;
-    visibility: visible;
+
 }
 
 .content:hover .content-details-hidden {
     top: 50%;
     left: 50%;
     opacity: 0;
-    display: none;
+  
 }
 
 .content-details h3 {
