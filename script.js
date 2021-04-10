@@ -57,11 +57,6 @@ $(document).ready(function () {
 
 //work
 document.getElementById('workNav').onclick = function () {
-
-
-
-
-    
     getAboutSection.classList.remove('fadeIn');
     getAboutSection.classList.add('hide');
    
@@ -70,7 +65,10 @@ document.getElementById('workNav').onclick = function () {
 
     getWorkSection.classList.remove('hide');
     getWorkSection.classList.add('fadeIn');
-    
+
+    navBarWork.className += " active";
+    navBarAbout.className = "nav-link";
+    navBarUXGames.className = "nav-link";
 }
 
 //about
@@ -82,14 +80,12 @@ document.getElementById('aboutNav').onclick = function () {
     getUXGamesSection.classList.remove('fadeIn');
     getUXGamesSection.classList.add('hide');
    
-
     getAboutSection.classList.remove('hide');
     getAboutSection.classList.add('fadeIn')
 
     navBarAbout.className += " active";
     navBarWork.className = "nav-link";
     navBarUXGames.className = "nav-link";
- 
 }
 
 //ux
@@ -108,8 +104,6 @@ document.getElementById('uxGamesNav').onclick = function () {
     navBarWork.className = "nav-link";
     navBarAbout.className = "nav-link";
 }
-
-
 
 
 /*CHANGE UXGAMES ON CLICK OF IMAGE TO DISPLAY TEXT AND RESIZED IMAGE*/
