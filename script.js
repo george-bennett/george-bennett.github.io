@@ -5,8 +5,8 @@ $('.nav-link').click(function (event) {
     event.preventDefault();
     window.location.hash = '';
 });
-
 document.getElementById("work").className += " fadeIn";
+
 
 
 const getAboutSection = document.getElementById('about');
@@ -100,6 +100,138 @@ const getGame4_overlay = document.getElementById('game4-overlay');
 const getGame4_cn = document.getElementById('game4-cn');
 const getGame4_img = document.getElementById('game4_img');
 const getGame4_txt = document.getElementById('game4_txt');
+
+
+
+
+$(document).ready(function () {
+    $("#game1-overlay").click(function () {
+        if (getGame1_cn.className === 'col-lg-6') {
+            $("#game1-cn").fadeOut(10);
+            $("#game2-cn").fadeOut(100);
+            $("#game3-cn").fadeOut(100);
+            $("#game4-cn").fadeOut(100);
+
+            getGame1_cn.classList.remove('col-lg-6');
+            //getGame1_cn.classList.add('col-lg-12');
+            $("#game1-cn").fadeIn(2000);
+            //SHOW TEXT ABOUT GAME 1
+            getGame1_txt.classList.remove('hideEle');
+        }
+        else {
+            //REMOVE GAME 1 TXT
+            getGame1_txt.classList.add('hideEle');
+
+            getGame1_cn.classList.add('col-lg-6');
+            $("#game1-cn").fadeIn(800);
+            $("#game2-cn").fadeIn(1000);
+            $("#game3-cn").fadeIn(1000);
+            $("#game4-cn").fadeIn(1000);
+
+
+        }
+    });
+});
+
+
+$(document).ready(function () {
+    $("#game2-overlay").click(function () {
+        if (getGame2_cn.className === 'col-lg-6') {
+            $("#game1-cn").fadeOut(10);
+            $("#game2-cn").fadeOut(10);
+            $("#game3-cn").fadeOut(10);
+            $("#game4-cn").fadeOut(10);
+
+            getGame2_cn.classList.remove('col-lg-6');
+            //getGame1_cn.classList.add('col-lg-12');
+            $("#game2-cn").fadeIn(2000);
+            //SHOW TEXT ABOUT GAME 2
+            getGame2_txt.classList.remove('hideEle');
+        }
+        else {
+
+            //REMOVE GAME 2 TXT
+            getGame2_txt.classList.add('hideEle');
+
+            getGame2_cn.classList.add('col-lg-6');
+            $("#game1-cn").fadeIn(1000);
+            $("#game2-cn").fadeIn(800);
+            $("#game3-cn").fadeIn(1000);
+            $("#game4-cn").fadeIn(1000);
+
+ 
+
+        }
+    });
+});
+
+$(document).ready(function () {
+    $("#game3-overlay").click(function () {
+        if (getGame3_cn.className === 'col-lg-6') {
+            $("#game1-cn").fadeOut(10);
+            $("#game2-cn").fadeOut(10);
+            $("#game3-cn").fadeOut(10);
+            $("#game4-cn").fadeOut(10);
+
+            getGame3_cn.classList.remove('col-lg-6');
+            //getGame1_cn.classList.add('col-lg-12');
+            $("#game3-cn").fadeIn(2000);
+
+            //SHOW TEXT ABOUT GAME 3
+            getGame3_txt.classList.remove('hideEle');
+        }
+        
+        else {
+             //REMOVE GAME 3 TXT
+            getGame3_txt.classList.add('hideEle');
+
+            getGame3_cn.classList.add('col-lg-6');
+            $("#game1-cn").fadeIn(1000);
+            $("#game2-cn").fadeIn(1000);
+            $("#game3-cn").fadeIn(800);
+            $("#game4-cn").fadeIn(1000);
+
+           
+        }
+    });
+});
+
+
+$(document).ready(function () {
+    $("#game4-overlay").click(function () {
+        if (getGame4_cn.className === 'col-lg-6') {
+            $("#game1-cn").fadeOut(10);
+            $("#game2-cn").fadeOut(10);
+            $("#game3-cn").fadeOut(10);
+            $("#game4-cn").fadeOut(10);
+
+            getGame4_cn.classList.remove('col-lg-6');
+            //getGame1_cn.classList.add('col-lg-12');
+            $("#game4-cn").fadeIn(2000);
+
+            //SHOW TEXT ABOUT GAME 4
+            getGame4_txt.classList.remove('hideEle');
+        }
+        else {
+            //REMOVE GAME 4 TXT
+            getGame4_txt.classList.add('hideEle');
+
+            getGame4_cn.classList.add('col-lg-6');
+            $("#game1-cn").fadeIn(1000);
+            $("#game2-cn").fadeIn(1000);
+            $("#game3-cn").fadeIn(1000);
+            $("#game4-cn").fadeIn(800);
+
+        
+        }
+
+
+
+    });
+});
+
+
+/*
 
 //Manage Row 1- Image 1
 document.getElementById('game1-overlay').onclick = function () {
@@ -221,8 +353,6 @@ document.getElementById('game4-overlay').onclick = function () {
         getGame1_cn.classList.add('hideEle');
         getGame2_cn.classList.add('hideEle');
         getGame3_cn.classList.add('hideEle');
-
-
     }
     else {
         //RETURN OTHER IMAGES
@@ -236,49 +366,8 @@ document.getElementById('game4-overlay').onclick = function () {
         //Return Container to Normal Size
         getGame4_cn.classList.remove('col-lg-12');
         getGame4_cn.classList.add('col-lg-6');
-
-
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//fluff code for testing
-
-
-/*
-//test
-document.getElementById('testNav').onclick = function () {
-
-    getTestSection.classList.remove('hide');
-    getTestSection.classList.add('fadeIn');
-
-    navBarTest.className += " active";
-    navBarUXGames.className = "nav-link";
-    navBarWork.className = "nav-link";
-    navBarAbout.className = "nav-link";
-
-    getAboutSection.classList.add('hide');
-    getAboutSection.classList.remove('fadeIn');
-    getWorkSection.classList.add('hide');
-    getWorkSection.classList.remove('fadeIn');
-    getUXGamesSection.classList.add('hide');
-    getUXGamesSection.classList.remove('fadeIn');
-}
 */
 
 
@@ -287,25 +376,7 @@ document.getElementById('testNav').onclick = function () {
 
 
 
-/*
-//Toggle Fade on About Nav element
-$(document).ready(function () {
-    $("#aboutNav").click(function () {
-        $("#about").fadeIn();
-        $("#work").fadeOut();
-        $("uxGames").fadeOut();
-           });
-});
-   
 
-$(document).ready(function () {
-    $("#uxGamesNav").click(function () {
-        $("#uxGames").fadeIn();
-        $("#work").fadeOut();
-        $("#about").fadeOut();
-    });
-});
-*/
 
 
 
