@@ -1,11 +1,11 @@
 // This will contain JavaScript Stuff for Website / Bootstrap 5
 //Temporary until I can figure out how to load href without the # symbol
-
+/*
 $('.nav-link').click(function (event) {
     event.preventDefault();
     window.location.hash = '';
 });
-
+*/
 //document.getElementById("work").className += " fadeIn";
 
 
@@ -69,6 +69,21 @@ document.getElementById('workNav').onclick = function () {
     navBarWork.className += " active";
     navBarAbout.className = "nav-link";
     navBarUXGames.className = "nav-link";
+
+
+    //window.location.hash = '';
+
+    var final_url = "";
+    var current_url = window.location.hash
+    console.log(current_url);
+
+    if (current_url.indexOf('#') != -1) {
+        final_url = current_url.replace('#', '');
+        console.log(final_url);
+    }
+    history.pushState('data', '', final_url);
+
+
 }
 
 //about
