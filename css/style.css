@@ -85,13 +85,13 @@ nav .navbar-nav li a:hover {
     font-weight: 500;
     padding-left: 2em;
     padding-right: 2em;
-    
     /*border-radius: 10px;*/
     min-height: 200px;
-    /*  color: rgb(73 72 72);*/
-    color: #2BAE66FF
-
-
+    color: #2BAE66FF;
+    /*text-shadow: 1px 1px 10px white;*/
+    text-shadow: 0.15em 0 rgb(255 255 255), 0 0.15em rgb(255 255 255), -0.15em 0 rgb(255 255 255), 0 -0.15em rgb(255 255 255), -0.15em -0.15em rgb(255 255 255), -0.15em 0.15em rgb(255 255 255), 0.15em -0.15em rgb(255 255 255), 0.15em 0.15em rgb(255 255 255);
+    /*font-weight: 900;
+    letter-spacing: 0.01em;*/
 }
 
 p {
