@@ -80,7 +80,7 @@ nav .navbar-nav li a:hover {
 }
 
 #main {
-    margin-top: 1.5em;
+    margin-top: 0.5em;
     font-family: 'Roboto';
     font-weight: 500;
     padding-left: 2em;
@@ -127,8 +127,7 @@ p {
         transition: opacity 1.5s ease-in-out;
 }
 #work.hide, #about.hide, #uxGames.hide {
-        height: 10px;
-        padding: 10px;
+        height: 0px;
         opacity: 0;
     }
 
@@ -141,10 +140,10 @@ p {
     opacity: 1;
     visibility: visible;
     display: block;
-    -webkit-transition: opacity 5.5s ease-in-out;
-    -moz-transition: opacity 5.5s ease-in-out;
-    -o-transition: opacity 5.5s ease-in-out;
-    transition: opacity 5.5s ease-in-out;
+    -webkit-transition: opacity 1.5s ease-in-out;
+    -moz-transition: opacity 1.5s ease-in-out;
+    -o-transition: opacity 1.5s ease-in-out;
+    transition: opacity 1.5s ease-in-out;
 }
 
 .hideElement {
