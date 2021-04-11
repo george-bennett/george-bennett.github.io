@@ -89,16 +89,24 @@ nav .navbar-nav li a:hover {
     min-height: 200px;
     color: #2BAE66FF;
     /*text-shadow: 1px 1px 10px white;*/
-    text-shadow: 0.15em 0 rgb(255 255 255), 0 0.15em rgb(255 255 255), -0.15em 0 rgb(255 255 255), 0 -0.15em rgb(255 255 255), -0.15em -0.15em rgb(255 255 255), -0.15em 0.15em rgb(255 255 255), 0.15em -0.15em rgb(255 255 255), 0.15em 0.15em rgb(255 255 255);
     /*font-weight: 900;
     letter-spacing: 0.01em;*/
 }
 
-p {
-padding-top: 1em;
-padding-bottom: 1em;
-
+.shadow-para {
+    text-shadow: 0.15em 0 rgb(255 255 255), 0 0.15em rgb(255 255 255), -0.15em 0 rgb(255 255 255), 
+        0 -0.15em rgb(255 255 255), -0.15em -0.15em rgb(255 255 255), -0.15em 0.15em rgb(255 255 255),
+        0.15em -0.15em rgb(255 255 255), 0.15em 0.15em rgb(255 255 255);
 }
+
+
+
+
+
+p {
+    padding-top: 1em;
+    padding-bottom: 1em;
+ }
 
 #work {
     opacity: 0;
@@ -147,10 +155,6 @@ padding-bottom: 1em;
     font-size: 0;
 }
 
-
-
-
-
 .hideEle {
     height: 0;
     font-size: 0;
@@ -166,7 +170,6 @@ padding-bottom: 1em;
 display: none;
 
 }
-
 
 /*
 .col-lg-6 {
@@ -198,9 +201,10 @@ text-align: center;
     text-align: center;
     border-radius: 3%;
     box-shadow: 1.5px 5px;
+    text-shadow: none;
 }
 
-.content .content-overlay {
+    .content .content-overlay {
         background: rgba(0, 0, 0, 0.7);
         position: absolute;
         top: 0;
@@ -212,8 +216,9 @@ text-align: center;
         text-align: center;
         -webkit-transition: all 0.5s ease-in-out 0s;
         -moz-transition: all 0.5s ease-in-out 0s;
-        transition: all 0.5s ease-in-out 0s
-}
+        transition: all 0.5s ease-in-out 0s;
+        text-shadow: 0;
+    }
 
 
 .content:hover .content-overlay {
@@ -248,13 +253,14 @@ text-align: center;
     -webkit-transition: all 0.3s ease-in-out 0s;
     -moz-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
+    text-shadow: none;
 }
 
 .content:hover .content-details {
     top: 50%;
     left: 50%;
     opacity: 1;
-
+    text-shadow: none;
 }
 
 .content:hover .content-details-hidden {
@@ -272,12 +278,13 @@ text-align: center;
     margin: 0.5em;
     text-transform: uppercase;
     font-size: 1.2em;
+    text-shadow: none;
 }
-
 .content-details p {
     font-family: 'Roboto';
     color: #fff;
     font-size: 0.8em;
+    text-shadow: none;
 }
 
 
