@@ -9,9 +9,6 @@ $('.nav-link').click(function (event) {
 
 });
 
-$(document).ready(function () {
-    
-});
 
 
 const getAboutSection = document.getElementById('about');
