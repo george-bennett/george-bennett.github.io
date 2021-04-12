@@ -1,19 +1,22 @@
 // This will contain JavaScript Stuff for Website / Bootstrap 5
 //Temporary until I can figure out how to load href without the # symbol
-/*
+
 $('.nav-link').click(function (event) {
     event.preventDefault();
-    window.location.hash = '';
-});
-*/
-//document.getElementById("work").className += " fadeIn";
+    //window.location.hash = '';
+    console.log(window.location.hash)
+    $(this).scrollTop(0);
 
+});
+
+$(document).ready(function () {
+    
+});
 
 
 const getAboutSection = document.getElementById('about');
 const getWorkSection = document.getElementById('work');
 const getUXGamesSection = document.getElementById('uxGames');
-
 
 const navBarAbout = document.getElementById('aboutNav');
 const navBarWork = document.getElementById('workNav');
@@ -28,7 +31,6 @@ $(document).ready(function () {
     /*! Fades in page on load */
     $('#work').css('display', 'none');
     $('#work').fadeIn(100);
-
 });
 
 /*
@@ -54,7 +56,6 @@ $(document).ready(function () {
 });
 */
 
-
 //work
 document.getElementById('workNav').onclick = function () {
     getAboutSection.classList.remove('fadeIn');
@@ -62,6 +63,9 @@ document.getElementById('workNav').onclick = function () {
    
     getUXGamesSection.classList.remove('fadeIn');
     getUXGamesSection.classList.add('hide');
+
+
+   
 
     getWorkSection.classList.remove('hide');
     getWorkSection.classList.add('fadeIn');
@@ -72,7 +76,7 @@ document.getElementById('workNav').onclick = function () {
 
 
     //window.location.hash = '';
-
+    /*
     var final_url = "";
     var current_url = window.location.hash
     console.log(current_url);
@@ -82,7 +86,7 @@ document.getElementById('workNav').onclick = function () {
         console.log(final_url);
     }
     history.pushState('data', '', final_url);
-
+    */
 
 }
 
@@ -230,9 +234,6 @@ $(document).ready(function () {
             $("#game2-cn").fadeIn(400);
             $("#game3-cn").fadeIn(500);
             $("#game4-cn").fadeIn(500);
-
- 
-
         }
     });
 });
