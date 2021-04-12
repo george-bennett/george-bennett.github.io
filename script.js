@@ -61,30 +61,12 @@ document.getElementById('workNav').onclick = function () {
     getUXGamesSection.classList.remove('fadeIn');
     getUXGamesSection.classList.add('hide');
 
-
-   
-
     getWorkSection.classList.remove('hide');
     getWorkSection.classList.add('fadeIn');
 
     navBarWork.className += " active";
     navBarAbout.className = "nav-link";
     navBarUXGames.className = "nav-link";
-
-
-    //window.location.hash = '';
-    /*
-    var final_url = "";
-    var current_url = window.location.hash
-    console.log(current_url);
-
-    if (current_url.indexOf('#') != -1) {
-        final_url = current_url.replace('#', '');
-        console.log(final_url);
-    }
-    history.pushState('data', '', final_url);
-    */
-
 }
 
 //about
@@ -162,7 +144,7 @@ $(document).ready(function () {
             $("#game4-cn").fadeOut(1);
 
             getGame1_cn.classList.remove('col-lg-6');
-            //getGame1_cn.classList.add('col-lg-12');
+            getGame1_cn.classList.add('col-lg-12');
             $("#game1-cn").fadeIn(1000);
             //SHOW TEXT ABOUT GAME 1
             getGame1_txt.classList.remove('hideEle');
@@ -170,6 +152,7 @@ $(document).ready(function () {
         else {
             //REMOVE GAME 1 TXT
             getGame1_txt.classList.add('hideEle');
+            getGame1_cn.classList.remove('col-lg-12');
             getGame1_cn.classList.add('col-lg-6');
             $("#game1-cn").fadeIn(400);
             $("#game2-cn").fadeIn(500);
@@ -189,7 +172,7 @@ $(document).ready(function () {
             $("#game4-cn").fadeOut(1);
 
             getGame1_cn.classList.remove('col-lg-6');
-            //getGame1_cn.classList.add('col-lg-12');
+            getGame1_cn.classList.add('col-lg-12');
             $("#game1-cn").fadeIn(1000);
             //SHOW TEXT ABOUT GAME 1
             getGame1_txt.classList.remove('hideEle');
@@ -197,6 +180,7 @@ $(document).ready(function () {
         else {
             //REMOVE GAME 1 TXT
             getGame1_txt.classList.add('hideEle');
+            getGame1_cn.classList.remove('col-lg-12');
             getGame1_cn.classList.add('col-lg-6');
             $("#game1-cn").fadeIn(400);
             $("#game2-cn").fadeIn(500);
@@ -216,7 +200,8 @@ $(document).ready(function () {
             $("#game4-cn").fadeOut(1);
 
             getGame2_cn.classList.remove('col-lg-6');
-            //getGame1_cn.classList.add('col-lg-12');
+            getGame2_cn.classList.add('col-lg-12');
+
             $("#game2-cn").fadeIn(1000);
             //SHOW TEXT ABOUT GAME 2
             getGame2_txt.classList.remove('hideEle');
@@ -226,7 +211,9 @@ $(document).ready(function () {
             //REMOVE GAME 2 TXT
             getGame2_txt.classList.add('hideEle');
 
+            getGame2_cn.classList.remove('col-lg-12');
             getGame2_cn.classList.add('col-lg-6');
+
             $("#game1-cn").fadeIn(500);
             $("#game2-cn").fadeIn(400);
             $("#game3-cn").fadeIn(500);
@@ -244,7 +231,7 @@ $(document).ready(function () {
             $("#game4-cn").fadeOut(1);
 
             getGame2_cn.classList.remove('col-lg-6');
-           
+            getGame2_cn.classList.add('col-lg-12');
             $("#game2-cn").fadeIn(1000);
             //SHOW TEXT ABOUT GAME 2
             getGame2_txt.classList.remove('hideEle');
@@ -252,6 +239,7 @@ $(document).ready(function () {
         else {
             //REMOVE GAME 2 TXT
             getGame2_txt.classList.add('hideEle');
+            getGame2_cn.classList.remove('col-lg-12');
             getGame2_cn.classList.add('col-lg-6');
             $("#game1-cn").fadeIn(500);
             $("#game2-cn").fadeIn(400);
@@ -269,8 +257,9 @@ $(document).ready(function () {
             $("#game3-cn").fadeOut(1);
             $("#game4-cn").fadeOut(1);
 
+          
             getGame3_cn.classList.remove('col-lg-6');
- 
+            getGame3_cn.classList.add('col-lg-12');
             $("#game3-cn").fadeIn(1000);
 
             //SHOW TEXT ABOUT GAME 3
@@ -281,7 +270,9 @@ $(document).ready(function () {
              //REMOVE GAME 3 TXT
             getGame3_txt.classList.add('hideEle');
 
+            getGame3_cn.classList.remove('col-lg-12');
             getGame3_cn.classList.add('col-lg-6');
+
             $("#game1-cn").fadeIn(500);
             $("#game2-cn").fadeIn(500);
             $("#game3-cn").fadeIn(400);
@@ -301,7 +292,8 @@ $(document).ready(function () {
             $("#game4-cn").fadeOut(1);
 
             getGame3_cn.classList.remove('col-lg-6');
-            //getGame1_cn.classList.add('col-lg-12');
+            getGame3_cn.classList.add('col-lg-12');
+
             $("#game3-cn").fadeIn(1000);
             //SHOW TEXT ABOUT GAME 3
             getGame3_txt.classList.remove('hideEle');
@@ -309,7 +301,10 @@ $(document).ready(function () {
         else {
             //REMOVE GAME 3 TXT
             getGame3_txt.classList.add('hideEle');
+
+            getGame3_cn.classList.remove('col-lg-12');
             getGame3_cn.classList.add('col-lg-6');
+
             $("#game1-cn").fadeIn(500);
             $("#game2-cn").fadeIn(500);
             $("#game3-cn").fadeIn(400);
@@ -326,8 +321,9 @@ $(document).ready(function () {
             $("#game3-cn").fadeOut(1);
             $("#game4-cn").fadeOut(1);
 
-            getGame4_cn.classList.remove('col-lg-6');
-            //getGame1_cn.classList.add('col-lg-12');
+            getGame4_cn.classList.remove('col-lg-6'); 
+            getGame4_cn.classList.add('col-lg-12');
+
             $("#game4-cn").fadeIn(1000);
 
             //SHOW TEXT ABOUT GAME 4
@@ -336,8 +332,10 @@ $(document).ready(function () {
         else {
             //REMOVE GAME 4 TXT
             getGame4_txt.classList.add('hideEle');
-
+          
+            getGame4_cn.classList.remove('col-lg-12');
             getGame4_cn.classList.add('col-lg-6');
+
             $("#game1-cn").fadeIn(500);
             $("#game2-cn").fadeIn(500);
             $("#game3-cn").fadeIn(500);
@@ -357,7 +355,7 @@ $(document).ready(function () {
             $("#game4-cn").fadeOut(1);
 
             getGame4_cn.classList.remove('col-lg-6');
-            //getGame1_cn.classList.add('col-lg-12');
+            getGame4_cn.classList.add('col-lg-12');
             $("#game4-cn").fadeIn(1000);
             //SHOW TEXT ABOUT GAME 4
             getGame4_txt.classList.remove('hideEle');
@@ -365,7 +363,10 @@ $(document).ready(function () {
         else {
             //REMOVE GAME 4 TXT
             getGame4_txt.classList.add('hideEle');
+
+            getGame3_cn.classList.remove('col-lg-12');
             getGame4_cn.classList.add('col-lg-6');
+
             $("#game1-cn").fadeIn(500);
             $("#game2-cn").fadeIn(500);
             $("#game3-cn").fadeIn(500);

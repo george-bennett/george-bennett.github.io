@@ -83,14 +83,10 @@ nav .navbar-nav li a:hover {
     margin-top: 0.5em;
     font-family: 'Roboto';
     font-weight: 500;
-    padding-left: 2em;
-    padding-right: 2em;
-    /*border-radius: 10px;*/
+    padding-left: 5em;
+    padding-right: 5em;
     min-height: 200px;
     color: #2BAE66FF;
-    /*text-shadow: 1px 1px 10px white;*/
-    /*font-weight: 900;
-    letter-spacing: 0.01em;*/
 }
 
 .shadow-para {
@@ -98,10 +94,6 @@ nav .navbar-nav li a:hover {
         0 -0.15em rgb(255 255 255), -0.15em -0.15em rgb(255 255 255), -0.15em 0.15em rgb(255 255 255),
         0.15em -0.15em rgb(255 255 255), 0.15em 0.15em rgb(255 255 255);
 }
-
-
-
-
 
 p {
     padding-top: 1em;
@@ -112,7 +104,6 @@ p {
     opacity: 0;
     padding-top: 1.5em;
 }
-
 #about, #uxGames {
     opacity: 0;
     padding-top: 1.0em;
@@ -130,11 +121,6 @@ p {
         height: 0px;
         opacity: 0;
     }
-
-
-
-
-
 
 .fadeIn {
     opacity: 1;
@@ -162,29 +148,12 @@ p {
 
 }
 
-.show{
-    display: block;
+/*Image size when uxgames images are expanded*/
+.col-lg-12  .content{
+width: 75%;
+margin-left: auto;
+margin-right: auto;
 }
-.hidden{
-display: none;
-
-}
-
-/*
-.col-lg-6 {
-    position: relative;
-    flex-shrink: 1;
-    flex-wrap: wrap;
-    transition: all 0.5s ease;
-}
-/*
-.col-lg-12 {
-    position: relative;
-    flex-grow: 1;
-    flex-wrap: wrap;
-    transition: all 0.5s ease-in-out;
-}
-*/
 
 .gametxt {
 text-align: center;
@@ -194,13 +163,13 @@ text-align: center;
 /*For image overlay command interactivity*/
 .content {
     position: relative;
-    margin: auto;
     overflow: hidden;
     align-items: center;
     text-align: center;
     border-radius: 3%;
     box-shadow: 1.5px 5px;
     text-shadow: none;
+    margin: 0.5em;
 }
 
     .content .content-overlay {
