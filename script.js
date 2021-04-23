@@ -131,7 +131,9 @@ const getGame4_overlay = document.getElementById('game4-overlay');
 const getGame4_cn = document.getElementById('game4-cn');
 const getGame4_img = document.getElementById('game4_img');
 const getGame4_txt = document.getElementById('game4_txt');
-
+const getGame4_text_img_1 = document.getElementById('game4_txt_img_1');
+const getGame4_text_img_2 = document.getElementById('game4_txt_img_2');
+const getGame4_text_img_3 = document.getElementById('game4_txt_img_3');
 
 
 //Desktop - 1
@@ -328,11 +330,22 @@ $(document).ready(function () {
 
             //SHOW TEXT ABOUT GAME 4
             getGame4_txt.classList.remove('hideEle');
+
+
+            getGame4_text_img_1.classList.remove('hideEle');
+            getGame4_text_img_2.classList.remove('hideEle');
+            getGame4_text_img_3.classList.remove('hideEle');
+
+
         }
         else {
             //REMOVE GAME 4 TXT
             getGame4_txt.classList.add('hideEle');
-          
+
+            getGame4_text_img_1.classList.add('hideEle');
+            getGame4_text_img_2.classList.add('hideEle');
+            getGame4_text_img_3.classList.add('hideEle');
+
             getGame4_cn.classList.remove('col-lg-12');
             getGame4_cn.classList.add('col-lg-6');
 
@@ -359,10 +372,23 @@ $(document).ready(function () {
             $("#game4-cn").fadeIn(1000);
             //SHOW TEXT ABOUT GAME 4
             getGame4_txt.classList.remove('hideEle');
+
+            getGame4_text_img_1.classList.remove('hideEle');
+            getGame4_text_img_2.classList.remove('hideEle');
+            getGame4_text_img_3.classList.remove('hideEle');
+
+
         }
         else {
             //REMOVE GAME 4 TXT
             getGame4_txt.classList.add('hideEle');
+
+
+            getGame4_text_img_1.classList.add('hideEle');
+            getGame4_text_img_2.classList.add('hideEle');
+            getGame4_text_img_3.classList.add('hideEle');
+
+
 
             getGame3_cn.classList.remove('col-lg-12');
             getGame4_cn.classList.add('col-lg-6');
@@ -382,7 +408,7 @@ $(document).ready(function () {
 $(function () {
     $(window).bind("load", function () {
         console.log($(this).width())
-        if ($(this).width() < 500) {
+        if ($(this).width() < 450) {
             $('#game1-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
             $('#game1-overlay-details').removeClass('content-details').addClass('content-details-hidden');
 
@@ -414,7 +440,7 @@ $(function () {
 $(function () {
     $(window).bind("resize", function () {
         console.log($(this).width())
-        if ($(this).width() < 500) {
+        if ($(this).width() < 450) {
             $('#game1-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
             $('#game1-overlay-details').removeClass('content-details').addClass('content-details-hidden');
 
