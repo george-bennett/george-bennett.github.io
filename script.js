@@ -30,6 +30,7 @@ $(document).ready(function () {
     /*! Fades in page on load */
     $('#work').css('display', 'none');
     $('#work').fadeIn(100);
+    window.location.hash = 'work';
 });
 
 /*
@@ -58,9 +59,13 @@ $(document).ready(function () {
 });
 */
 
+var pageHistory = "work";
+
 //work
 document.getElementById('workNav').onclick = function () {
-    window.location.hash = 'work';
+    history.pushState(pageHistory, 'workPage', '/work');
+
+    //window.location.hash = 'work';
 
     getAboutSection.classList.remove('fadeIn');
     getAboutSection.classList.add('hide');
@@ -78,7 +83,9 @@ document.getElementById('workNav').onclick = function () {
 
 //about
 document.getElementById('aboutNav').onclick = function () {
-    window.location.hash = 'about';
+    //window.location.hash = 'about';
+
+    history.pushState(pageHistory, 'aboutPage', '/about');
 
     getWorkSection.classList.remove('fadeIn');
     getWorkSection.classList.add('hide');
@@ -96,8 +103,8 @@ document.getElementById('aboutNav').onclick = function () {
 
 //ux
 document.getElementById('uxGamesNav').onclick = function () {
-    window.location.hash = 'uxingames';
-
+    //window.location.hash = 'uxingames';
+    history.pushState(pageHistory, 'uxInGamesPage', '/uxingames');
     getAboutSection.classList.remove('fadeIn');
     getAboutSection.classList.add('hide');
 
