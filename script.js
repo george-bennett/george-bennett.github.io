@@ -9,7 +9,9 @@ $('.nav-link').click(function (event) {
 
 });
 
+$('#link').click(function () {
 
+});
 
 const getAboutSection = document.getElementById('about');
 const getWorkSection = document.getElementById('work');
@@ -30,28 +32,31 @@ $(document).ready(function () {
     $('#work').fadeIn(100);
 });
 
-/*
+
 $(document).ready(function () {
     $("#workNav").click(function () {   
        // $('#work').css('display', 'none');
-        $('#work').fadeIn(1000);
+        window.location.hash = 'work';
+        return false;
     });
 });
 
 $(document).ready(function () {
     $("#aboutNav").click(function () {
      //   $('#work').css('display', 'none');
-        $('#work').fadeIn(1000);
+        window.location.hash = 'about';
+        return false;
     });
 });
 
 $(document).ready(function () {
     $("#uxGamesNav").click(function () {
      //   $('#uxGames').css('display', 'none');
-        $('#uxGames').fadeIn(1000);
+        window.location.hash = 'uxingames';
+        return false;
     });
 });
-*/
+
 
 //work
 document.getElementById('workNav').onclick = function () {
