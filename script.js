@@ -32,76 +32,12 @@ $(document).ready(function () {
     /*! Fades in page on load */
     $('#work').css('display', 'none');
     $('#work').fadeIn(100);
-    history.pushState(pageHistory, 'workPage', '/work');
+    history.replaceState(pageHistory, 'workPage', '/work');
 });
-
-//If back/forward is pressed
-$(window).bind("load", function () {
-    /*! Fades in page on load */
-
-    if (history.pushState.name == '/work') {
-        getAboutSection.classList.remove('fadeIn');
-        getAboutSection.classList.add('hide');
-
-        getUXGamesSection.classList.remove('fadeIn');
-        getUXGamesSection.classList.add('hide');
-
-        getWorkSection.classList.remove('hide');
-        getWorkSection.classList.add('fadeIn');
-
-        navBarWork.className += " active";
-        navBarAbout.className = "nav-link";
-        navBarUXGames.className = "nav-link";
-    }
-    else if (history.pushState.name == '/about') {
-        getWorkSection.classList.remove('fadeIn');
-        getWorkSection.classList.add('hide');
-
-        getUXGamesSection.classList.remove('fadeIn');
-        getUXGamesSection.classList.add('hide');
-
-        getAboutSection.classList.remove('hide');
-        getAboutSection.classList.add('fadeIn')
-
-        navBarAbout.className += " active";
-        navBarWork.className = "nav-link";
-        navBarUXGames.className = "nav-link";
-    }
-    else if (history.pushState.name == '/uxingames'){
-
-        getAboutSection.classList.remove('fadeIn');
-        getAboutSection.classList.add('hide');
-
-        getWorkSection.classList.remove('fadeIn');
-        getWorkSection.classList.add('hide');
-
-        getUXGamesSection.classList.remove('hide');
-        getUXGamesSection.classList.add('fadeIn');
-
-        navBarUXGames.className += " active";
-        navBarWork.className = "nav-link";
-        navBarAbout.className = "nav-link";
-    }
-    else {
-        console.log("ERROR");
-    }
-    history.pushState(pageHistory, 'workPage', '/work');
-});
-
-
-
-
-
-
-
-
-
 
 //work
 document.getElementById('workNav').onclick = function () {
-    history.pushState(pageHistory, 'workPage', '/work');
-
-    //window.location.hash = 'work';
+   // history.pushState(pageHistory, 'workPage', '/work');
 
     getAboutSection.classList.remove('fadeIn');
     getAboutSection.classList.add('hide');
@@ -119,9 +55,7 @@ document.getElementById('workNav').onclick = function () {
 
 //about
 document.getElementById('aboutNav').onclick = function () {
-    //window.location.hash = 'about';
-
-    history.pushState(pageHistory, 'aboutPage', '/about');
+   // history.pushState(pageHistory, 'aboutPage', '/about');
 
     getWorkSection.classList.remove('fadeIn');
     getWorkSection.classList.add('hide');
@@ -139,8 +73,7 @@ document.getElementById('aboutNav').onclick = function () {
 
 //ux
 document.getElementById('uxGamesNav').onclick = function () {
-    //window.location.hash = 'uxingames';
-    history.pushState(pageHistory, 'uxInGamesPage', '/uxingames');
+   // history.pushState(pageHistory, 'uxInGamesPage', '/uxingames');
 
     getAboutSection.classList.remove('fadeIn');
     getAboutSection.classList.add('hide');
