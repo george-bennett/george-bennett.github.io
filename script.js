@@ -32,11 +32,11 @@ $(document).ready(function () {
     $('#work').fadeIn(100);
 });
 
-
+/*
 $(document).ready(function () {
     $("#workNav").click(function () {   
        // $('#work').css('display', 'none');
-        window.location.hash = 'work';
+        window.history.pushState('obj', 'newtitle', '/abc');
         return false;
     });
 });
@@ -44,7 +44,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     $("#aboutNav").click(function () {
      //   $('#work').css('display', 'none');
-        window.location.hash = 'about';
+        window.history.pushState('obj', 'newtitle', '/abc');
         return false;
     });
 });
@@ -52,14 +52,16 @@ $(document).ready(function () {
 $(document).ready(function () {
     $("#uxGamesNav").click(function () {
      //   $('#uxGames').css('display', 'none');
-        window.location.hash = 'uxingames';
+        window.history.pushState('obj', 'newtitle', '/abc');
         return false;
     });
 });
-
+*/
 
 //work
 document.getElementById('workNav').onclick = function () {
+    window.location.hash = 'work';
+
     getAboutSection.classList.remove('fadeIn');
     getAboutSection.classList.add('hide');
    
@@ -76,7 +78,8 @@ document.getElementById('workNav').onclick = function () {
 
 //about
 document.getElementById('aboutNav').onclick = function () {
-   
+    window.location.hash = 'about';
+
     getWorkSection.classList.remove('fadeIn');
     getWorkSection.classList.add('hide');
 
@@ -93,6 +96,7 @@ document.getElementById('aboutNav').onclick = function () {
 
 //ux
 document.getElementById('uxGamesNav').onclick = function () {
+    window.location.hash = 'uxingames';
 
     getAboutSection.classList.remove('fadeIn');
     getAboutSection.classList.add('hide');
