@@ -389,12 +389,12 @@ $(document).ready(function () {
 
 
 
-
+/*
 //Disable Overlay in Mobile Formats
 $(function () {
-    $(window).bind("load", function () {
+    $(window).on("load", function () {
         console.log($(this).width())
-        if ($(this).width() < 450) {
+        if ($(this).width() < 600) {
             $('#game1-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
             $('#game1-overlay-details').removeClass('content-details').addClass('content-details-hidden');
 
@@ -407,7 +407,7 @@ $(function () {
             $('#game4-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
             $('#game4-overlay-details').removeClass('content-details').addClass('content-details-hidden');
         }
-        else {
+        if ($(this).width() > 600) {
             $('game1-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
             $('game1-overlay-details').removeClass('content-details-hidden').addClass('content-details');
 
@@ -424,9 +424,9 @@ $(function () {
 })
 
 $(function () {
-    $(window).bind("resize", function () {
+    $(window).on("resize", function () {
         console.log($(this).width())
-        if ($(this).width() < 450) {
+        if ($(this).width() < 600) {
             $('#game1-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
             $('#game1-overlay-details').removeClass('content-details').addClass('content-details-hidden');
 
@@ -439,7 +439,7 @@ $(function () {
             $('#game4-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
             $('#game4-overlay-details').removeClass('content-details').addClass('content-details-hidden');
         }
-        else {
+        else  {
             $('game1-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
             $('game1-overlay-details').removeClass('content-details-hidden').addClass('content-details');
 
@@ -455,8 +455,42 @@ $(function () {
     })
 })
 
+*/
+$(function () {
+    $(window).on("resize", function () {
+        console.log($(this).width())
+        if ($(this).width() < 600) {
+
+            $('#game1-overlay').addClass('content-overlay-hidden');
+            $('#game2-overlay').addClass('content-overlay-hidden');
+            $('#game3-overlay').addClass('content-overlay-hidden');
+            $('#game4-overlay').addClass('content-overlay-hidden');
+
+            $('#game1-overlay-details').addClass('content-details-hidden');
+            $('#game2-overlay-details').addClass('content-details-hidden');
+            $('#game3-overlay-details').addClass('content-details-hidden');
+            $('#game4-overlay-details').addClass('content-details-hidden');
+
+           
+        }
+        else {
+            $('#game1-overlay').removeClass('content-overlay-hidden');
+            $('#game2-overlay').removeClass('content-overlay-hidden');
+            $('#game3-overlay').removeClass('content-overlay-hidden');
+            $('#game4-overlay').removeClass('content-overlay-hidden');
 
 
+            $('#game1-overlay-details').removeClass('content-details-hidden');
+            $('#game2-overlay-details').removeClass('content-details-hidden');
+            $('#game3-overlay-details').removeClass('content-details-hidden');
+            $('#game4-overlay-details').removeClass('content-details-hidden');
+
+
+
+
+        }
+    })
+})
 
 
 
