@@ -2,7 +2,7 @@
 //Temporary until I can figure out how to load href without the # symbol
 
 $('.nav-link').click(function (event) {
-    event.preventDefault();
+    //event.preventDefault();
     //window.location.hash = '';
     console.log(window.location.hash)
     $(this).scrollTop(0);
