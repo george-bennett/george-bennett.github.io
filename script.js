@@ -25,41 +25,84 @@ const navBarTest = document.getElementById('testNav');
 //getWorkSection.classList.remove('hide');
 getWorkSection.classList.add('fadeIn');
 
-$(document).ready(function () {
+var pageHistory = "work";
 
+//Start
+$(document).ready(function () {
     /*! Fades in page on load */
     $('#work').css('display', 'none');
     $('#work').fadeIn(100);
-    window.location.hash = 'work';
+    history.pushState(pageHistory, 'workPage', '/work');
 });
 
-/*
+//If back/forward is pressed
 $(document).ready(function () {
-    $("#workNav").click(function () {   
-       // $('#work').css('display', 'none');
-        window.history.pushState('obj', 'newtitle', '/abc');
-        return false;
-    });
+    /*! Fades in page on load */
+
+    if (history.pushState.name == '/work') {
+        getAboutSection.classList.remove('fadeIn');
+        getAboutSection.classList.add('hide');
+
+        getUXGamesSection.classList.remove('fadeIn');
+        getUXGamesSection.classList.add('hide');
+
+        getWorkSection.classList.remove('hide');
+        getWorkSection.classList.add('fadeIn');
+
+        navBarWork.className += " active";
+        navBarAbout.className = "nav-link";
+        navBarUXGames.className = "nav-link";
+    }
+    else if (history.pushState.name == '/about') {
+        getWorkSection.classList.remove('fadeIn');
+        getWorkSection.classList.add('hide');
+
+        getUXGamesSection.classList.remove('fadeIn');
+        getUXGamesSection.classList.add('hide');
+
+        getAboutSection.classList.remove('hide');
+        getAboutSection.classList.add('fadeIn')
+
+        navBarAbout.className += " active";
+        navBarWork.className = "nav-link";
+        navBarUXGames.className = "nav-link";
+    }
+    else if (history.pushState.name == '/uxingames'){
+
+        getAboutSection.classList.remove('fadeIn');
+        getAboutSection.classList.add('hide');
+
+        getWorkSection.classList.remove('fadeIn');
+        getWorkSection.classList.add('hide');
+
+        getUXGamesSection.classList.remove('hide');
+        getUXGamesSection.classList.add('fadeIn');
+
+        navBarUXGames.className += " active";
+        navBarWork.className = "nav-link";
+        navBarAbout.className = "nav-link";
+    }
+    else {
+        console.log("ERROR");
+
+    }
+
+
+    history.pushState(pageHistory, 'workPage', '/work');
+
+
+
 });
 
-$(document).ready(function () {
-    $("#aboutNav").click(function () {
-     //   $('#work').css('display', 'none');
-        window.history.pushState('obj', 'newtitle', '/abc');
-        return false;
-    });
-});
 
-$(document).ready(function () {
-    $("#uxGamesNav").click(function () {
-     //   $('#uxGames').css('display', 'none');
-        window.history.pushState('obj', 'newtitle', '/abc');
-        return false;
-    });
-});
-*/
 
-var pageHistory = "work";
+
+
+
+
+
+
+
 
 //work
 document.getElementById('workNav').onclick = function () {
@@ -105,6 +148,7 @@ document.getElementById('aboutNav').onclick = function () {
 document.getElementById('uxGamesNav').onclick = function () {
     //window.location.hash = 'uxingames';
     history.pushState(pageHistory, 'uxInGamesPage', '/uxingames');
+
     getAboutSection.classList.remove('fadeIn');
     getAboutSection.classList.add('hide');
 
