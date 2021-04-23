@@ -160,9 +160,15 @@ p {
 margin-left: auto;
 margin-right: auto;
 transition: all .5s;
+width: 75%;
 }
 
-
+.col-lg-12 #game-4-imgs {
+    margin-left: auto;
+    margin-right: auto;
+    transition: all .5s;
+    width: 75%;
+}
 
 .gametxt {
 text-align: center;
