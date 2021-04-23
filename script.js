@@ -36,7 +36,7 @@ $(document).ready(function () {
 });
 
 //If back/forward is pressed
-$(document).ready(function () {
+$(window).bind("load", function () {
     /*! Fades in page on load */
 
     if (history.pushState.name == '/work') {
@@ -84,16 +84,9 @@ $(document).ready(function () {
     }
     else {
         console.log("ERROR");
-
     }
-
-
     history.pushState(pageHistory, 'workPage', '/work');
-
-
-
 });
-
 
 
 
