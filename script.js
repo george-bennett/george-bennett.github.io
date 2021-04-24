@@ -37,7 +37,6 @@ $(document).ready(function () {
 
 //PUSH AND POPSTATE FOR BACK/FORWARD
 function work() {
-    window.location = originalURL;
     history.pushState({
         page_id: 1,
         page: "work"
@@ -65,7 +64,6 @@ function uxGames() {
 }
 
 function showSection(name) {  
-    let locat = location.href;
         if (name === 'work') {
             getAboutSection.classList.remove('fadeIn');
             getAboutSection.classList.add('hide');
