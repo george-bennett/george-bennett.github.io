@@ -41,6 +41,7 @@ $(document).load(function () {
 
 //PUSH AND POPSTATE FOR BACK/FORWARD
 function work() {
+    window.location.href = 'index.html';
     history.pushState({
         page_id: 1,
         page: "work"
@@ -50,6 +51,7 @@ function work() {
 }
 
 function about() {
+    window.location.href = 'index.html';
     history.pushState({
         page_id: 2,
         page: "about"
@@ -59,6 +61,8 @@ function about() {
 }
 
 function uxGames() {
+
+    window.location.href = 'index.html';
 
     history.pushState({
         page_id: 3,
@@ -84,7 +88,6 @@ function showSection(name) {
             navBarAbout.className = "nav-link";
             navBarUXGames.className = "nav-link";
 
-            history.pushState(null, null, locat);
 
         }
         else if (name === 'about') {
@@ -101,7 +104,6 @@ function showSection(name) {
             navBarWork.className = "nav-link";
             navBarUXGames.className = "nav-link";
 
-            history.pushState(null, null, locat);
         }
         else if (name === 'uxGames') {
             getAboutSection.classList.remove('fadeIn');
@@ -116,8 +118,6 @@ function showSection(name) {
             navBarUXGames.className += " active";
             navBarWork.className = "nav-link";
             navBarAbout.className = "nav-link";
-
-            history.pushState(null, null, locat);
         }
 }
 //Popstate history
