@@ -10,6 +10,7 @@ $('.nav-link').click(function (event) {
 });
 
 
+
 const getAboutSection = document.getElementById('about');
 const getWorkSection = document.getElementById('work');
 const getUXGamesSection = document.getElementById('uxGames');
@@ -22,8 +23,6 @@ const navBarTest = document.getElementById('testNav');
 //getWorkSection.classList.remove('hide');
 getWorkSection.classList.add('fadeIn');
 
-var pageHistory = "work";
-
 //Start
 $(document).ready(function () {
     /*! Fades in page on load */
@@ -32,11 +31,15 @@ $(document).ready(function () {
     work();
 });
 
+
+$(document).load(function () {
+    /*! Fades in page on load */
+    $('#work').css('display', 'none');
+    $('#work').fadeIn(100);
+    work();
+});
+
 //PUSH AND POPSTATE FOR BACK/FORWARD
-
-
-
-
 function work() {
     history.pushState({
         page_id: 1,
@@ -65,7 +68,8 @@ function uxGames() {
     showSection("uxGames");
 }
 
-function showSection(name) {   
+function showSection(name) {  
+    let locat = location.href;
         if (name === 'work') {
             getAboutSection.classList.remove('fadeIn');
             getAboutSection.classList.add('hide');
@@ -79,6 +83,9 @@ function showSection(name) {
             navBarWork.className += " active";
             navBarAbout.className = "nav-link";
             navBarUXGames.className = "nav-link";
+
+            history.pushState(null, null, locat);
+
         }
         else if (name === 'about') {
             getWorkSection.classList.remove('fadeIn');
@@ -93,6 +100,8 @@ function showSection(name) {
             navBarAbout.className += " active";
             navBarWork.className = "nav-link";
             navBarUXGames.className = "nav-link";
+
+            history.pushState(null, null, locat);
         }
         else if (name === 'uxGames') {
             getAboutSection.classList.remove('fadeIn');
@@ -107,6 +116,8 @@ function showSection(name) {
             navBarUXGames.className += " active";
             navBarWork.className = "nav-link";
             navBarAbout.className = "nav-link";
+
+            history.pushState(null, null, locat);
         }
 }
 //Popstate history
