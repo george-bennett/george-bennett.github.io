@@ -20,6 +20,9 @@ const navBarWork = document.getElementById('workNav');
 const navBarUXGames = document.getElementById('uxGamesNav');
 const navBarTest = document.getElementById('testNav');
 
+const originalURL = window.location.href;
+
+
 //getWorkSection.classList.remove('hide');
 //getWorkSection.classList.add('fadeIn');
 
@@ -29,19 +32,12 @@ $(document).ready(function () {
     $('#work').css('display', 'none');
     $('#work').fadeIn(100);
     work();
-});
 
-
-$(document).load(function () {
-    /*! Fades in page on load */
-    $('#work').css('display', 'none');
-    $('#work').fadeIn(100);
-    work();
 });
 
 //PUSH AND POPSTATE FOR BACK/FORWARD
 function work() {
-    location.replace('www.george-bennett.co.uk');
+    window.location = originalURL;
     history.pushState({
         page_id: 1,
         page: "work"
@@ -51,7 +47,6 @@ function work() {
 }
 
 function about() {
-    location.replace('www.george-bennett.co.uk');
     history.pushState({
         page_id: 2,
         page: "about"
@@ -61,7 +56,6 @@ function about() {
 }
 
 function uxGames() {
-    location.replace('www.george-bennett.co.uk');
     history.pushState({
         page_id: 3,
         page: "uxGames"
