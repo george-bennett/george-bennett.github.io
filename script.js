@@ -108,7 +108,6 @@ function showSection(name) {
             navBarUXGames.className += " active";
             navBarWork.className = "nav-link";
             navBarAbout.className = "nav-link";
-
         }
 }
 
