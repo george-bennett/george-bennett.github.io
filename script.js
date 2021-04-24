@@ -116,8 +116,8 @@ function showSection(name) {
 window.onpopstate = function (event) {
     var content = "";
     if (event.state) {
-        content = event.state.plate;
-        console.log(content);
+        content = event.state.page;
+        console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
     }
     showSection(content);
 }
