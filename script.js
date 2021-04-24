@@ -29,7 +29,7 @@ $(document).ready(function () {
     /*! Fades in page on load */
     $('#work').css('display', 'none');
     $('#work').fadeIn(100);
-    history.replaceState(pageHistory, 'workPage', '/work');
+    work();
 });
 
 //PUSH AND POPSTATE FOR BACK/FORWARD
@@ -65,9 +65,7 @@ function uxGames() {
     showSection("uxGames");
 }
 
-function showSection(name) {
-   
-       
+function showSection(name) {   
         if (name === 'work') {
             getAboutSection.classList.remove('fadeIn');
             getAboutSection.classList.add('hide');
@@ -111,32 +109,15 @@ function showSection(name) {
             navBarAbout.className = "nav-link";
         }
 }
-
-
+//Popstate history
 window.onpopstate = function (event) {
-    var content = "";
+    var content = "work";
     if (event.state) {
         content = event.state.page;
         console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
     }
     showSection(content);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*
