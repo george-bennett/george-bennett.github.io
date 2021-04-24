@@ -9,9 +9,6 @@ $('.nav-link').click(function (event) {
 
 });
 
-$('#link').click(function () {
-
-});
 
 const getAboutSection = document.getElementById('about');
 const getWorkSection = document.getElementById('work');
@@ -32,10 +29,14 @@ $(document).ready(function () {
     /*! Fades in page on load */
     $('#work').css('display', 'none');
     $('#work').fadeIn(100);
-   // history.replaceState(pageHistory, 'workPage', '/work');
+    history.replaceState(pageHistory, 'workPage', '/work');
 });
 
 //PUSH AND POPSTATE FOR BACK/FORWARD
+
+
+
+
 function work() {
     history.pushState({
         page_id: 1,
@@ -66,7 +67,7 @@ function uxGames() {
 
 function showSection(name) {
    
-        //history.pushState(pageHistory, 'workPage', '/work');
+       
         if (name === 'Work') {
             getAboutSection.classList.remove('fadeIn');
             getAboutSection.classList.add('hide');
@@ -116,6 +117,7 @@ window.onpopstate = function (event) {
     var content = "";
     if (event.state) {
         content = event.state.plate;
+        console.log(content);
     }
     showSection(content);
 }
