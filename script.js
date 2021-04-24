@@ -4,7 +4,7 @@
 $('.nav-link').click(function (event) {
     //event.preventDefault();
     //window.location.hash = '';
-    console.log(window.location.hash)
+    //console.log(window.location.hash)
     $(this).scrollTop(0);
 
 });
