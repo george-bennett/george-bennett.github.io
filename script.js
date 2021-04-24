@@ -52,7 +52,7 @@ function about() {
         page: "about"
     }, null, "/about");
 
-    showSection("About");
+    showSection("about");
 }
 
 function uxGames() {
