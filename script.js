@@ -21,7 +21,7 @@ const navBarUXGames = document.getElementById('uxGamesNav');
 const navBarTest = document.getElementById('testNav');
 
 //getWorkSection.classList.remove('hide');
-getWorkSection.classList.add('fadeIn');
+//getWorkSection.classList.add('fadeIn');
 
 //Start
 $(document).ready(function () {
@@ -41,7 +41,7 @@ $(document).load(function () {
 
 //PUSH AND POPSTATE FOR BACK/FORWARD
 function work() {
-    window.location.href = 'index.html';
+    location.replace('www.george-bennett.co.uk');
     history.pushState({
         page_id: 1,
         page: "work"
@@ -51,7 +51,7 @@ function work() {
 }
 
 function about() {
-    window.location.href = 'index.html';
+    location.replace('www.george-bennett.co.uk');
     history.pushState({
         page_id: 2,
         page: "about"
@@ -61,9 +61,7 @@ function about() {
 }
 
 function uxGames() {
-
-    window.location.href = 'index.html';
-
+    location.replace('www.george-bennett.co.uk');
     history.pushState({
         page_id: 3,
         page: "uxGames"
