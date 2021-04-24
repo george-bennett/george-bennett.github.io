@@ -32,12 +32,117 @@ $(document).ready(function () {
     /*! Fades in page on load */
     $('#work').css('display', 'none');
     $('#work').fadeIn(100);
-    history.replaceState(pageHistory, 'workPage', '/work');
+   // history.replaceState(pageHistory, 'workPage', '/work');
 });
 
+//PUSH AND POPSTATE FOR BACK/FORWARD
+function work() {
+    history.pushState({
+        page_id: 1,
+        page: "work"
+    }, null, "/work");
+
+    showSection("work");
+}
+
+function about() {
+    history.pushState({
+        page_id: 2,
+        page: "about"
+    }, null, "/about");
+
+    showSection("About");
+}
+
+function uxGames() {
+
+    history.pushState({
+        page_id: 3,
+        page: "uxGames"
+    }, null, "/uxingames");
+
+    showSection("uxGames");
+}
+
+function showSection(name) {
+    document.getElementById(name).onclick = function () {
+        //history.pushState(pageHistory, 'workPage', '/work');
+        if (name === 'Work') {
+            getAboutSection.classList.remove('fadeIn');
+            getAboutSection.classList.add('hide');
+
+            getUXGamesSection.classList.remove('fadeIn');
+            getUXGamesSection.classList.add('hide');
+
+            getWorkSection.classList.remove('hide');
+            getWorkSection.classList.add('fadeIn');
+
+            navBarWork.className += " active";
+            navBarAbout.className = "nav-link";
+            navBarUXGames.className = "nav-link";
+        }
+        else if (name === 'About') {
+            getWorkSection.classList.remove('fadeIn');
+            getWorkSection.classList.add('hide');
+
+            getUXGamesSection.classList.remove('fadeIn');
+            getUXGamesSection.classList.add('hide');
+
+            getAboutSection.classList.remove('hide');
+            getAboutSection.classList.add('fadeIn')
+
+            navBarAbout.className += " active";
+            navBarWork.className = "nav-link";
+            navBarUXGames.className = "nav-link";
+        }
+        else if (name === 'uxGames') {
+            getAboutSection.classList.remove('fadeIn');
+            getAboutSection.classList.add('hide');
+
+            getWorkSection.classList.remove('fadeIn');
+            getWorkSection.classList.add('hide');
+
+            getUXGamesSection.classList.remove('hide');
+            getUXGamesSection.classList.add('fadeIn');
+
+            navBarUXGames.className += " active";
+            navBarWork.className = "nav-link";
+            navBarAbout.className = "nav-link";
+
+        }
+    }
+}
+
+window.onpopstate = function (event) {
+    var content = "";
+    if (event.state) {
+        content = event.state.plate;
+    }
+    showSection(content);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+//NAVIGATION BAR INTERACTIONS
 //work
 document.getElementById('workNav').onclick = function () {
-    history.pushState(pageHistory, 'workPage', '/work');
+    //history.pushState(pageHistory, 'workPage', '/work');
 
     getAboutSection.classList.remove('fadeIn');
     getAboutSection.classList.add('hide');
@@ -55,7 +160,7 @@ document.getElementById('workNav').onclick = function () {
 
 //about
 document.getElementById('aboutNav').onclick = function () {
-    history.pushState(pageHistory, 'aboutPage', '/about');
+   // history.pushState(pageHistory, 'aboutPage', '/about');
 
     getWorkSection.classList.remove('fadeIn');
     getWorkSection.classList.add('hide');
@@ -73,7 +178,7 @@ document.getElementById('aboutNav').onclick = function () {
 
 //ux
 document.getElementById('uxGamesNav').onclick = function () {
-    history.pushState(pageHistory, 'uxInGamesPage', '/uxingames');
+   // history.pushState(pageHistory, 'uxInGamesPage', '/uxingames');
 
     getAboutSection.classList.remove('fadeIn');
     getAboutSection.classList.add('hide');
@@ -88,7 +193,7 @@ document.getElementById('uxGamesNav').onclick = function () {
     navBarWork.className = "nav-link";
     navBarAbout.className = "nav-link";
 }
-
+*/
 
 /*CHANGE UXGAMES ON CLICK OF IMAGE TO DISPLAY TEXT AND RESIZED IMAGE*/
 const getMasterRow = document.getElementById('gm-row-master');
@@ -387,75 +492,17 @@ $(document).ready(function () {
     });
 });
 
-
-
-/*
-//Disable Overlay in Mobile Formats
 $(function () {
     $(window).on("load", function () {
-        console.log($(this).width())
-        if ($(this).width() < 600) {
-            $('#game1-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
-            $('#game1-overlay-details').removeClass('content-details').addClass('content-details-hidden');
-
-            $('#game2-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
-            $('#game2-overlay-details').removeClass('content-details').addClass('content-details-hidden');
-
-            $('#game3-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
-            $('#game3-overlay-details').removeClass('content-details').addClass('content-details-hidden');
-
-            $('#game4-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
-            $('#game4-overlay-details').removeClass('content-details').addClass('content-details-hidden');
-        }
-        if ($(this).width() > 600) {
-            $('game1-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
-            $('game1-overlay-details').removeClass('content-details-hidden').addClass('content-details');
-
-            $('game2-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
-            $('game2-overlay-details').removeClass('content-details-hidden').addClass('content-details');
-
-            $('game3-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
-            $('game3-overlay-details').removeClass('content-details-hidden').addClass('content-details');
-
-            $('game4-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
-            $('game4-overlay-details').removeClass('content-details-hidden').addClass('content-details');
-        }
+       // console.log($(this).pageHistory);
+        console.log("Page Loaded");
     })
 })
 
-$(function () {
-    $(window).on("resize", function () {
-        console.log($(this).width())
-        if ($(this).width() < 600) {
-            $('#game1-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
-            $('#game1-overlay-details').removeClass('content-details').addClass('content-details-hidden');
+window.onhashchange = function () {
+    console.log("Page Hash has changed");
+}
 
-            $('#game2-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
-            $('#game2-overlay-details').removeClass('content-details').addClass('content-details-hidden');
-
-            $('#game3-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
-            $('#game3-overlay-details').removeClass('content-details').addClass('content-details-hidden');
-
-            $('#game4-overlay').removeClass('content-overlay').addClass('content-overlay-hidden');
-            $('#game4-overlay-details').removeClass('content-details').addClass('content-details-hidden');
-        }
-        else  {
-            $('game1-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
-            $('game1-overlay-details').removeClass('content-details-hidden').addClass('content-details');
-
-            $('game2-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
-            $('game2-overlay-details').removeClass('content-details-hidden').addClass('content-details');
-
-            $('game3-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
-            $('game3-overlay-details').removeClass('content-details-hidden').addClass('content-details');
-
-            $('game4-overlay').removeClass('content-overlay-hidden').addClass('content-overlay');
-            $('game4-overlay-details').removeClass('content-details-hidden').addClass('content-details');
-        }
-    })
-})
-
-*/
 $(function () {
     $(window).on("resize", function () {
         console.log($(this).width())
@@ -469,9 +516,7 @@ $(function () {
             $('#game1-overlay-details').addClass('content-details-hidden');
             $('#game2-overlay-details').addClass('content-details-hidden');
             $('#game3-overlay-details').addClass('content-details-hidden');
-            $('#game4-overlay-details').addClass('content-details-hidden');
-
-           
+            $('#game4-overlay-details').addClass('content-details-hidden');         
         }
         else {
             $('#game1-overlay').removeClass('content-overlay-hidden');
@@ -479,15 +524,10 @@ $(function () {
             $('#game3-overlay').removeClass('content-overlay-hidden');
             $('#game4-overlay').removeClass('content-overlay-hidden');
 
-
             $('#game1-overlay-details').removeClass('content-details-hidden');
             $('#game2-overlay-details').removeClass('content-details-hidden');
             $('#game3-overlay-details').removeClass('content-details-hidden');
             $('#game4-overlay-details').removeClass('content-details-hidden');
-
-
-
-
         }
     })
 })
