@@ -65,7 +65,7 @@ function uxGames() {
 }
 
 function showSection(name) {
-    document.getElementById(name).onclick = function () {
+   
         //history.pushState(pageHistory, 'workPage', '/work');
         if (name === 'Work') {
             getAboutSection.classList.remove('fadeIn');
@@ -110,8 +110,8 @@ function showSection(name) {
             navBarAbout.className = "nav-link";
 
         }
-    }
 }
+
 
 window.onpopstate = function (event) {
     var content = "";
