@@ -31,7 +31,7 @@ $(document).ready(function () {
     /*! Fades in page on load */
     $('#work').css('display', 'none');
     $('#work').fadeIn(100);
-    //work();
+    work();
 
 });
 
