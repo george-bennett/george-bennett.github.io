@@ -36,7 +36,7 @@ $(document).ready(function () {
 });
 
 //PUSH AND POPSTATE FOR BACK/FORWARD
-
+/*
 function work() {
     history.pushState({
         page_id: 1,
@@ -63,7 +63,7 @@ function uxGames() {
 
     showSection("uxGames");
 }
-
+*/
 function showSection(name) {  
         if (name === 'work') {
             getAboutSection.classList.remove('fadeIn');
