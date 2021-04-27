@@ -27,11 +27,11 @@ const originalURL = window.location.href;
 //Start
 $(document).ready(function () {
     /*! Fades in page on load */
-    $('#work').css('display', 'none');
-    $('#work').fadeIn(100);
+ //   $('#work').css('display', 'none');
+ //   $('#work').fadeIn(100);
    // work();
 
-});
+//});
 */
 //PUSH AND POPSTATE FOR BACK/FORWARD
 
