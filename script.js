@@ -121,7 +121,7 @@ window.onpopstate = function (event) {
 }
 
 
-
+/*
 //NAVIGATION BAR INTERACTIONS
 //work
 document.getElementById('workNav').onclick = function () {
@@ -176,7 +176,7 @@ document.getElementById('uxGamesNav').onclick = function () {
     navBarWork.className = "nav-link";
     navBarAbout.className = "nav-link";
 }
-
+*/
 
 /*CHANGE UXGAMES ON CLICK OF IMAGE TO DISPLAY TEXT AND RESIZED IMAGE*/
 const getMasterRow = document.getElementById('gm-row-master');
