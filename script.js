@@ -23,15 +23,19 @@ const originalURL = window.location.href;
 
 //getWorkSection.classList.remove('hide');
 //getWorkSection.classList.add('fadeIn');
-/*
+
+
 //Start
 $(document).ready(function () {
     /*! Fades in page on load */
- //   $('#work').css('display', 'none');
- //   $('#work').fadeIn(100);
-   // work();
 
-//});
+
+
+    $('#main').css('display', 'none');
+    $('#main').fadeIn(100);
+   
+
+});
 
 //PUSH AND POPSTATE FOR BACK/FORWARD
 
