@@ -32,7 +32,7 @@ $(document).ready(function () {
    // work();
 
 //});
-*/
+
 //PUSH AND POPSTATE FOR BACK/FORWARD
 
 function work() {
