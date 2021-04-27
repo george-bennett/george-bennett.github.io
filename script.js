@@ -28,23 +28,16 @@ const originalURL = window.location.href;
 //Start
 $(document).ready(function () {
 /*! Fades in page on load */
-
     if (document.location.href == "https://george-bennett.co.uk/work" || document.location.href == "https://george-bennett.co.uk/") {
-       // $('#work').css('display', 'none');
-       // $('#work').fadeIn(100);
         work();
-
     }
     else if (document.location.href == "https://george-bennett.co.uk/about") {
         about();
 
     }
-
     else if (document.location.href == "https://george-bennett.co.uk/uxingames") {
         uxGames();
     } 
-
-
 });
 
 //PUSH AND POPSTATE FOR BACK/FORWARD
