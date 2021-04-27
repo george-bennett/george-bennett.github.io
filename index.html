@@ -1,15 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <script>
-        (function () {
-            var redirect = sessionStorage.redirect;
-            delete sessionStorage.redirect;
-            if (redirect && redirect != location.href) {
-                history.replaceState(null, null, redirect);
-            }
-        })();
-    </script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,6 +12,15 @@
     <title>George Bennett</title>
 </head>
 <body>
+    <script>
+        (function () {
+            var redirect = sessionStorage.redirect;
+            delete sessionStorage.redirect;
+            if (redirect && redirect != location.href) {
+                history.replaceState(null, null, redirect);
+            }
+        })();
+    </script>
     <!--NAVBAR SECTION-->
     <div class="container-fluid sticky-top" id="nav-bar">
         <nav class="navbar navbar-custom sticky-top navbar-expand-lg navbar-dark">
@@ -60,7 +60,7 @@
                 </div>
                 <div class="col-lg">
                     <div class="content img-fluid">
-                        <div class="content-overlay"></div> <img src="https://i.imgur.com/y3uD28V.jpg" class="img-fluid mx-auto d-block" alt="alfa PLACEHOLDER">     
+                        <div class="content-overlay"></div> <img src="https://i.imgur.com/y3uD28V.jpg" class="img-fluid mx-auto d-block" alt="alfa PLACEHOLDER">
                         <div class="content-details fadeIn-bottom">
                             <h3 class="content-title">Test - Not Clickable Yet</h3>
                         </div>
@@ -102,11 +102,11 @@
             <div class="row" id="gm-row-1">
                 <div class="col-md-12">
                     <p class="center-text shadow-para">
-                    This section of the website will be about my experience with UX in Games, placed into interactable icons. For instance I will evaulate "Sucker Punch" studios "Ghost of Tsushima",
-                    played on Playstation 5, which was initially released in 2020. I want to discuss its mechanics and how it accomadates the player with menus, combat, use of items, accessability options etc.
-                    However as you can see this is still placeholder for the moment.
-                </p>
-                    </div>
+                        This section of the website will be about my experience with UX in Games, placed into interactable icons. For instance I will evaulate "Sucker Punch" studios "Ghost of Tsushima",
+                        played on Playstation 5, which was initially released in 2020. I want to discuss its mechanics and how it accomadates the player with menus, combat, use of items, accessability options etc.
+                        However as you can see this is still placeholder for the moment.
+                    </p>
+                </div>
                 <div class="col-md-6" id="game1-cn">
                     <div class="content" id="content-1">
                         <div class="content-overlay mx-auto" role="button"></div> <img src="https://wallpaperaccess.com/full/1662265.jpg" class="img-fluid mx-auto d-block" alt="NISSAN PLACEHOLDER" role="button" id="gm1_img">
@@ -140,7 +140,7 @@
                 </div>
                 <div class="col-md-6" id="game4-cn">
                     <div class="content" id="content-4">
-                        <div class="content-overlay mx-auto"  ></div> <img src="images/games/GOT_golden_landscape.jpg" class="img-fluid  mx-auto d-block" alt="NISSAN PLACEHOLDER" role="button" id="gm4_img">
+                        <div class="content-overlay mx-auto"></div> <img src="images/games/GOT_golden_landscape.jpg" class="img-fluid  mx-auto d-block" alt="NISSAN PLACEHOLDER" role="button" id="gm4_img">
                         <div class="content-expand-icon" role="button" id="game4-overlay"><img src="images/full-screen-white.png" class="img-fluid img-expand mx-auto d-block" id="game-img-expand-4"></div>
                         <div class="content-details fadeIn-bottom" id="game4-overlay-details">
                             <h3 class="content-title" id="game4-title">Ghost of Tsushima</h3>
