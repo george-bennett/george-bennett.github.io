@@ -40,7 +40,7 @@ $(document).ready(function () {
 
     }
 
-    else if (document.location.href == "https://george-bennett.co.uk/about") {
+    else if (document.location.href == "https://george-bennett.co.uk/uxingames") {
         uxGames();
     } 
 
