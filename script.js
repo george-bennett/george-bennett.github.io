@@ -83,8 +83,6 @@ function showSection(name) {
             navBarWork.className += " active";
             navBarAbout.className = "nav-link";
             navBarUXGames.className = "nav-link";
-
-
         }
         else if (name === 'about') {
             getWorkSection.classList.remove('fadeIn');
@@ -92,6 +90,7 @@ function showSection(name) {
 
             getUXGamesSection.classList.remove('fadeIn');
             getUXGamesSection.classList.add('hide');
+
 
             getAboutSection.classList.remove('hide');
             getAboutSection.classList.add('fadeIn')
@@ -127,6 +126,24 @@ window.onpopstate = function (event) {
     showSection(content);
 }
 
+//Burger menu 
+const burgerMenu = document.getElementById('burger_menu');
+const burgerMenuImage = document.getElementById('burger_menu_img');
+
+burgerMenu.onclick = function () {
+    if (burgerMenuImage.className === 'closed') {
+        console.log("open menu");
+        burgerMenuImage.src = '/images/close_menu.png';
+        burgerMenuImage.classList.remove('closed');
+        burgerMenuImage.classList.add('open');
+    }
+    else if (burgerMenuImage.className === 'open') {
+        console.log("close menu");
+        burgerMenuImage.src = '/images/burger_menu.png';
+        burgerMenuImage.classList.remove('open');
+        burgerMenuImage.classList.add('closed');
+    }
+}
 
 /*
 //NAVIGATION BAR INTERACTIONS
@@ -579,7 +596,7 @@ window.onhashchange = function () {
 $(function () {
     $(window).on("resize", function () {
         console.log($(this).width())
-        if ($(this).width() < 450) {
+        if ($(this).width() < 425) {
 
             $('#game1-overlay').addClass('content-overlay-hidden');
             $('#game2-overlay').addClass('content-overlay-hidden');
