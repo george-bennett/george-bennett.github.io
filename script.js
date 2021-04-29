@@ -28,7 +28,7 @@ const originalURL = window.location.href;
 //Start
 $(document).ready(function () {
     /*! Fades in page on load */
-    if (document.location.href == "https://george-bennett.co.uk/work" || document.location.href == "https://george-bennett.co.uk") {
+    if (document.location.href == "https://george-bennett.co.uk/work" || document.location.href == "https://george-bennett.co.uk/") {
         work();
     }
     else if (document.location.href == "https://george-bennett.co.uk/about") {
@@ -38,6 +38,11 @@ $(document).ready(function () {
     else if (document.location.href == "https://george-bennett.co.uk/uxingames") {
         uxGames();
     }
+
+    else if (document.location.href == "https://george-bennet.co.uk") {
+        init();
+    }
+
 });
 
 //PUSH AND POPSTATE FOR BACK/FORWARD
@@ -79,25 +84,6 @@ function uxGames() {
 }
 
 function showSection(name) { 
-
-    //Inital Load
-    /*
-    if (name === 'init') {
-            getAboutSection.classList.remove('fadeIn');
-            getAboutSection.classList.add('hide');
-
-            getUXGamesSection.classList.remove('fadeIn');
-            getUXGamesSection.classList.add('hide');
-
-            getWorkSection.classList.remove('hide');
-            getWorkSection.classList.add('fadeIn');
-
-            navBarWork.className += " active";
-            navBarAbout.className = "nav-link";
-            navBarUXGames.className = "nav-link";
-        }
-    */
-
         if (name === 'work') {
             getAboutSection.classList.remove('fadeIn');
             getAboutSection.classList.add('hide');
@@ -128,7 +114,7 @@ function showSection(name) {
             navBarWork.className = "nav-link";
             navBarUXGames.className = "nav-link";
 
-         
+            toggleMenu();
                 
         }
         else if (name === 'uxGames') {
@@ -145,11 +131,8 @@ function showSection(name) {
             navBarWork.className = "nav-link";
             navBarAbout.className = "nav-link";
 
-            
-    
-         
+            toggleMenu();     
     }
-
 }
 
 //Popstate history
