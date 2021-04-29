@@ -27,8 +27,8 @@ const originalURL = window.location.href;
 
 //Start
 $(document).ready(function () {
-/*! Fades in page on load */
-    if (document.location.href == "https://george-bennett.co.uk/work") {
+    /*! Fades in page on load */
+    if (document.location.href == "https://george-bennett.co.uk/work" || document.location.href == "https://george-bennett.co.uk") {
         work();
     }
     else if (document.location.href == "https://george-bennett.co.uk/about") {
@@ -46,6 +46,7 @@ $(document).ready(function () {
 });
 
 //PUSH AND POPSTATE FOR BACK/FORWARD
+/*
 function init() {
     history.pushState({
         page_id: 0,
@@ -54,6 +55,7 @@ function init() {
 
     showSection('init');
 }
+*/
 function work() {
     history.pushState({
         page_id: 1,
@@ -84,7 +86,8 @@ function uxGames() {
 function showSection(name) { 
 
     //Inital Load
-        if (name === 'init') {
+    /*
+    if (name === 'init') {
             getAboutSection.classList.remove('fadeIn');
             getAboutSection.classList.add('hide');
 
@@ -98,7 +101,9 @@ function showSection(name) {
             navBarAbout.className = "nav-link";
             navBarUXGames.className = "nav-link";
         }
-        else if (name === 'work') {
+    */
+
+        if (name === 'work') {
             getAboutSection.classList.remove('fadeIn');
             getAboutSection.classList.add('hide');
 
@@ -111,7 +116,7 @@ function showSection(name) {
             navBarWork.className += " active";
             navBarAbout.className = "nav-link";
             navBarUXGames.className = "nav-link";
-            toggleMenu();
+           
         }
         else if (name === 'about') {
             getWorkSection.classList.remove('fadeIn');
@@ -128,7 +133,7 @@ function showSection(name) {
             navBarWork.className = "nav-link";
             navBarUXGames.className = "nav-link";
 
-            toggleMenu();
+         
                 
         }
         else if (name === 'uxGames') {
@@ -145,7 +150,7 @@ function showSection(name) {
             navBarWork.className = "nav-link";
             navBarAbout.className = "nav-link";
 
-            toggleMenu();
+            
     
          
     }
