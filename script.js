@@ -46,16 +46,6 @@ $(document).ready(function () {
 });
 
 //PUSH AND POPSTATE FOR BACK/FORWARD
-/*
-function init() {
-    history.pushState({
-        page_id: 0,
-        page: "init"
-    }, null, "/work");
-
-    showSection('init');
-}
-*/
 function work() {
     history.pushState({
         page_id: 1,
@@ -173,36 +163,6 @@ function toggleMenu() {
 
 
 }
-/*
-//NAVIGATION BAR INTERACTIONS
-//work
-document.getElementById('workNav').onclick = function () {
-
-
-
-    navBarWork.className += " active";
-    navBarAbout.className = "nav-link";
-    navBarUXGames.className = "nav-link";
-}
-
-//about
-document.getElementById('aboutNav').onclick = function () {
-
-
-
-    navBarAbout.className += " active";
-    navBarWork.className = "nav-link";
-    navBarUXGames.className = "nav-link";
-}
-
-//ux
-document.getElementById('uxGamesNav').onclick = function () {
-
-    navBarUXGames.className += " active";
-    navBarWork.className = "nav-link";
-    navBarAbout.className = "nav-link";
-}
-*/
 
 /*CHANGE UXGAMES ON CLICK OF IMAGE TO DISPLAY TEXT AND RESIZED IMAGE*/
 const getMasterRow = document.getElementById('gm-row-master');
@@ -557,8 +517,6 @@ $(document).ready(function () {
             getGame4_text_img_1.classList.remove('hideEle');
             getGame4_text_img_2.classList.remove('hideEle');
             getGame4_text_img_3.classList.remove('hideEle');
-
-
         }
         else {
 
