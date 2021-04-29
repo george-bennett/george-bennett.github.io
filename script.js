@@ -83,6 +83,7 @@ function showSection(name) {
             navBarWork.className += " active";
             navBarAbout.className = "nav-link";
             navBarUXGames.className = "nav-link";
+            toggleMenu();
         }
         else if (name === 'about') {
             getWorkSection.classList.remove('fadeIn');
@@ -99,6 +100,8 @@ function showSection(name) {
             navBarWork.className = "nav-link";
             navBarUXGames.className = "nav-link";
 
+            toggleMenu();
+                
         }
         else if (name === 'uxGames') {
             getAboutSection.classList.remove('fadeIn');
@@ -113,7 +116,12 @@ function showSection(name) {
             navBarUXGames.className += " active";
             navBarWork.className = "nav-link";
             navBarAbout.className = "nav-link";
-        }
+
+            toggleMenu();
+    
+         
+    }
+
 }
 
 //Popstate history
@@ -127,10 +135,12 @@ window.onpopstate = function (event) {
 }
 
 //Burger menu 
+const myNavbar = document.getElementById('myNavbar');
 const burgerMenu = document.getElementById('burger_menu');
 const burgerMenuImage = document.getElementById('burger_menu_img');
-
+/*
 burgerMenu.onclick = function () {
+    
     if (burgerMenuImage.className === 'closed') {
         console.log("open menu");
         burgerMenuImage.src = '/images/close_menu.png';
@@ -143,22 +153,21 @@ burgerMenu.onclick = function () {
         burgerMenuImage.classList.remove('open');
         burgerMenuImage.classList.add('closed');
     }
+    
 }
+*/
 
+function toggleMenu() {
+    document.getElementById('bIcon').classList.toggle("change");
+
+
+}
 /*
 //NAVIGATION BAR INTERACTIONS
 //work
 document.getElementById('workNav').onclick = function () {
-    //history.pushState(pageHistory, 'workPage', '/work');
 
-    getAboutSection.classList.remove('fadeIn');
-    getAboutSection.classList.add('hide');
-   
-    getUXGamesSection.classList.remove('fadeIn');
-    getUXGamesSection.classList.add('hide');
 
-    getWorkSection.classList.remove('hide');
-    getWorkSection.classList.add('fadeIn');
 
     navBarWork.className += " active";
     navBarAbout.className = "nav-link";
@@ -167,16 +176,8 @@ document.getElementById('workNav').onclick = function () {
 
 //about
 document.getElementById('aboutNav').onclick = function () {
-   // history.pushState(pageHistory, 'aboutPage', '/about');
 
-    getWorkSection.classList.remove('fadeIn');
-    getWorkSection.classList.add('hide');
 
-    getUXGamesSection.classList.remove('fadeIn');
-    getUXGamesSection.classList.add('hide');
-   
-    getAboutSection.classList.remove('hide');
-    getAboutSection.classList.add('fadeIn')
 
     navBarAbout.className += " active";
     navBarWork.className = "nav-link";
@@ -185,16 +186,6 @@ document.getElementById('aboutNav').onclick = function () {
 
 //ux
 document.getElementById('uxGamesNav').onclick = function () {
-   // history.pushState(pageHistory, 'uxInGamesPage', '/uxingames');
-
-    getAboutSection.classList.remove('fadeIn');
-    getAboutSection.classList.add('hide');
-
-    getWorkSection.classList.remove('fadeIn');
-    getWorkSection.classList.add('hide');
-
-    getUXGamesSection.classList.remove('hide');
-    getUXGamesSection.classList.add('fadeIn');
 
     navBarUXGames.className += " active";
     navBarWork.className = "nav-link";
