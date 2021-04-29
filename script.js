@@ -37,11 +37,23 @@ $(document).ready(function () {
     }
     else if (document.location.href == "https://george-bennett.co.uk/uxingames") {
         uxGames();
-    } 
+    }
+
+    else if (document.location.href == "https://george-bennet.co.uk") {
+        init();
+    }
+
 });
 
 //PUSH AND POPSTATE FOR BACK/FORWARD
+function init() {
+    history.pushState({
+        page_id: 0,
+        page: "init"
+    }, null, "/work");
 
+    showSection('init');
+}
 function work() {
     history.pushState({
         page_id: 1,
@@ -69,7 +81,24 @@ function uxGames() {
     showSection("uxGames");
 }
 
-function showSection(name) {  
+function showSection(name) { 
+
+    //Inital Load
+        if (name === "init") {
+            getAboutSection.classList.remove('fadeIn');
+            getAboutSection.classList.add('hide');
+
+            getUXGamesSection.classList.remove('fadeIn');
+            getUXGamesSection.classList.add('hide');
+
+            getWorkSection.classList.remove('hide');
+            getWorkSection.classList.add('fadeIn');
+
+            navBarWork.className += " active";
+            navBarAbout.className = "nav-link";
+            navBarUXGames.className = "nav-link";
+    }
+
         if (name === 'work') {
             getAboutSection.classList.remove('fadeIn');
             getAboutSection.classList.add('hide');
