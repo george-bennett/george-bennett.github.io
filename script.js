@@ -84,7 +84,7 @@ function uxGames() {
 function showSection(name) { 
 
     //Inital Load
-        if (name === "init") {
+        if (name === 'init') {
             getAboutSection.classList.remove('fadeIn');
             getAboutSection.classList.add('hide');
 
@@ -97,9 +97,9 @@ function showSection(name) {
             navBarWork.className += " active";
             navBarAbout.className = "nav-link";
             navBarUXGames.className = "nav-link";
-    }
+        }
 
-        if (name === 'work') {
+        else if (name === 'work') {
             getAboutSection.classList.remove('fadeIn');
             getAboutSection.classList.add('hide');
 
