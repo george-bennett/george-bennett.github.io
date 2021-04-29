@@ -104,7 +104,7 @@ function showSection(name) {
             navBarWork.className = "nav-link";
             navBarUXGames.className = "nav-link";
 
-            toggleMenu();
+
                 
         }
         else if (name === 'uxGames') {
@@ -121,7 +121,6 @@ function showSection(name) {
             navBarWork.className = "nav-link";
             navBarAbout.className = "nav-link";
 
-            toggleMenu();     
     }
 }
 
