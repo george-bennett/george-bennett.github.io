@@ -98,7 +98,6 @@ function showSection(name) {
             navBarAbout.className = "nav-link";
             navBarUXGames.className = "nav-link";
         }
-
         else if (name === 'work') {
             getAboutSection.classList.remove('fadeIn');
             getAboutSection.classList.add('hide');
