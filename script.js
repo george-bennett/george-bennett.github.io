@@ -38,11 +38,6 @@ $(document).ready(function () {
     else if (document.location.href == "https://george-bennett.co.uk/uxingames") {
         uxGames();
     }
-
-    else if (document.location.href == "https://george-bennet.co.uk") {
-        init();
-    }
-
 });
 
 //PUSH AND POPSTATE FOR BACK/FORWARD
