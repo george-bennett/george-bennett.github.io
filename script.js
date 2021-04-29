@@ -156,11 +156,17 @@ burgerMenu.onclick = function () {
     
 }
 */
-
 function toggleMenu() {
-    document.getElementById('bIcon').classList.toggle("change");
+    var width = window.innerWidth;
+
+    if (width <= 991) {
+        document.getElementById('bIcon').classList.toggle('change');
+
+    }
+    else {
 
 
+    }
 }
 
 /*CHANGE UXGAMES ON CLICK OF IMAGE TO DISPLAY TEXT AND RESIZED IMAGE*/
@@ -580,6 +586,7 @@ $(function () {
         }
     })
 })
+
 
 
 
