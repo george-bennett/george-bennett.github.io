@@ -39,8 +39,8 @@ $(document).ready(function () {
         uxGames();
     }
 
-    else if (document.location.href == "https://george-bennet.co.uk") {
-        init();
+    else if (document.location.href == "https://george-bennet.co.uk/uxingames/ghostoftsushima") {
+        ghostoftsushima();
     }
 
 });
@@ -72,6 +72,18 @@ function uxGames() {
 
     showSection("uxGames");
 }
+
+function ghostoftsushima() {
+    history.pushState({
+        page_id: 3.1,
+        page: "GhostofTsushima"
+    }, null, "/uxingames/ghostoftsushima");
+
+    showSection("ghostoftsushima");
+}
+
+
+
 
 function showSection(name) { 
         if (name === 'work') {
@@ -120,8 +132,51 @@ function showSection(name) {
             navBarUXGames.className += " active";
             navBarWork.className = "nav-link";
             navBarAbout.className = "nav-link";
+        }
+        else if (name === 'ghostoftsushima') {
 
-    }
+            getAboutSection.classList.remove('fadeIn');
+            getAboutSection.classList.add('hide');
+
+            getWorkSection.classList.remove('fadeIn');
+            getWorkSection.classList.add('hide');
+
+            getUXGamesSection.classList.remove('hide');
+            getUXGamesSection.classList.add('fadeIn');
+
+            navBarUXGames.className += " active";
+            navBarWork.className = "nav-link";
+            navBarAbout.className = "nav-link";
+
+            if (getGame4_cn.className === 'col-md-6') {
+
+                //Change Icon from Expand Close
+                getGame4_expand.src = "images/small-screen-white.png"
+
+                $("#game1-cn").fadeOut(1);
+                $("#game2-cn").fadeOut(1);
+                $("#game3-cn").fadeOut(1);
+                $("#game4-cn").fadeOut(1);
+
+                getGame4_cn.classList.remove('col-md-6');
+                getGame4_cn.classList.add('col-md-12');
+
+                $("#game4-cn").fadeIn(1000);
+
+                //SHOW TEXT ABOUT GAME 4
+                getGame4_txt.classList.remove('hideEle');
+
+
+                getGame4_text_img_1.classList.remove('hideEle');
+                getGame4_text_img_2.classList.remove('hideEle');
+                getGame4_text_img_3.classList.remove('hideEle');
+
+
+            }
+
+
+
+        }
 }
 
 //Popstate history
@@ -451,6 +506,8 @@ $(document).ready(function () {
     $("#game4-overlay").click(function () {
         if (getGame4_cn.className === 'col-md-6') {
 
+            ghostoftsushima()
+            /*
             //Change Icon from Expand Close
             getGame4_expand.src = "images/small-screen-white.png"
 
@@ -471,7 +528,7 @@ $(document).ready(function () {
             getGame4_text_img_1.classList.remove('hideEle');
             getGame4_text_img_2.classList.remove('hideEle');
             getGame4_text_img_3.classList.remove('hideEle');
-
+*/
 
         }
         else {
