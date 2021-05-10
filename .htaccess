@@ -3,7 +3,7 @@ RewriteEngine on
 RewriteBase /
 
 RewriteCond %{REQUEST_URI} ^$
-RewriteCond %{HTTP_HOST} ^example.com$
+RewriteCond %{HTTP_HOST} ^george-bennett.co.uk$
 RewriteRule ^$ http://george-bennett.co.uk/index.html [L,R=301]
 
 RewriteCond %{REQUEST_FILENAME} !-d
