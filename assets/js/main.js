@@ -1,4 +1,18 @@
 
+$(document).ready(function () {
+    /*! Fades in page on load */
+    if (document.location.href === "https://george-bennett.co.uk/home.html" || document.location.href === "https://george-bennett.co.uk/") {
+        document.location.href = "https://george-bennett.co.uk/home"
+    }
+    else if (document.location.href === "https://george-bennett.co.uk/about.html") {
+        document.location.href = "https://george-bennett.co.uk/about"
+
+    }
+    else if (document.location.href === "https://george-bennett.co.uk/uxingames.html") {
+        document.location.href = "https://george-bennett.co.uk/uxingames"
+    }
+});
+
 (function() {
   "use strict";
 
