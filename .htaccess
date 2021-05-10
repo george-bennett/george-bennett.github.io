@@ -1,8 +1,9 @@
 RewriteEngine on
 
-RewriteCond %{HTTP_HOST} george-bennett.co.uk [NC]
-RewriteCond %{REQUEST_URI} ^/$
-RewriteRule ^(.*)$ /home/$1 [L]
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^george-bennett\.co.uk$
+RewriteRule (.*) https://www.george-bennett.co.uk/$1 [R=301,L]
+RewriteRule ^$ home [L]
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
