@@ -16,6 +16,7 @@ body {
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-attachment: fixed;
 }
 p{
@@ -49,7 +50,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   padding-left: 10px;
   padding-right: 10px;
   position: relative;
-  font-size: 16px;
+  font-size: 24px;
 }
 
 .filters a:hover, .filters a:focus, .filters a:active {
@@ -100,6 +101,16 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 .item .img-fluid {
 
 }
+
+
+.img-fluid-profile {
+    max-width: 75%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    margin: 7.5%;
+}
+
 
 .item .item-wrap {
   display: block;

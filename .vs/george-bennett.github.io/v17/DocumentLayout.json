@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\George\\PycharmProjects\\git_repos\\george-bennett.github.io\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\George\\PycharmProjects\\git_repos\\george-bennett.github.io\\assets\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\George\\PycharmProjects\\git_repos\\george-bennett.github.io\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\George\\PycharmProjects\\git_repos\\george-bennett.github.io\\photography.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:photography.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\George\\PycharmProjects\\git_repos\\george-bennett.github.io\\assets\\css\\style.css",
+              "RelativeDocumentMoniker": "assets\\css\\style.css",
+              "ToolTip": "C:\\Users\\George\\PycharmProjects\\git_repos\\george-bennett.github.io\\assets\\css\\style.css",
+              "RelativeToolTip": "assets\\css\\style.css",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAhwGkAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-22T19:25:10.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "photography.html",
+              "DocumentMoniker": "C:\\Users\\George\\PycharmProjects\\git_repos\\george-bennett.github.io\\photography.html",
+              "RelativeDocumentMoniker": "photography.html",
+              "ToolTip": "C:\\Users\\George\\PycharmProjects\\git_repos\\george-bennett.github.io\\photography.html",
+              "RelativeToolTip": "photography.html",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAGkAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-09-22T19:21:16.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\George\\PycharmProjects\\git_repos\\george-bennett.github.io\\index.html",
+              "RelativeDocumentMoniker": "index.html",
+              "ToolTip": "C:\\Users\\George\\PycharmProjects\\git_repos\\george-bennett.github.io\\index.html",
+              "RelativeToolTip": "index.html",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAAAFEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-09-22T19:13:58.426Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
