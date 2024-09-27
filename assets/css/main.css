@@ -1,0 +1,322 @@
+/*--------------------------------------------------------------
+# General
+
+Set up main logic of areas within the body of the HTML
+--------------------------------------------------------------*/
+
+body {
+    font-family: "Archivo", sans-serif;
+    /*color: #0d1e2d; */
+    /*background: linear-gradient(180deg, rgba(43,174,111,1) 50%, rgba(59,212,138,1) 100%);*/ /*Green fade*/
+    background: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(240,240,240,1) 100%); /*White/Grey fade*/
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+p {
+    /*color: #fff;*/
+    color: #000;
+    font-size: large;
+}
+
+a {
+    color: #777;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #000;
+    }
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: "Archivo", sans-serif;
+    color: #fff;
+}
+
+.section {
+    padding: 3rem 0;
+}
+
+.filters a {
+    margin-top: 4em;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    font-size: 24px;
+}
+
+    .filters a:hover, .filters a:focus, .filters a:active {
+        text-decoration: none;
+    }
+
+        .filters a:hover:before {
+            content: "";
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            bottom: 0;
+            height: 1px;
+            background-color: #fff;
+        }
+
+    .filters a.active {
+        color: #fff;
+    }
+
+        .filters a.active:before {
+            content: "";
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            bottom: 0;
+            height: 1px;
+            background-color: #fff;
+        }
+
+
+@media screen and (max-width: 469px) {
+    .filters a {
+        font-size: 12px;
+    }
+}
+
+#left-arrow {
+    width: 200%;
+    height: 200%;
+}
+
+.item {
+    border: none;
+    margin-bottom: 30px;
+}
+
+.img-fluid-profile {
+    max-width: 85%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    margin: 5.5%;
+}
+
+
+.item .item-wrap {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+    .item .item-wrap:after {
+        z-index: 2;
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.75);
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s all ease-in-out;
+    }
+
+    .item .item-wrap img {
+        transition: .3s transform ease;
+        transform: scale(1);
+    }
+
+    .item .item-wrap > .work-info {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        z-index: 3;
+        transform: translateY(-50%);
+        color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        margin-top: 20px;
+        transition: .3s all ease;
+    }
+
+        .item .item-wrap > .work-info h3 {
+            font-size: 32px;
+            margin-bottom: 0;
+        }
+
+        .item .item-wrap > .work-info span {
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: .2rem;
+        }
+
+    .item .item-wrap:hover {
+        text-decoration: none;
+    }
+
+        .item .item-wrap:hover img {
+            transform: scale(1.05);
+        }
+
+        .item .item-wrap:hover:after {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .item .item-wrap:hover .work-info {
+            margin-top: 0px;
+            opacity: 1;
+            visibility: visible;
+        }
+
+.testimonial-wrap {
+    padding: 50px 50px 80px 50px;
+    background: #eceff2;
+}
+
+    .testimonial-wrap .testimonial {
+        text-align: center;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+        .testimonial-wrap .testimonial img {
+            border-radius: 50%;
+            width: 120px;
+            margin: 0 auto 30px auto;
+        }
+
+        .testimonial-wrap .testimonial blockquote p {
+            font-size: 20px;
+        }
+
+.h3 {
+    font-size: 20px;
+}
+
+.h4 {
+    font-size: 16px;
+}
+
+.heading {
+    font-size: 28px;
+}
+
+.readmore {
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 10px 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    transition: .2s all ease;
+    font-weight: 700;
+}
+
+    .readmore:active, .readmore:focus, .readmore:hover {
+        outline: none;
+    }
+
+    .readmore:hover {
+        color: #fff;
+        text-decoration: none;
+        background: #000;
+    }
+
+.testimonials-slider .swiper-pagination {
+    margin-top: -60px;
+    position: relative;
+}
+
+    .testimonials-slider .swiper-pagination .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background-color: rgba(13, 30, 45, 0.3);
+        opacity: 1;
+    }
+
+    .testimonials-slider .swiper-pagination .swiper-pagination-bullet-active {
+        background-color: rgba(13, 30, 45, 0.6);
+    }
+
+.sticky-content {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    /* required */
+}
+
+.list-line li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px;
+}
+
+    .list-line li:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: .7rem;
+        width: 10px;
+        height: 2px;
+        background: #000;
+    }
+
+.form-control {
+    border-radius: 0;
+    background: #f8f9fa;
+    border: 1px solid transparent;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+    .form-control:active, .form-control:focus {
+        background: #eff1f4;
+        outline: none;
+        box-shadow: none;
+        border: 1px solid transparent;
+    }
+
+.custom-progress {
+    height: 7px;
+    border-radius: 0;
+}
+
+    .custom-progress .progress-bar {
+        background: #000;
+    }
+
+/* Services */
+.services i {
+    font-size: 40px;
+}
+
+.services h4 {
+    padding-top: 10px;
+}
+
+@-webkit-keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

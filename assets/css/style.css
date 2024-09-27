@@ -17,12 +17,6 @@
 }
 */
 
-
-
-
-
-
-
 body {
     /*font-family: "Inconsolata", monospace;*/
     font-family: "Archivo", sans-serif;
@@ -34,12 +28,13 @@ body {
     background-repeat: no-repeat;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    color: #000;
 }
 
 p {
     /*color: #fff;*/
     color: #000; 
-    font-size: large;
+    font-size: larger;
 }
 
 a {
@@ -53,8 +48,8 @@ a {
 
 h1, h2, h3, h4, h5, h6, .font-heading {
     /*font-family: "Raleway", sans-serif;*/
-    font-family: "Archivo";
-    color: #fff;
+    font-family: "Archivo", sans-serif;
+    color: #000;
 }
 
 .section {
@@ -64,7 +59,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 .filters a {
     margin-top: 4em;
     text-decoration: none;
-    color: #fff;
+    color: #000;
     display: inline-block;
     padding-left: 10px;
     padding-left: 10px;
@@ -88,7 +83,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         }
 
     .filters a.active {
-        color: #fff;
+        color: #000;
     }
 
         .filters a.active:before {
@@ -106,6 +101,12 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         font-size: 12px;
     }
 }
+
+.overlay-title{
+    color: #fff;
+}
+
+
 
 #left-arrow {
     width: 200%;
@@ -317,6 +318,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     }
 
 /* Services */
+/*
 .services i {
     font-size: 40px;
 }
@@ -344,7 +346,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         transform: rotate(360deg);
     }
 }
-
+*/
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -352,7 +354,6 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 .custom-navmenu {
     /*background: #0d1e2d;*/
     background-color: #fff;
-    background-color: #2
 }
 
     .custom-navmenu .custom-menu, .custom-navmenu .custom-menu li {
@@ -423,8 +424,11 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 .navbar {
     /* background-color: #FCF6F5FF; */
-     background-color: rgba(235, 235, 235, 1);
-    font-size: larger;
+    /*background-color: rgba(235, 235, 235, 1);*/
+    background-color: #2f855a;
+    font-size: large;
+    padding-right: var(--bs-gutter-x, .75rem);
+    padding-left: var(--bs-gutter-x, .75rem);
 }
 
     .navbar .navbar-nav .nav-item {
@@ -441,18 +445,18 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 .navbar-custom .navbar-text li {
     /*color: #FCF6F5FF;*/
     /* color: #2BAE66FF; */
-    color: #000; 
+    color: white; 
 }
 
 .navbar-custom .navbar-nav .nav-link {
     /*color: #FCF6F5FF;*/
     /*color: #2BAE66FF;*/
-    color: #000;
+    color: white;
 }
 
     .navbar-custom .navbar-nav .nav-link.active {
         /*color: #FCF6F5FF;*/
-        color: #000;
+        color:white;
         background-color: #2BAE66FF;
     }
 
