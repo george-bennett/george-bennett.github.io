@@ -1,3 +1,12 @@
 
 ,env
 /.vs
+*.vsidx
+*.vsidx
+.vs/george-bennett.github.io/FileContentIndex/02f53d5d-cab0-4c8d-a257-3101059c5d90.vsidx
+.vs/george-bennett.github.io/FileContentIndex/eac52457-f42e-4a5e-8abe-19da6f663179.vsidx
+.vs/george-bennett.github.io/FileContentIndex/fc98d1a0-0df2-443b-9419-38e26b4676f7.vsidx
+.vs/george-bennett.github.io/v17/.wsuo
+.vs/george-bennett.github.io/v17/DocumentLayout.json
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json

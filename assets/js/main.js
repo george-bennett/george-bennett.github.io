@@ -117,3 +117,37 @@ function toggleMenu() {
 function goBack() {
     window.history.back();
 }
+
+
+
+// Modal for Images in fullscreen (Photography Page)
+var modal = document.getElementById("imgModal");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+// Get all images with the class "modal-image"
+var images = document.getElementsByClassName("modal-image");
+
+// Loop through all images and add an onclick event to open the modal
+for (var i = 0; i < images.length; i++) {
+    images[i].onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+    modal.style.display = "none";
+}
+
+// Optional: close modal when user clicks anywhere outside the image
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}

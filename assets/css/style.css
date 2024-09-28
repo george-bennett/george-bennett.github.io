@@ -130,6 +130,12 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     margin: 5.5%;
 }
 
+.img-fluid {
+    margin: 1.25%;
+    height: 80%;
+    padding: 1.25%;
+    
+}
 
 .item .item-wrap {
     display: block;
@@ -155,6 +161,8 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         transition: .3s transform ease;
         transform: scale(1);
     }
+
+
 
     .item .item-wrap > .work-info {
         position: absolute;
@@ -317,6 +325,80 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         background: #000;
     }
 
+.modal {
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Make sure it's above the navbar */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Black with opacity */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    overflow: hidden; /* Prevent scrollbars */
+    padding: 1%;
+
+}
+.modal-content {
+    max-width: 95%; 
+    max-height: 90%;
+    width: auto;
+    height: auto; /* Maintain aspect ratio */
+    margin: auto;
+    display: block;
+    border: 2px solid #fff; /* Optional: Add border around image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+#caption {
+    margin: 20px auto;
+    text-align: center;
+    color: #ccc;
+    font-size: 18px;
+    width: 80%;
+    
+}
+.close {
+    position: absolute;
+    top: 10px; /* Slightly offset from the top of the modal image */
+    right: 10px; /* Align it to the right side of the image */
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 10; /* Ensure the button is above the image */
+}
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+    }
+
+
+/* Specific styling to remove the hover effect on modal images */
+.modal-image:hover {
+    /* Remove any scaling effects on hover for modal images */
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: .5s all ease;
+}
+
+/* Remove the dark overlay effect for modal images */
+.modal-image::after {
+    visibility: hidden !important;
+    opacity: 0 !important;
+
+    transition: .5s all ease;
+}
+
+
+
 /* Services */
 /*
 .services i {
@@ -397,6 +479,10 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         .custom-navmenu a:hover {
             color: #fff;
         }
+
+.sticky-top{
+    z-index: 900;
+}
 
 /* Custom Navbar */
 .custom-navbar {
