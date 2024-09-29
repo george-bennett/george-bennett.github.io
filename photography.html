@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>George Bennett - Home</title>
+    <title>George Bennett - Photography</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -35,7 +35,7 @@
     <!-- ======= Navbar ======= -->
     <div class="container-fluid sticky-top" id="nav-master">
         <nav class="navbar navbar-custom navbar-expand-lg">
-            <div class="container-xxl">
+            <div class="container-fluid" id="nav-controller" >
                 <a class="navbar-brand">George Bennett</a>
                 <button class="navbar-toggler" type="button" onclick="toggleMenu()" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <!--<span class="navbar-toggler-icon"></span>-->
@@ -68,97 +68,139 @@
     <main id="main">
         <!-- ======= Works Section ======= -->
         <section class="section site-portfolio">
-            <div class="container-xxl">
-                <div class="row mb-5 align-items-center" id="items-row">
-                    <div class="col-md-12 col-lg-12 text-center" data-aos="fade-up" data-aos-delay="75">
+            <div class="container-fluid" id="overall-content">
+                <div class="row mb-5" id="items-row">
+                    <div class="col-md-12 col-lg-12" data-aos="fade-up" data-aos-delay="75">
+                        <br />
+                        <h2 style="padding: 5px">Mainly focusing on wildlife photography, here is a selection of my favourite work so far</h2>
                         <div id="filters" class="filters">
                             <a href="#" data-filter="*" class="active">All</a>
                             <a href="#" data-filter=".wild">Wildlife</a>
                             <a href="#" data-filter=".scapes">Landscape</a>
+                            <a href="#" data-filter=".other">Other</a>
                         </div>
                     </div>
                 </div>
+                
                 <div id="portfolio-grid" class="row no-gutter" data-aos="fade-up" data-aos-delay="75">
-                    <!--WILDLIFE SECTION-->
+                    <!-- WILDLIFE SECTION -->
                     <div class="item wild col-sm-6 col-md-4 col-lg-4 mb-4">
-                        <a class="">
-                            <img class="img-fluid modal-image" src="assets/img/photos/wildlife/squirrel_walnut.jpg" alt="A Squirrel">
+                        <a href="#">
+                            <img class="img-fluid modal-image"
+                                 data-src="assets/img/photos/wildlife/squirrel_walnut.jpg"
+                                 data-description="A Squirrel"
+                                 data-details="A squirrel enjoying a walnut."
+                                 data-cam-settings="Sony ZV-E10, 70-350mm f5.6-6.3 @ 350mm"
+                                 src="assets/img/photos/wildlife/squirrel_walnut.jpg" alt="A Squirrel">
                         </a>
-                        <a class="">
-                            <img class="img-fluid modal-image" src="assets/img/photos/wildlife/butterfly.jpg" alt="A Butterfly">
+                        <a href="#">
+                            <img class="img-fluid modal-image"
+                                 data-src="assets/img/photos/wildlife/butterfly.jpg"
+                                 data-description="A Butterfly"
+                                 data-details="A beautiful butterfly resting on a flower."
+                                 data-cam-settings="Sony A7IV, 90mm Macro @ 90mm"
+                                 src="assets/img/photos/wildlife/butterfly.jpg" alt="A Butterfly">
                         </a>
                     </div>
                     <div class="item wild col-sm-6 col-md-4 col-lg-4 mb-4">
-                        <a class="">
-                            <img class="img-fluid modal-image" src="assets/img/photos/wildlife/sparrow_close.jpg" alt="A Sparrow">
+                        <a href="#">
+                            <img class="img-fluid modal-image"
+                                 data-src="assets/img/photos/wildlife/sparrow_close.jpg"
+                                 data-description="A Sparrow"
+                                 data-details="A close-up of a sparrow."
+                                 data-cam-settings="Sony ZV-E10, 70-350mm f5.6-6.3 @ 300mm"
+                                 src="assets/img/photos/wildlife/sparrow_close.jpg" alt="A Sparrow">
                         </a>
-                        <a class="">
-                            <img class="img-fluid modal-image" src="assets/img/photos/wildlife/sparrowhawk_fem.jpg" alt="A Sparrowhawk">
+                        <a href="#">
+                            <img class="img-fluid modal-image"
+                                 data-src="assets/img/photos/wildlife/sparrowhawk_fem.jpg"
+                                 data-description="A Sparrowhawk"
+                                 data-details="A female sparrowhawk resting from the rain."
+                                 data-cam-settings="Sony A7IV, 200-600 w/ 1.4x Teleconvertor f5.6-6.3 @ 840mm"
+                                 src="assets/img/photos/wildlife/sparrowhawk_fem.jpg" alt="A Sparrowhawk">
                         </a>
                     </div>
-                    <div class="item wild col-sm-6 col-md-4 col-lg-4 mb-4">
-                        <a class="">
-                            <img class="img-fluid modal-image" src="assets/img/photos/wildlife/sparrowhawk_fem.jpg" alt="A Sparrowhawk">
-                        </a>
-                        <a class="">
-                            <img class="img-fluid modal-image" src="assets/img/photos/wildlife/sparrow_close.jpg" alt="A Sparrow">
+                    <div class="item other col-sm-6 col-md-4 col-lg-4 mb-4">
+                        <a href="#">
+                            <img class="img-fluid modal-image"
+                                 data-src="assets/img/photos/other/campus_cat.jpg"
+                                 data-description="A certain special cat"
+                                 data-details="Pebbles the Cat at the University of Essex."
+                                 data-cam-settings="Sony A7IV, 200-600 @ 600mm"
+                                 src="assets/img/photos/other/campus_cat.jpg" alt="A Sparrow">
                         </a>
                     </div>
+
                 </div>
 
                 <!-- Modal for Images -->
                 <!--
-                <div class="col-sm-12 col-md-12 col-lg-12 mb-12">
-                    <div id="imgModal" class="modal">
-                        <div class="col-sm-12 col-md-8 col-lg-8 mb-8">
-                            <span class="close">&times;</span>
-                            <img class="modal-content" id="img01">
-                        </div>
-                        <div class="col-sm-12 col-md-4 col-lg-4 mb-4">
-                            <div>div id="caption"></div>
-                        </div>
-                    </div>
-                </div>
-                -->
+    <div class="col-sm-12 col-md-12 col-lg-12 mb-12">
+        <div id="imgModal" class="modal">
+            <div class="col-sm-12 col-md-8 col-lg-8 mb-8">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4 mb-4">
+                <div>div id="caption"></div>
+            </div>
+        </div>
+    </div>
+    -->
+                <!--
+    <div id="imgModal" class="modal">
+        <div class="row" style="background-color: lightgray">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
+    </div>
+    -->
+                <!--
+           <div id="imgModal" class="modal" tabindex="-1">
+               <div class="modal-dialog modal-xl">
+                   <div class="modal-content">
+                       <div class="modal-body p-0">
+                           <div class="container-fluid">
+                               <div class="row no-gutters" style="background-color: lightgray;">
 
-                <div class="col-sm-12 col-md-12 col-lg-12 mb-12">
-                    <div id="imgModal" class="modal">
-                        <span class="close">&times;</span>
-                        <img class="modal-content" id="img01">
-                        <div id="caption"></div>
+                                   <span class="close" style="position: absolute; top: 15px; right: 20px; font-size: 24px; cursor: pointer;">&times;</span>
+
+
+
+                                   <div class="col-md-6 modal-image-container">
+                                       <img id="img01" class="img-fluid" alt="Modal Image">
+                                   </div>
+                                   <div class="col-md-6 d-flex align-items-center justify-content-center p-4">
+                                       <div id="caption" class="caption-text"></div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+    -->
+                <!--Testing FullScreen Images-->
+                <div id="fullScreenViewer" class="fullscreen-viewer" style="display: none;">
+                    <span class="close" onclick="closeFullScreen()">&times;</span>
+                    <div class="viewer-content">
+
+                        <div class="image-container col-xs-12 col-sm-12 col-md-6">
+                            <img id="fullScreenImage" class="img-fluid" alt="Full-Screen Image">
+                        </div>
+                        <div class="description-container col-xs-12 col-sm-12 col-md-6">
+                            <div class="image-container-background">
+                                <h2 id="imageDescription" class="image-title"></h2>
+                                <p id="imageDetails" class="image-details"></p>
+                                <p id="imageCamSettings" class="image-camera-settings"></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-
-            <!--LANDSCAPES SECTION-->
-            <!--
-        <div class="item wild col-sm-6 col-md-6 col-lg-6 mb-4">
-            <a class="item-wrap">
-                <img class="img-fluid" src="assets/img/photos/wildlife/sparrow_close.jpg">
-            </a>
-            <a class="item-wrap">
-                <img class="img-fluid" src="assets/img/photos/wildlife/squirrel_walnut.jpg">
-            </a>
-        </div>
-        <div class="item wild col-sm-6 col-md-6 col-lg-6 mb-4">
-            <a class="item-wrap">
-                <img class="img-fluid" src="assets/img/photos/wildlife/sparrow_close.jpg">
-            </a>
-            <a class="item-wrap">
-                <img class="img-fluid" src="assets/img/photos/wildlife/squirrel_walnut.jpg">
-            </a>
-
-        </div>
-
-
-
-
-
-
-                    </div>
-                    -->
-        </section>
+</section>
         <!-- End  Works Section -->
     </main>
     <!-- End #main -->
@@ -169,7 +211,7 @@
                 <div class="col-12 social justify-content-center" data-aos="fade-up" data-aos-delay="150" id="socialMedia">
                     <a href="#" id="twitter"><span class="bi bi-twitter"></span></a>
                     <a href="#" id="facebook"><span class="bi bi-facebook"></span></a>
-                    <a href="#" id="instagram"><span class="bi bi-instagram"></span></a>
+                    <a href="https://www.instagram.com/georgewbennett/" id="instagram"><span class="bi bi-instagram"></span></a>
                     <a href="# " id="linkedIn"><span class="bi bi-linkedin"></span></a>
                 </div>
             </div>
@@ -184,7 +226,7 @@
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 

@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\assets",
-    "\\assets\\css",
-    "\\assets\\js"
+    "\\assets\\img\\photos",
+    "\\assets\\img\\photos\\landscape",
+    "\\assets\\img\\photos\\wildlife"
   ],
-  "SelectedNode": "\\work-single.html",
+  "SelectedNode": "\\index.html",
   "PreviewInSolutionExplorer": false
 }

@@ -119,7 +119,7 @@ function goBack() {
 }
 
 
-
+/*
 // Modal for Images in fullscreen (Photography Page)
 var modal = document.getElementById("imgModal");
 var modalImg = document.getElementById("img01");
@@ -151,3 +151,116 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
+*/
+
+
+//Fullscreen Viewer
+var fullScreenViewer = document.getElementById("fullScreenViewer");
+var fullScreenImage = document.getElementById("fullScreenImage");
+var imageDescription = document.getElementById("imageDescription");
+var imageDetails = document.getElementById("imageDetails");
+var imageCamSettings = document.getElementById("imageCamSettings");
+
+// Get all images with the class "modal-image"
+var images = document.getElementsByClassName("modal-image");
+
+// Loop through all images and add an onclick event to open the full-screen viewer
+for (var i = 0; i < images.length; i++) {
+    images[i].onclick = function () {
+        fullScreenViewer.style.display = "flex";
+        fullScreenImage.src = this.getAttribute("data-src"); // Set image source
+        imageDescription.innerText = this.getAttribute("data-description"); // Set description
+        imageDetails.innerText = this.getAttribute("data-details"); // Set additional details
+        imageCamSettings.innerText = this.getAttribute("data-cam-settings");
+    }
+}
+
+// Get the <span> element that closes the viewer
+var closeBtn = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the viewer
+closeBtn.onclick = function () {
+    fullScreenViewer.style.display = "none"; // Hide the viewer
+}
+
+// Optional: close viewer when user clicks anywhere outside the image
+
+ window.onclick = function (event) {
+        if (event.target == fullScreenViewer) {
+            fullScreenViewer.style.display = "none"; // Hide the viewer
+        }
+    }
+
+
+
+/*
+// Full-Screen Image Viewer Elements
+var fullScreenViewer = document.getElementById("fullScreenViewer");
+var carouselInner = document.querySelector(".carousel-inner");
+var imageDescription = document.getElementById("imageDescription");
+var imageDetails = document.getElementById("imageDetails");
+
+// Get all images with the class "modal-image"
+var images = document.getElementsByClassName("modal-image");
+var imageArray = [];
+
+// Populate the imageArray with the images' data
+for (var i = 0; i < images.length; i++) {
+    imageArray.push({
+        src: images[i].getAttribute("data-src"),
+        description: images[i].getAttribute("data-description"),
+        details: images[i].getAttribute("data-details"),
+        alt: images[i].alt
+    });
+}
+
+
+// Function to open the full-screen viewer and set the carousel
+function openFullScreenViewer(index) {
+    fullScreenViewer.style.display = "flex";
+
+    // Clear existing images in carousel
+    carouselInner.innerHTML = "";
+
+    // Create carousel items
+    imageArray.forEach((image, i) => {
+        var isActive = i === index ? "active" : "";
+        carouselInner.innerHTML += `
+            <div class="carousel-item ${isActive}">
+                <img src="${image.src}" class="d-block w-100" alt="${image.alt}">
+            </div>
+        `;
+    });
+
+    // Set description and details for the first image
+    imageDescription.innerText = imageArray[index].description; // Set description
+    imageDetails.innerText = imageArray[index].details; // Set additional details
+
+    // Initialize carousel
+    $('#carouselExample').carousel(index); // Set initial index
+}
+
+// Loop through all images and add an onclick event to open the full-screen viewer
+for (var i = 0; i < images.length; i++) {
+    images[i].onclick = function () {
+        var index = Array.from(images).indexOf(this); // Get the index of the clicked image
+        openFullScreenViewer(index); // Open viewer with that index
+    }
+}
+
+// Get the <span> element that closes the viewer
+var closeBtn = document.getElementById("close-carousel");
+
+// Function to close the full-screen viewer
+closeBtn.onclick = function () {
+    fullScreenViewer.style.display = "none"; // Hide the viewer
+}
+
+// Optional: close viewer when user clicks anywhere outside the image
+window.onclick = function (event) {
+    if (event.target == fullScreenViewer) {
+        fullScreenViewer.style.display = "none"; // Hide the viewer
+    }
+}
+
+    */
