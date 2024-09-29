@@ -172,6 +172,12 @@ for (var i = 0; i < images.length; i++) {
         imageDescription.innerText = this.getAttribute("data-description"); // Set description
         imageDetails.innerText = this.getAttribute("data-details"); // Set additional details
         imageCamSettings.innerText = this.getAttribute("data-cam-settings");
+
+
+        // Update the URL without changing the page or including image name
+        const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+        window.history.pushState({ path: newUrl }, '', newUrl);
+
     }
 }
 
