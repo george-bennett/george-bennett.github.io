@@ -125,7 +125,8 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 .item {
     border: none;
-    margin-bottom: 30px;
+    margin: 0 auto;
+    position: relative;
 }
     .item .img-fluid {
     }
@@ -140,8 +141,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 .img-fluid {
-    margin: 1.25%;
-    padding: 1.25%;
+    padding: 2.5%;
     display: block; /* Ensure images are displayed */
     max-width: 100%; /* Responsive */
     height: auto; /* Maintain aspect ratio */
@@ -381,6 +381,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   object-fit: contain; /* Ensure the entire image is contained within the box */
   max-height: 90vh; /* Prevents the image from exceeding modal height */
   width: 100%; /* Maintains full width to prevent overflow */
+  margin: 1%;
 }
 
 /* Special treatment for landscape images */
@@ -388,13 +389,6 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   .modal-image-container img {
     max-height: 100vh; /* Allow landscape images to take up more height */
   }
-}
-
-.close {
-  color: #000;
-  font-weight: bold;
-  position: absolute;
-  z-index: 2; /* Ensures close button is above other content */
 }
 
 #caption {
@@ -407,10 +401,10 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 .close {
     position: absolute;
-    top: 10px; /* Slightly offset from the top of the modal image */
+    top: 5px; /* Slightly offset from the top of the modal image */
     right: 10px; /* Align it to the right side of the image */
     color: #fff;
-    font-size: 30px;
+    font-size: 100px;
     font-weight: bold;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -423,7 +417,10 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         text-decoration: none;
     }
 
-
+.modal-image {
+    /* Remove any scaling effects on hover for modal images */
+    padding: 2.5%;
+}
 /* Specific styling to remove the hover effect on modal images */
 .modal-image:hover {
     /* Remove any scaling effects on hover for modal images */
@@ -497,7 +494,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
     .close {
         color: white; /* Close button color */
-        font-size: 40px; /* Close button size */
+        font-size: 100px; /* Close button size */
         position: absolute;
         top: 20px; /* Position from the top */
         right: 30px; /* Position from the right */
@@ -511,38 +508,38 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     }
 
 
-    @media (max-width: 767.98px) { /* Targets xs and sm screens (Bootstrap breakpoints) */
-        .viewer-content {
-            flex-direction: column; /* Stack vertically for small screens */
-        }
-
-        .image-container, .description-container {
-            flex: 1; /* Each takes 50% of the height in a column layout */
-            height: 75%; /* Ensure it takes up half of the viewer content */
-            width: 100%; /* Full width */
-        }
-
-        .image-container {
-            padding: 10px; /* Reduce padding for better spacing on smaller screens */
-        }
-
-        .description-container {
-            padding: 10px; /* Add padding for description */
-            text-align: center;
-        }
-
-        .close {
-            color: black; /* Close button color */
-            font-size: 60px; /* Close button size */
-            position: absolute;
-            top: 10px; /* Position from the top */
-            right: 30px; /* Position from the right */
-            cursor: pointer; /* Pointer cursor for hover effect */
-            z-index: 1060; /* Above the content */
-        }
-
-
+@media (max-width: 767.98px) { /* Targets xs and sm screens (Bootstrap breakpoints) */
+    .viewer-content {
+        flex-direction: column; /* Stack vertically for small screens */
+        position: relative; /* Position relative for proper positioning of absolute elements inside */
     }
+
+    .image-container, .description-container {
+        flex: 1; /* Each takes 50% of the height in a column layout */
+        height: 75%; /* Adjusted to take up 75% for the image container */
+        width: 100%; /* Full width */
+    }
+
+    .image-container {
+        padding: 10px; /* Reduce padding for better spacing on smaller screens */
+        position: relative; /* Set position to relative so close button can be positioned against this container */
+    }
+
+    .description-container {
+        padding: 10px; /* Add padding for description */
+        text-align: center;
+    }
+
+    .close {
+        color: black; /* Close button color */
+        font-size: 60px; /* Close button size */
+        position: absolute;
+        top: 10px; /* Position from the top */
+        right: 15px; /* Adjust right position to keep away from content */
+        cursor: pointer; /* Pointer cursor for hover effect */
+        z-index: 1060; /* Ensure it stays above other content */
+    }
+}
 
 .description-container {
     display: flex;
@@ -596,61 +593,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /* Services */
-    /*
-.services i {
-    font-size: 40px;
-}
-
-.services h4 {
-    padding-top: 10px;
-}
-
-@-webkit-keyframes animate-loading {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes animate-loading {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-*/
-    /*--------------------------------------------------------------
+/*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
     /* Custom Navmenu */
@@ -897,7 +840,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
             outline: none;
         }
 
-    /*--------------------------------------------------------------
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
     .footer {
