@@ -185,7 +185,7 @@ for (var i = 0; i < images.length; i++) {
 var closeBtn = document.getElementsByClassName("close")[0];
 
 // When the user clicks on <span> (x), close the viewer
-closeBtn.onclick = function () {
+closeBtn.onclick = function() {
     fullScreenViewer.style.display = "none"; // Hide the viewer
 }
 
