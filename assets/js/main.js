@@ -334,7 +334,7 @@ for (var i = 0; i < images.length; i++) {
 
         // Set camera  prefix
         const camData = this.getAttribute("data-cam");
-        imageCamera.innerText = "📷 Camera: " + (camData ? camData : "Not specified");
+        imageCamera.innerText = "Camera: " + (camData ? camData : "Not specified");
 
         // Set lens  prefix
         const lensData = this.getAttribute("data-lens");
