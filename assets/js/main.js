@@ -1,10 +1,6 @@
-/*MAIN.JS 
+﻿/*MAIN.JS 
 This Page is responsible for the logic of images, navigation elements and page listener functions
 */
-
-
-
-
 (function() {
   "use strict";
 
@@ -290,7 +286,12 @@ var fullScreenViewer = document.getElementById("fullScreenViewer");
 var fullScreenImage = document.getElementById("fullScreenImage");
 var imageDescription = document.getElementById("imageDescription");
 var imageDetails = document.getElementById("imageDetails");
-var imageCamSettings = document.getElementById("imageCamSettings");
+
+var imageCamera = document.getElementById("imageCamera");
+var imageLens = document.getElementById("imageLens");
+var imageFocal = document.getElementById("imageFocal");
+var imgAperture = document.getElementById("imageAperture");
+
 
 // Get all images with the class "modal-image"
 var images = document.getElementsByClassName("modal-image");
@@ -298,17 +299,54 @@ var images = document.getElementsByClassName("modal-image");
 // Loop through all images and add an onclick event to open the full-screen viewer
 for (var i = 0; i < images.length; i++) {
     images[i].onclick = function () {
+
+        // Display the full-screen viewer
+        fullScreenViewer.style.display = "flex";
+        document.body.style.overflow = "hidden";
+        // Set the image source
+        fullScreenImage.src = this.getAttribute("data-src");
+
+        // Set description
+        imageDescription.innerText = this.getAttribute("data-description") || "Description not available";
+
+        // Set details
+        imageDetails.innerText = this.getAttribute("data-details") || "Details not available";
+
+        // Set camera  prefix
+        const camData = this.getAttribute("data-cam");
+        imageCamera.innerText = "📷 Camera: " + (camData ? camData : "Not specified");
+
+        // Set lens  prefix
+        const lensData = this.getAttribute("data-lens");
+        imageLens.innerText = "Lens: " + (lensData ? lensData : "Not specified");
+
+        // Set focal prefix
+        const focalData = this.getAttribute("data-focal");
+        imageFocal.innerText = "Focal Length: " + (focalData ? focalData : "Not specified");
+
+        // Set aperture prefix
+        const apertureData = this.getAttribute("data-aperture");
+        imgAperture.innerText = "Aperture: " + (apertureData ? apertureData : "Not specified");
+
+        // Update the URL without changing the page or image name
+        const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+        window.history.pushState({ path: newUrl }, '', newUrl);
+
+
+/*
         fullScreenViewer.style.display = "flex";
         fullScreenImage.src = this.getAttribute("data-src"); // Set image source
         imageDescription.innerText = this.getAttribute("data-description"); // Set description
         imageDetails.innerText = this.getAttribute("data-details"); // Set additional details
-        imageCamSettings.innerText = this.getAttribute("data-cam-settings");
-
+        imageCamera.innerText = this.getAttribute("Camera:" + "data-cam");
+        imageLens.innerText = this.getAttribute("data-lens");
+        imageFocal.innerText = this.getAttribute("data-focal");
+        imgAperture.innerText = this.getAttribute("data-aperture");
 
         // Update the URL without changing the page or including image name
         const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
         window.history.pushState({ path: newUrl }, '', newUrl);
-
+        */
     }
 }
 
@@ -318,6 +356,8 @@ var closeBtn = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the viewer
 closeBtn.onclick = function() {
     fullScreenViewer.style.display = "none"; // Hide the viewer
+    // Re-enable scrolling on body
+    document.body.style.overflow = "auto";
 }
 
 // Optional: close viewer when user clicks anywhere outside the image
