@@ -210,254 +210,274 @@ h1, h2, h3, h4, h5, h6, .font-heading {
                 font-size: 32px;
                 margin-bottom: 0;
             }
+@media (min-width: 991px) {
+    /* Adding hover effects */
+    .item .item-wrap:hover img {
+        transform: scale(1.05);
+    }
 
-        /* Adding hover effects */
+    .item .item-wrap:hover:after {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .item .item-wrap:hover .work-info {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
+
+
+    @media (max-width: 991px) {
+        /* Always show overlay and work-info */
+        .item .item-wrap:after {
+            visibility: visible !important; /* Ensure overlay is visible */
+            opacity: 1 !important; /* Fully opaque */
+        }
+
+        .item .item-wrap > .work-info {
+            visibility: visible !important; /* Show work-info */
+            opacity: 1 !important; /* Fully opaque */
+        }
+
+        /* Remove hover effect on mobile for image scaling */
         .item .item-wrap:hover img {
-            transform: scale(1.05);
+            transform: none; /* Disable scaling on hover */
         }
-
-        .item .item-wrap:hover:after {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .item .item-wrap:hover .work-info {
-            opacity: 1;
-            visibility: visible;
-        }
-
-.testimonial-wrap {
-    padding: 50px 50px 80px 50px;
-    background: #eceff2;
-}
-
-    .testimonial-wrap .testimonial {
-        text-align: center;
-        max-width: 500px;
-        margin: 0 auto;
     }
 
-        .testimonial-wrap .testimonial img {
-            border-radius: 50%;
-            width: 120px;
-            margin: 0 auto 30px auto;
-        }
 
-        .testimonial-wrap .testimonial blockquote p {
-            font-size: 20px;
-        }
-
-.h3 {
-    font-size: 20px;
-}
-
-.h4 {
-    font-size: 16px;
-}
-
-.heading {
-    font-size: 28px;
-}
-
-.readmore {
-    display: inline-block;
-    border: 1px solid #fff;
-    padding: 10px 15px;
-    font-size: 12px;
-    text-transform: uppercase;
-    color: #fff;
-    transition: .2s all ease;
-    font-weight: 700;
-}
-
-    .readmore:active, .readmore:focus, .readmore:hover {
-        outline: none;
+    .testimonial-wrap {
+        padding: 50px 50px 80px 50px;
+        background: #eceff2;
     }
 
-    .readmore:hover {
+        .testimonial-wrap .testimonial {
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+            .testimonial-wrap .testimonial img {
+                border-radius: 50%;
+                width: 120px;
+                margin: 0 auto 30px auto;
+            }
+
+            .testimonial-wrap .testimonial blockquote p {
+                font-size: 20px;
+            }
+
+    .h3 {
+        font-size: 20px;
+    }
+
+    .h4 {
+        font-size: 16px;
+    }
+
+    .heading {
+        font-size: 28px;
+    }
+
+    .readmore {
+        display: inline-block;
+        border: 1px solid #fff;
+        padding: 10px 15px;
+        font-size: 12px;
+        text-transform: uppercase;
         color: #fff;
-        text-decoration: none;
-        background: #000;
+        transition: .2s all ease;
+        font-weight: 700;
     }
 
-.testimonials-slider .swiper-pagination {
-    margin-top: -60px;
-    position: relative;
-}
+        .readmore:active, .readmore:focus, .readmore:hover {
+            outline: none;
+        }
 
-    .testimonials-slider .swiper-pagination .swiper-pagination-bullet {
-        width: 12px;
-        height: 12px;
-        background-color: rgba(13, 30, 45, 0.3);
-        opacity: 1;
+        .readmore:hover {
+            color: #fff;
+            text-decoration: none;
+            background: #000;
+        }
+
+    .testimonials-slider .swiper-pagination {
+        margin-top: -60px;
+        position: relative;
     }
 
-    .testimonials-slider .swiper-pagination .swiper-pagination-bullet-active {
-        background-color: rgba(13, 30, 45, 0.6);
+        .testimonials-slider .swiper-pagination .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(13, 30, 45, 0.3);
+            opacity: 1;
+        }
+
+        .testimonials-slider .swiper-pagination .swiper-pagination-bullet-active {
+            background-color: rgba(13, 30, 45, 0.6);
+        }
+
+    .sticky-content {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        /* required */
     }
 
-.sticky-content {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    /* required */
-}
-
-.list-line li {
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 30px;
-}
-
-    .list-line li:before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: .7rem;
-        width: 10px;
-        height: 2px;
-        background: #000;
+    .list-line li {
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 30px;
     }
 
-.form-control {
-    border-radius: 0;
-    background: #f8f9fa;
-    border: 1px solid transparent;
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-}
+        .list-line li:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: .7rem;
+            width: 10px;
+            height: 2px;
+            background: #000;
+        }
 
-    .form-control:active, .form-control:focus {
-        background: #eff1f4;
-        outline: none;
-        box-shadow: none;
+    .form-control {
+        border-radius: 0;
+        background: #f8f9fa;
         border: 1px solid transparent;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
     }
 
-.custom-progress {
-    height: 7px;
-    border-radius: 0;
-}
+        .form-control:active, .form-control:focus {
+            background: #eff1f4;
+            outline: none;
+            box-shadow: none;
+            border: 1px solid transparent;
+        }
 
-    .custom-progress .progress-bar {
-        background: #000;
+    .custom-progress {
+        height: 7px;
+        border-radius: 0;
     }
 
-.modal-overlay {
-  position: fixed; /* Cover the entire viewport */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9); /* 90% black */
-  display: none; /* Initially hidden */
-  z-index: 1040; /* Positioned below the modal content */
-}
+        .custom-progress .progress-bar {
+            background: #000;
+        }
 
-/* Show overlay when modal is open */
-.modal.show .modal-overlay {
-  display: block; /* Show the overlay when the modal is active */
-}
-
-/* Ensure the modal does not exceed the viewport height */
-.modal-content {
-  max-height: 90vh; /* Keeps the modal at 90% of the viewport height */
-  width: 100%; /* Ensures the modal takes full width */
-  z-index: 1050; /* Positioned above the overlay */
-}
-
-.modal-dialog {
-  max-width: 1400px; /* Wider modal */
-  margin: auto; /* Centers the modal horizontally */
-  display: flex; /* Enable flexbox for vertical centering */
-  align-items: center; /* Center the content vertically */
-  height: 100vh; /* Full height for centering */
-}
-
-.modal-body {
-  display: flex; /* Enable flexbox */
-  justify-content: center; /* Center the body content horizontally */
-  align-items: center; /* Center the body content vertically */
-}
-
-.modal-image-container {
-  height: 100%;
-  overflow: hidden;
-}
-
-.modal-image-container img {
-  object-fit: contain; /* Ensure the entire image is contained within the box */
-  max-height: 90vh; /* Prevents the image from exceeding modal height */
-  width: 100%; /* Maintains full width to prevent overflow */
-  margin: 1%;
-}
-
-/* Special treatment for landscape images */
-@media (min-aspect-ratio: 16/9) { /* Example for landscape images */
-  .modal-image-container img {
-    max-height: 100vh; /* Allow landscape images to take up more height */
-  }
-}
-
-#caption {
-    margin: 20px auto;
-    text-align: center;
-    color: #ccc;
-    font-size: 18px;
-    width: 80%;
-    
-}
-.close {
-    position: absolute;
-    top: 5px; /* Slightly offset from the top of the modal image */
-    right: 10px; /* Align it to the right side of the image */
-    color: #fff;
-    font-size: 100px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    z-index: 10; /* Ensure the button is above the image */
-}
-
-    .close:hover,
-    .close:focus {
-        color: #bbb;
-        text-decoration: none;
+    .modal-overlay {
+        position: fixed; /* Cover the entire viewport */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9); /* 90% black */
+        display: none; /* Initially hidden */
+        z-index: 1040; /* Positioned below the modal content */
     }
 
-.modal-image {
-    /* Remove any scaling effects on hover for modal images */
-    padding: 2.5%;
-}
-/* Specific styling to remove the hover effect on modal images */
-.modal-image:hover {
-    /* Remove any scaling effects on hover for modal images */
-    cursor: pointer;
-    transform: scale(1.05);
-    transition: .5s all ease;
-}
+    /* Show overlay when modal is open */
+    .modal.show .modal-overlay {
+        display: block; /* Show the overlay when the modal is active */
+    }
 
-/* Remove the dark overlay effect for modal images */
-.modal-image::after {
-    visibility: hidden !important;
-    opacity: 0 !important;
+    /* Ensure the modal does not exceed the viewport height */
+    .modal-content {
+        max-height: 90vh; /* Keeps the modal at 90% of the viewport height */
+        width: 100%; /* Ensures the modal takes full width */
+        z-index: 1050; /* Positioned above the overlay */
+    }
 
-    transition: .5s all ease;
-}
+    .modal-dialog {
+        max-width: 1400px; /* Wider modal */
+        margin: auto; /* Centers the modal horizontally */
+        display: flex; /* Enable flexbox for vertical centering */
+        align-items: center; /* Center the content vertically */
+        height: 100vh; /* Full height for centering */
+    }
+
+    .modal-body {
+        display: flex; /* Enable flexbox */
+        justify-content: center; /* Center the body content horizontally */
+        align-items: center; /* Center the body content vertically */
+    }
+
+    .modal-image-container {
+        height: 100%;
+        overflow: hidden;
+    }
+
+        .modal-image-container img {
+            object-fit: contain; /* Ensure the entire image is contained within the box */
+            max-height: 90vh; /* Prevents the image from exceeding modal height */
+            width: 100%; /* Maintains full width to prevent overflow */
+            margin: 1%;
+        }
+
+    /* Special treatment for landscape images */
+    @media (min-aspect-ratio: 16/9) { /* Example for landscape images */
+        .modal-image-container img {
+            max-height: 100vh; /* Allow landscape images to take up more height */
+        }
+    }
+
+    #caption {
+        margin: 20px auto;
+        text-align: center;
+        color: #ccc;
+        font-size: 18px;
+        width: 80%;
+    }
+
+    .close {
+        position: absolute;
+        top: 5px; /* Slightly offset from the top of the modal image */
+        right: 10px; /* Align it to the right side of the image */
+        color: #fff;
+        font-size: 100px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        z-index: 10; /* Ensure the button is above the image */
+    }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+        }
+
+    .modal-image {
+        /* Remove any scaling effects on hover for modal images */
+        padding: 2.5%;
+    }
+        /* Specific styling to remove the hover effect on modal images */
+        .modal-image:hover {
+            /* Remove any scaling effects on hover for modal images */
+            cursor: pointer;
+            transform: scale(1.05);
+            transition: .5s all ease;
+        }
+
+        /* Remove the dark overlay effect for modal images */
+        .modal-image::after {
+            visibility: hidden !important;
+            opacity: 0 !important;
+            transition: .5s all ease;
+        }
 
 
-/*FullScreen Image Viewer*/
-.fullscreen-viewer {
-    position: fixed; /* Cover the entire viewport */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* background-color: rgba(0, 0, 0, 0.95); /* 90% black */
-    background-color: rgba(47, 133, 90, 0.95); 
-    display: flex; /* Flexbox for layout */
-    z-index: 1050; /* Above all other content */
-}
+    /*FullScreen Image Viewer*/
+    .fullscreen-viewer {
+        position: fixed; /* Cover the entire viewport */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* background-color: rgba(0, 0, 0, 0.95); /* 90% black */
+        background-color: rgba(47, 133, 90, 0.95);
+        display: flex; /* Flexbox for layout */
+        z-index: 1050; /* Above all other content */
+    }
 
 
     .viewer-content {
@@ -467,10 +487,9 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         flex-direction: row; /* Default: image and description side by side */
     }
 
-    .image-container-bkground{
+    .image-container-bkground {
         background-color: white;
         padding: 10px
-
     }
 
     .image-container {
@@ -491,15 +510,16 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         }
 
 
-.description-container {
-    display: flex; /* Enable flexbox layout */
-    align-items: center; /* Center content vertically */
-    flex-direction: column; /* Stack children vertically */
-    justify-content: center; /* Center content horizontally */
-    padding: 20px; /* Padding for the description area */
-    color: white; /* Ensure text is visible */
-    text-align: center; /* Optional: center-align text within container */
-}
+    .description-container {
+        display: flex; /* Enable flexbox layout */
+        align-items: center; /* Center content vertically */
+        flex-direction: column; /* Stack children vertically */
+        justify-content: center; /* Center content horizontally */
+        padding: 20px; /* Padding for the description area */
+        color: white; /* Ensure text is visible */
+        text-align: center; /* Optional: center-align text within container */
+    }
+
     .close {
         color: white; /* Close button color */
         font-size: 100px; /* Close button size */
@@ -516,97 +536,98 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     }
 
 
-@media (max-width: 767.98px) { /* Targets xs and sm screens (Bootstrap breakpoints) */
-    .viewer-content {
-        flex-direction: column; /* Stack vertically for small screens */
-        position: relative; /* Position relative for proper positioning of absolute elements inside */
-    }
+    @media (max-width: 767.98px) { /* Targets xs and sm screens (Bootstrap breakpoints) */
+        .viewer-content {
+            flex-direction: column; /* Stack vertically for small screens */
+            position: relative; /* Position relative for proper positioning of absolute elements inside */
+        }
 
-    .image-container, .description-container {
-        /* Each takes 50% of the height in a column layout */
-       
-        width: 100%; /* Full width */
-    }
+        .image-container, .description-container {
+            /* Each takes 50% of the height in a column layout */
 
-    .image-container {
-        padding: 10px; /* Reduce padding for better spacing on smaller screens */
-        position: relative; /* Set position to relative so close button can be positioned against this container */
-        height: 75%; /* Adjusted to take up 75% for the image container */
+            width: 100%; /* Full width */
+        }
+
+        .image-container {
+            padding: 10px; /* Reduce padding for better spacing on smaller screens */
+            position: relative; /* Set position to relative so close button can be positioned against this container */
+            height: 75%; /* Adjusted to take up 75% for the image container */
+        }
+
+        .description-container {
+            padding: 10px; /* Add padding for description */
+            text-align: center;
+            margin: 1%;
+        }
+
+        .close {
+            color: black; /* Close button color */
+            font-size: 60px; /* Close button size */
+            position: absolute;
+            top: 10px; /* Position from the top */
+            right: 15px; /* Adjust right position to keep away from content */
+            cursor: pointer; /* Pointer cursor for hover effect */
+            z-index: 1060; /* Ensure it stays above other content */
+        }
     }
 
     .description-container {
-        padding: 10px; /* Add padding for description */
-        text-align: center;
+        display: flex;
+        align-items: center; /* Center items vertically */
+        justify-content: center; /* Center items horizontally */
+        padding: 20px; /* Padding around the container */
     }
 
-    .close {
-        color: black; /* Close button color */
-        font-size: 60px; /* Close button size */
-        position: absolute;
-        top: 10px; /* Position from the top */
-        right: 15px; /* Adjust right position to keep away from content */
-        cursor: pointer; /* Pointer cursor for hover effect */
-        z-index: 1060; /* Ensure it stays above other content */
-    }
-}
-
-.description-container {
-    display: flex;
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    padding: 20px; /* Padding around the container */
-}
-
-.image-container-background {
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px; /* Internal padding */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    max-height: 300px; /* Max height for the container */
-    overflow-y: auto; /* Scroll if content exceeds max height */
-    width: 100%;
-}
-
-
-/* Style for the title */
-.image-title {
-    font-size: 24px; /* Larger font size */
-    font-weight: bold; /* Bold font */
-    margin-bottom: 10px; /* Space below the title */
-    color: #2f855a; /* Example color from your palette */
-    text-align: left;
-    text-decoration: underline;
-}
-
-/* Style for details and camera settings */
-.image-details,
-.image-camera-settings {
-    font-size: 16px; /* Normal font size */
-    color: #333; /* Dark gray for better readability */
-    line-height: 1.5; /* Increased line height for readability */
-    margin-bottom: 5px; /* Space between paragraphs */
-    text-align: left;
-}
-
-/* Responsive Design */
-@media (max-width: 767.98px) {
     .image-container-background {
-        padding: 15px; /* Less padding on mobile */
+        background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+        border-radius: 8px; /* Rounded corners */
+        padding: 20px; /* Internal padding */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        max-height: 300px; /* Max height for the container */
+        overflow-y: auto; /* Scroll if content exceeds max height */
+        width: 100%;
     }
 
+
+    /* Style for the title */
     .image-title {
-        font-size: 20px; /* Slightly smaller font size on mobile */
+        font-size: 24px; /* Larger font size */
+        font-weight: bold; /* Bold font */
+        margin-bottom: 10px; /* Space below the title */
+        color: #2f855a; /* Example color from your palette */
+        text-align: left;
+        text-decoration: underline;
     }
 
+    /* Style for details and camera settings */
     .image-details,
     .image-camera-settings {
-        font-size: 14px; /* Smaller text on mobile */
+        font-size: 16px; /* Normal font size */
+        color: #333; /* Dark gray for better readability */
+        line-height: 1.5; /* Increased line height for readability */
+        margin-bottom: 5px; /* Space between paragraphs */
+        text-align: left;
     }
-}
+
+    /* Responsive Design */
+    @media (max-width: 767.98px) {
+        .image-container-background {
+            padding: 15px; /* Less padding on mobile */
+        }
+
+        .image-title {
+            font-size: 20px; /* Slightly smaller font size on mobile */
+        }
+
+        .image-details,
+        .image-camera-settings {
+            font-size: 14px; /* Smaller text on mobile */
+        }
+    }
 
 
 
-/*--------------------------------------------------------------
+    /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
     /* Custom Navmenu */
@@ -728,15 +749,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         border: none;
     }
 
-.navbar-toggler {
-    outline: none !important; /* Removes the default outline */
-    border: none !important; /* Ensures no border appears */
-    border-radius: 0 !important;
-    transition: none !important;
-    box-shadow: 0 0 0 0rem !important;
-}
-
-    .navbar-toggler:focus {
+    .navbar-toggler {
         outline: none !important; /* Removes the default outline */
         border: none !important; /* Ensures no border appears */
         border-radius: 0 !important;
@@ -744,15 +757,23 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         box-shadow: 0 0 0 0rem !important;
     }
 
+        .navbar-toggler:focus {
+            outline: none !important; /* Removes the default outline */
+            border: none !important; /* Ensures no border appears */
+            border-radius: 0 !important;
+            transition: none !important;
+            box-shadow: 0 0 0 0rem !important;
+        }
 
 
-    .navbar-toggler:active {
-        outline: none !important; /* Removes the default outline */
-        border: none !important; /* Ensures no border appears */
-        border-radius: 0 !important;
-        transition: none !important;
-        box-shadow: 0 0 0 0rem !important;
-    }
+
+        .navbar-toggler:active {
+            outline: none !important; /* Removes the default outline */
+            border: none !important; /* Ensures no border appears */
+            border-radius: 0 !important;
+            transition: none !important;
+            box-shadow: 0 0 0 0rem !important;
+        }
 
 
 
@@ -791,10 +812,10 @@ h1, h2, h3, h4, h5, h6, .font-heading {
             }
 
 
-        
-            .navbar .container-xxl {
-                height: 62px;
-            }
+
+        .navbar .container-xxl {
+            height: 62px;
+        }
 
         #navbarToggler {
             margin-top: 0em;
@@ -809,9 +830,6 @@ h1, h2, h3, h4, h5, h6, .font-heading {
             height: 62px;
             padding-top: 1em;
         }
-
-
-
     }
 
 
@@ -844,13 +862,13 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     }
 
     /* Burger */
-.burger {
-    width: 28px;
-    height: 32px;
-    cursor: pointer;
-    position: relative;
-    outline: none;
-}
+    .burger {
+        width: 28px;
+        height: 32px;
+        cursor: pointer;
+        position: relative;
+        outline: none;
+    }
 
         .burger:before, .burger span, .burger:after {
             width: 100%;
@@ -912,7 +930,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
             outline: none;
         }
 
-/*--------------------------------------------------------------
+    /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
     .footer {

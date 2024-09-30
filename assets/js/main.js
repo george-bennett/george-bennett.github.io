@@ -1,16 +1,10 @@
 ﻿/*MAIN.JS 
 This Page is responsible for the logic of images, navigation elements and page listener functions
 */
-
-
-
-
 (function() {
   "use strict";
 
-  /**
-   * Easy selector helper function
-   */
+  /* Easy selector helper function */
   const select = (el, all = false) => {
     el = el.trim()
     if (all) {
@@ -21,7 +15,6 @@ This Page is responsible for the logic of images, navigation elements and page l
   }
 
   /* Easy event listener function */
-
   const on = (type, el, listener, all = false) => {
     let selectEl = select(el, all)
     if (selectEl) {
@@ -33,9 +26,7 @@ This Page is responsible for the logic of images, navigation elements and page l
     }
   }
 
-  /**
-   * Easy on scroll event listener 
-   */
+  /* Easy on scroll event listener */
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
   }
@@ -124,6 +115,33 @@ function toggleMenu() {
     else {
     }
 }
+
+
+function toggleOverlays() {
+    const overlays = document.querySelectorAll('.item .item-wrap:after, .item .item-wrap > .work-info');
+
+    if (window.innerWidth <= 991) {
+        overlays.forEach(overlay => {
+            overlay.style.visibility = 'visible'; // Always show overlays on mobile/tablet
+            overlay.style.opacity = '1';
+        });
+    } else {
+        overlays.forEach(overlay => {
+            overlay.style.visibility = 'hidden'; // Hide overlays on larger screens
+            overlay.style.opacity = '0';
+        });
+    }
+}
+
+// Run on load and resize
+toggleOverlays();
+window.addEventListener('resize', toggleOverlays);
+
+
+
+
+
+
 
 function goBack() {
     window.history.back();
