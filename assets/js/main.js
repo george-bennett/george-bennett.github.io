@@ -1,6 +1,10 @@
 ﻿/*MAIN.JS 
 This Page is responsible for the logic of images, navigation elements and page listener functions
 */
+
+
+
+
 (function() {
   "use strict";
 
@@ -47,7 +51,12 @@ This Page is responsible for the logic of images, navigation elements and page l
   /**
    * Porfolio isotope and filter
    */
-  window.addEventListener('load', () => {
+    window.addEventListener('load', () => {
+      //Load at Top of Page // Prevents Refreshing Behaviour Inconsistencies. 
+      window.history.scrollRestoration = 'manual'; // Prevents scroll restoration
+      window.scrollTo(0, 0); // Scrolls to the top on load
+    
+
     let portfolioContainer = select('#portfolio-grid');
     if (portfolioContainer) {
       let portfolioIsotope = new Isotope(portfolioContainer, {
@@ -125,9 +134,6 @@ function goBack() {
  * This script is responsible for the logic of handling images, navigation elements, and page listener functions.
  */
 
-(function() {
-  "use strict";
-
   /**
    * Helper function for selecting elements.
    * @param {string} el - The CSS selector.
@@ -159,7 +165,67 @@ function goBack() {
         selectEl.addEventListener(type, listener);
       }
     }
-  }
+}
+
+
+//Init sequence
+window.addEventListener('load', () => {
+    // Initialize Isotope for filtering portfolio items
+    let portfolioContainer = select('#portfolio-grid');
+    if (portfolioContainer) {
+        let portfolioIsotope = new Isotope(portfolioContainer, {
+            itemSelector: '.item',
+        });
+
+        let portfolioFilters = select('#filters a', true);
+        on('click', '#filters a', function (e) {
+            e.preventDefault();
+            portfolioFilters.forEach(function (el) {
+                el.classList.remove('active');
+            });
+            this.classList.add('active');
+
+            portfolioIsotope.arrange({
+                filter: this.getAttribute('data-filter')
+            });
+            portfolioIsotope.on('arrangeComplete', function () {
+                AOS.refresh();
+            });
+        }, true);
+    }
+
+    // Initialize Swiper for testimonials
+    new Swiper('.testimonials-slider', {
+        speed: 600,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+        },
+        slidesPerView: 'auto',
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
+        }
+    });
+
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+    });
+});
+
+
+
+
+
+
+
+
 
   /**
    * Helper function to add scroll event listeners.
@@ -183,71 +249,7 @@ function goBack() {
    * Isotope and Filter
    * Initializes Isotope for filtering and adds click event to filter buttons.
    */
-  window.addEventListener('load', () => {
-    let portfolioContainer = select('#portfolio-grid');
-    if (portfolioContainer) {
-      // Initialize Isotope for filtering portfolio items
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.item,',
-      });
 
-      // Get all filter buttons and add click events to filter items
-      let portfolioFilters = select('#filters a', true);
-      on('click', '#filters a', function(e) {
-        e.preventDefault();
-        
-        // Remove 'active' class from all filters and add to the clicked filter
-        portfolioFilters.forEach(function(el) {
-          el.classList.remove('active');
-        });
-        this.classList.add('active');
-
-        // Filter items based on the clicked filter's data-filter attribute
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-
-        // Refresh animations after arranging items
-        portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh();
-        });
-      }, true);
-    }
-  });
-
-  /**
-   * Testimonials Slider
-   * Initializes Swiper for testimonials with loop, autoplay, and pagination functionality.
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
-
-  /**
-   * Animation on Scroll (AOS)
-   * Initializes AOS library for animations that trigger when elements are scrolled into view.
-   */
-  window.addEventListener('load', () => {
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    });
-  });
-
-})();
 
 /**
  * Toggle Burger Icon Change
