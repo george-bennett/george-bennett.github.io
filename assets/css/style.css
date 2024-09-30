@@ -428,28 +428,18 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         width: 80%;
     }
 
-    .close {
-        position: absolute;
-        top: 5px; /* Slightly offset from the top of the modal image */
-        right: 10px; /* Align it to the right side of the image */
-        color: #fff;
-        font-size: 100px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: color 0.3s ease;
-        z-index: 10; /* Ensure the button is above the image */
-    }
-
         .close:hover,
         .close:focus {
             color: #bbb;
             text-decoration: none;
         }
 
-    .modal-image {
-        /* Remove any scaling effects on hover for modal images */
-        padding: 2.5%;
-    }
+.modal-image {
+    /* Remove any scaling effects on hover for modal images */
+    padding: 2.5%;
+    margin: 1.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25); /* Adds a subtle shadow */
+}
         /* Specific styling to remove the hover effect on modal images */
         .modal-image:hover {
             /* Remove any scaling effects on hover for modal images */
@@ -492,22 +482,23 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         padding: 10px
     }
 
-    .image-container {
-        flex: 1; /* Take up 50% of the width */
-        display: flex; /* Center image vertically and horizontally */
-        align-items: center; /* Center vertically */
-        justify-content: center; /* Center horizontally */
-        position: relative; /* Position relative for inner box styling */
-        background-color: white; /* White background for the box */
-        padding: 15px; /* Space around the image */
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
-    }
+.image-container {
+    flex: 1; /* Take up 50% of the width */
+    display: flex; /* Center image vertically and horizontally */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    position: relative; /* Position relative for inner box styling */
+    background-color: white; /* White background for the box */
+    padding: 15px; /* Space around the image */
+}
 
-        .image-container img {
-            max-width: 100%; /* Allow image to scale */
-            max-height: 100%; /* Allow image to scale */
-            object-fit: contain; /* Ensure image fits within bounds */
-        }
+    .image-container img {
+        max-width: 100%; /* Allow image to scale */
+        max-height: 100%; /* Allow image to scale */
+        object-fit: contain; /* Ensure image fits within bounds */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+        padding: 0.5rem;
+    }
 
 
     .description-container {
@@ -522,10 +513,10 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
     .close {
         color: white; /* Close button color */
-        font-size: 100px; /* Close button size */
-        position: absolute;
-        top: 20px; /* Position from the top */
-        right: 30px; /* Position from the right */
+        font-size: 75px; /* Close button size */
+        position: fixed;
+        top: 0%; /* Position from the top */
+        right: 2.5%; /* Position from the right */
         cursor: pointer; /* Pointer cursor for hover effect */
         z-index: 1060; /* Above the content */
     }
@@ -536,12 +527,15 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     }
 
 
+
     @media (max-width: 767.98px) { /* Targets xs and sm screens (Bootstrap breakpoints) */
         .viewer-content {
             flex-direction: column; /* Stack vertically for small screens */
             position: relative; /* Position relative for proper positioning of absolute elements inside */
         }
 
+       
+    
         .image-container, .description-container {
             /* Each takes 50% of the height in a column layout */
 
@@ -553,6 +547,10 @@ h1, h2, h3, h4, h5, h6, .font-heading {
             position: relative; /* Set position to relative so close button can be positioned against this container */
             height: 75%; /* Adjusted to take up 75% for the image container */
         }
+            .image-container img {
+            max-width: 90%; /* Allow landscape images to take up more height */
+              
+            }
 
         .description-container {
             padding: 10px; /* Add padding for description */
@@ -563,9 +561,9 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         .close {
             color: black; /* Close button color */
             font-size: 60px; /* Close button size */
-            position: absolute;
-            top: 10px; /* Position from the top */
-            right: 15px; /* Adjust right position to keep away from content */
+            position: fixed; /* Ensures it stays in place as the page scrolls */
+            top: -10px; /* Adjusted for visibility on smaller screens */
+            right: 10px; /* Adjusted for visibility on smaller screens */
             cursor: pointer; /* Pointer cursor for hover effect */
             z-index: 1060; /* Ensure it stays above other content */
         }
