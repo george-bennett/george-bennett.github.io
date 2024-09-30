@@ -39,8 +39,20 @@ body {
     color: #000;
 }
 
+/*Light Mode/ Dark Mode Accessability*/
+.light-mode {
+    background: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(240,240,240,1) 100%); /*White/Grey fade*/
+    color: black;
+}
+
+.dark-mode {
+    background: linear-gradient(180deg, #000 50%, rgba(240,240,240,1) 100%); /*White/Grey fade*/
+    color: white;
+}
+
+
+
 p {
-    /*color: #fff;*/
     color: #000; 
     font-size: larger;
 }
@@ -438,6 +450,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     /* Remove any scaling effects on hover for modal images */
     padding: 2.5%;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25); /* Adds a subtle shadow */
+    margin-bottom: 1.5em;
 }
         /* Specific styling to remove the hover effect on modal images */
         .modal-image:hover {
@@ -455,7 +468,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         }
 
 
-    /*FullScreen Image Viewer*/
+/*FullScreen Image Viewer*/
     .fullscreen-viewer {
         position: fixed; /* Cover the entire viewport */
         top: 0;
@@ -624,7 +637,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 
 
-    /*--------------------------------------------------------------
+/*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
     /* Custom Navmenu */
