@@ -390,11 +390,12 @@ closeBtn.onclick = function() {
 
 
 
-// Set initial theme
+// Set initial theme - caused confusion in DOM loading.
+/*
 document.addEventListener('DOMContentLoaded', (event) => {
     document.body.classList.add('light-mode');
 });
-
+*/
 
 
 //Light Mode - Dark Mode
