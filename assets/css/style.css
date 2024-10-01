@@ -61,11 +61,11 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 */
 
-.light-mode h1, h2, h3, h4, h5, h6, .font-heading {
+.light-mode h1 h2 h3 h4 h5 h6 .font-heading {
     color: black;
 }
 
-.dark-mode h1, h2, h3, h4, h5, h6, .font-heading {
+.dark-mode h1 h2 h3 h4 h5 h6 .font-heading {
     color: white;
 }
 
