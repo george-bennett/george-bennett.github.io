@@ -31,6 +31,36 @@
     * License: https://bootstrapmade.com/license/
     ======================================================== -->
 </head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const body = document.body;
+        const savedTheme = localStorage.getItem('theme'); // Get the saved theme from local storage
+        const themeToggleText = document.getElementById('theme-button');
+
+        console.log("Current Theme on load is:" + savedTheme)
+
+        // If no theme is saved, set the default to Light Mode
+        if (!savedTheme) {
+            body.classList.add('light-mode'); // Apply light mode if no theme is saved
+            localStorage.setItem('theme', 'light'); // Save light mode as default in local storage
+            if (themeToggleText) {
+                themeToggleText.innerText = 'Switch to Dark Mode';
+            }
+        } else if (savedTheme === 'dark') {
+            // Apply Dark Mode if saved as dark
+            body.classList.add('dark-mode');
+            if (themeToggleText) {
+                themeToggleText.innerText = 'Switch to Light Mode';
+            }
+        } else {
+            // Apply Light Mode if saved as light
+            body.classList.add('light-mode');
+            if (themeToggleText) {
+                themeToggleText.innerText = 'Switch to Dark Mode';
+            }
+        }
+    });
+</script>
 <body>
     <!-- ======= Navbar ======= -->
     <div class="container-fluid sticky-top" id="nav-master">
@@ -71,7 +101,7 @@
                             <i class="bi bi-gear"></i> <!-- Bootstrap gear icon -->
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingsDropdown">
-                            <li><button class="dropdown-item" onclick="toggleTheme()">Switch to Dark Mode</button></li>
+                            <li><button class="dropdown-item" id="theme-button" onclick="toggleTheme()">Switch to Dark Mode</button></li>
                             <li><button class="dropdown-item" onclick="toggleTextSize()">Toggle Text Size</button></li>
                         </ul>
                     </div>
@@ -104,71 +134,71 @@
                     <!-- WILDLIFE SECTION -->
                     <div class="item wild col-sm-6 col-md-4 col-lg-4 mb-4">
 
-                            <img class="img-fluid modal-image"
-                                 data-src="assets/img/photos/wildlife/squirrel_walnut.webp"
-                                 data-description="A Squirrel"
-                                 data-details="A squirrel enjoying a walnut."
-                                 data-cam="Sony ZV-E10"
-                                 data-lens="Sony E 70-350mm F4.5-6.3 G OSS"
-                                 data-focal="350mm"
-                                 data-aperture="F/6.3"
-                                 src="assets/img/photos/wildlife/squirrel_walnut.webp" alt="A Squirrel">
+                        <img class="img-fluid modal-image"
+                             data-src="assets/img/photos/wildlife/squirrel_walnut.webp"
+                             data-description="A Squirrel"
+                             data-details="A squirrel enjoying a walnut."
+                             data-cam="Sony ZV-E10"
+                             data-lens="Sony E 70-350mm F4.5-6.3 G OSS"
+                             data-focal="350mm"
+                             data-aperture="F/6.3"
+                             src="assets/img/photos/wildlife/squirrel_walnut.webp" alt="A Squirrel">
 
 
-                            <img class="img-fluid modal-image"
-                                 data-src="assets/img/photos/wildlife/butterfly.webp"
-                                 data-description="A Butterfly"
-                                 data-details="A red admiral butterfly resting on a wall."
-                                 data-cam="Sony A7 IV"
-                                 data-lens="Tamron 28-75mm F/2.8 Di III VXD G2"
-                                 data-focal="75mm"
-                                 data-aperture="F/9"
-                                 src="assets/img/photos/wildlife/butterfly.webp" alt="A butterfly">
+                        <img class="img-fluid modal-image"
+                             data-src="assets/img/photos/wildlife/butterfly.webp"
+                             data-description="A Butterfly"
+                             data-details="A red admiral butterfly resting on a wall."
+                             data-cam="Sony A7 IV"
+                             data-lens="Tamron 28-75mm F/2.8 Di III VXD G2"
+                             data-focal="75mm"
+                             data-aperture="F/9"
+                             src="assets/img/photos/wildlife/butterfly.webp" alt="A butterfly">
 
                     </div>
                     <div class="item wild col-sm-6 col-md-4 col-lg-4 mb-4">
 
-                            <img class="img-fluid modal-image"
-                                 data-src="assets/img/photos/wildlife/pidgeon_family.webp"
-                                 data-description="Family Group Photo"
-                                 data-details="A family of wood pidgeons, with two adolescents"
-                                 data-cam="Sony A7 IV"
-                                 data-lens="FE 200-600mm F5.6-6.3 G OSS with 1.4x Teleconverter"
-                                 data-focal="840mm"
-                                 data-aperture="F/9"
-                                 src="assets/img/photos/wildlife/pidgeon_family.webp" alt="A family of Pidgeons">
+                        <img class="img-fluid modal-image"
+                             data-src="assets/img/photos/wildlife/pidgeon_family.webp"
+                             data-description="Family Group Photo"
+                             data-details="A family of wood pidgeons, with two adolescents"
+                             data-cam="Sony A7 IV"
+                             data-lens="FE 200-600mm F5.6-6.3 G OSS with 1.4x Teleconverter"
+                             data-focal="840mm"
+                             data-aperture="F/9"
+                             src="assets/img/photos/wildlife/pidgeon_family.webp" alt="A family of Pidgeons">
 
-                            <img class="img-fluid modal-image"
-                                 data-src="assets/img/photos/wildlife/sparrowhawk_fem.webp"
-                                 data-description="A female Sparrowhawk"
-                                 data-details="A female Sparrowhawk resting from the rain in my garden."
-                                 data-cam="Sony ZV-E10"
-                                 data-lens="Sony E 70-350mm F4.5-6.3 G OSS"
-                                 data-focal="350mm"
-                                 data-aperture="F6.3"
-                                 src="assets/img/photos/wildlife/sparrowhawk_fem.webp" alt="A Sparrowhawk">
+                        <img class="img-fluid modal-image"
+                             data-src="assets/img/photos/wildlife/sparrowhawk_fem.webp"
+                             data-description="A female Sparrowhawk"
+                             data-details="A female Sparrowhawk resting from the rain in my garden."
+                             data-cam="Sony ZV-E10"
+                             data-lens="Sony E 70-350mm F4.5-6.3 G OSS"
+                             data-focal="350mm"
+                             data-aperture="F6.3"
+                             src="assets/img/photos/wildlife/sparrowhawk_fem.webp" alt="A Sparrowhawk">
 
                     </div>
                     <div class="item scapes col-sm-6 col-md-4 col-lg-4 mb-4">
-                            <img class="img-fluid modal-image"
-                                 data-src="assets/img/photos/landscape/rocks_beach.webp"
-                                 data-description="Rocky Blues"
-                                 data-details="A rocky beach scene."
-                                 data-cam="Sony ZV-E10"
-                                 data-lens="Sony E 70-350mm F4.5-6.3 G OSS"
-                                 data-focal="70mm"
-                                 data-aperture="F4.5"
-                                 src="assets/img/photos/landscape/rocks_beach.webp" alt="A rocky beach scene">
+                        <img class="img-fluid modal-image"
+                             data-src="assets/img/photos/landscape/rocks_beach.webp"
+                             data-description="Rocky Blues"
+                             data-details="A rocky beach scene."
+                             data-cam="Sony ZV-E10"
+                             data-lens="Sony E 70-350mm F4.5-6.3 G OSS"
+                             data-focal="70mm"
+                             data-aperture="F4.5"
+                             src="assets/img/photos/landscape/rocks_beach.webp" alt="A rocky beach scene">
 
-                            <img class="img-fluid modal-image"
-                                 data-src="assets/img/photos/landscape/waves_rock.webp"
-                                 data-description="Rocky Blues"
-                                 data-details="Waves crash against the rocks."
-                                 data-cam="Sony ZV-E10"
-                                 data-lens="Sony E 70-350mm F4.5-6.3 G OSS"
-                                 data-focal="350mm"
-                                 data-aperture="F/6.3"
-                                 src="assets/img/photos/landscape/waves_rock.webp" alt="A wavey scene">
+                        <img class="img-fluid modal-image"
+                             data-src="assets/img/photos/landscape/waves_rock.webp"
+                             data-description="Rocky Blues"
+                             data-details="Waves crash against the rocks."
+                             data-cam="Sony ZV-E10"
+                             data-lens="Sony E 70-350mm F4.5-6.3 G OSS"
+                             data-focal="350mm"
+                             data-aperture="F/6.3"
+                             src="assets/img/photos/landscape/waves_rock.webp" alt="A wavey scene">
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-12" data-aos="fade-up" data-aos-delay="75" id="items-row">

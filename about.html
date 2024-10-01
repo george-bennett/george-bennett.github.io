@@ -23,7 +23,7 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
- 
+
 
     <!-- =======================================================
     * Template Name: MyPortfolio - v4.1.0
@@ -32,7 +32,36 @@
     * License: https://bootstrapmade.com/license/
     ======================================================== -->
 </head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const body = document.body;
+        const savedTheme = localStorage.getItem('theme'); // Get the saved theme from local storage
+        const themeToggleText = document.getElementById('theme-button');
 
+        console.log("Current Theme on load is:" + savedTheme)
+
+        // If no theme is saved, set the default to Light Mode
+        if (!savedTheme) {
+            body.classList.add('light-mode'); // Apply light mode if no theme is saved
+            localStorage.setItem('theme', 'light'); // Save light mode as default in local storage
+            if (themeToggleText) {
+                themeToggleText.innerText = 'Switch to Dark Mode';
+            }
+        } else if (savedTheme === 'dark') {
+            // Apply Dark Mode if saved as dark
+            body.classList.add('dark-mode');
+            if (themeToggleText) {
+                themeToggleText.innerText = 'Switch to Light Mode';
+            }
+        } else {
+            // Apply Light Mode if saved as light
+            body.classList.add('light-mode');
+            if (themeToggleText) {
+                themeToggleText.innerText = 'Switch to Dark Mode';
+            }
+        }
+    });
+</script>
 <body>
     <!-- ======= Navbar ======= -->
     <div class="container-fluid sticky-top" id="nav-master">
@@ -73,7 +102,7 @@
                             <i class="bi bi-gear"></i> <!-- Bootstrap gear icon -->
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingsDropdown">
-                            <li><button class="dropdown-item" onclick="toggleTheme()">Switch to Dark Mode</button></li>
+                            <li><button class="dropdown-item" id="theme-button" onclick="toggleTheme()">Switch to Dark Mode</button></li>
                             <li><button class="dropdown-item" onclick="toggleTextSize()">Toggle Text Size</button></li>
                         </ul>
                     </div>

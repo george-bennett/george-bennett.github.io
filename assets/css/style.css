@@ -53,10 +53,13 @@ p {
     font-size: larger;
 }
 
+
+/*
 h1, h2, h3, h4, h5, h6, .font-heading {
     font-family: "Archivo", sans-serif;
     color: #000;
 }
+*/
 
 .light-mode h1, h2, h3, h4, h5, h6, .font-heading {
     color: black;

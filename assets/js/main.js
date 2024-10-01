@@ -391,41 +391,80 @@ closeBtn.onclick = function() {
 
 
 // Set initial theme - caused confusion in DOM loading.
+
+
 /*
-document.addEventListener('DOMContentLoaded', (event) => {
-    document.body.classList.add('light-mode');
-});
-*/
-
-
 //Light Mode - Dark Mode
 function toggleTheme() {
     const body = document.body;
     const currentTheme = localStorage.getItem('theme'); // Get current theme from local storage
+    const themeToggleText = document.getElementById('theme-button')
+    console.log(currentTheme); // Log current theme for debugging
+    console.log(localStorage.getItem('theme'))
 
+    // Toggle the theme based on the current theme
     if (currentTheme === 'dark') {
         body.classList.remove('dark-mode'); // Remove dark mode class
+        body.classList.add('light-mode');
         localStorage.setItem('theme', 'light'); // Set the theme to light in local storage
+        themeToggleText.innerText = 'Switch to Dark Mode';
+
     } else {
-        body.classList.add('dark-mode'); // Add dark mode class
+        body.classList.remove('light-mode'); // Add dark mode class
+        body.classList.add('dark-mode');
         localStorage.setItem('theme', 'dark'); // Set the theme to dark in local storage
+        themeToggleText.innerText = 'Switch to Light Mode';
     }
 }
 
-
-
-
-
-
-
-
+// Set initial theme based on local storage
 document.addEventListener("DOMContentLoaded", function () {
     const body = document.body;
     const savedTheme = localStorage.getItem('theme'); // Get the saved theme from local storage
 
-    if (savedTheme === 'dark') {
+    // If no theme is saved, set to light mode by default
+    if (!savedTheme) {
+        //body.classList.add('light-mode'); // Ensure light mode is applied if no theme is saved
+        localStorage.setItem('theme', 'light'); // Save the default theme to local storage
+    } else if (savedTheme === 'dark') {
         body.classList.add('dark-mode'); // Apply dark mode class if it's saved as dark
+
     } else {
-        body.classList.remove('dark-mode'); // Remove dark mode class otherwise
+        body.classList.add('light-mode'); // Apply light mode if saved as light
+
     }
 });
+*/
+
+function toggleTheme() {
+    const body = document.body;
+    const currentTheme = localStorage.getItem('theme'); // Get the current theme from local storage
+    const themeToggleText = document.getElementById('theme-button');
+
+    // Debugging output
+
+    console.log("Theme in localStorage:", localStorage.getItem('theme'));
+
+    // Toggle the theme based on the current theme
+    if (currentTheme === 'dark') {
+        // Switch to Light Mode
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+        localStorage.setItem('theme', 'light'); // Update theme in local storage
+        if (themeToggleText) {
+            themeToggleText.innerText = 'Switch to Dark Mode';
+            console.log("Theme has change localStorage, Now:", localStorage.getItem('theme'));
+        }
+    } else {
+        // Switch to Dark Mode
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark'); // Update theme in local storage
+        if (themeToggleText) {
+            themeToggleText.innerText = 'Switch to Light Mode';
+            console.log("Theme has change localStorage, Now:", localStorage.getItem('theme'));
+        }
+    }
+}
+
+// Set the initial theme based on local storage
