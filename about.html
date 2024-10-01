@@ -33,27 +33,21 @@
     ======================================================== -->
 </head>
 
-<body>
+<body class="light-mode">
     <!-- ======= Navbar ======= -->
     <div class="container-fluid sticky-top" id="nav-master">
         <nav class="navbar navbar-custom navbar-expand-lg">
-            <div class="container-fluid" id="nav-controller">
+            <div class="container-fluid d-flex justify-content-between align-items-center" id="nav-controller">
+                <!-- Navbar Brand aligned to the left -->
                 <a class="navbar-brand">George Bennett</a>
-                <button class="navbar-toggler" type="button" onclick="toggleMenu()" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                    <!--<span class="navbar-toggler-icon"></span>-->
-                    <div class="burgerIcon" id="bIcon">
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
-                    </div>
-                </button>
+                <!-- Collapsible Navbar Links -->
                 <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="https://george-bennett.co.uk/">Home</a>
+                            <a class="nav-link active" aria-current="page" href="https://george-bennett.co.uk/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="about">About</a>
+                            <a class="nav-link" href="about">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="uxingames">UX in Games</a>
@@ -63,6 +57,29 @@
                         </li>
                     </ul>
                 </div>
+                <div class="d-flex align-items-center">
+                    <!-- Button for mobile toggle -->
+                    <button class="navbar-toggler me-2" type="button" onclick="toggleMenu()" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                        <div class="burgerIcon" id="bIcon">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                    </button>
+
+                    <!-- Settings Dropdown -->
+                    <div class="settings-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="settingsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-gear"></i> <!-- Bootstrap gear icon -->
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingsDropdown">
+                            <li><button class="dropdown-item" onclick="toggleTheme()">Switch to Dark Mode</button></li>
+                            <li><button class="dropdown-item" onclick="toggleTextSize()">Toggle Text Size</button></li>
+                        </ul>
+                    </div>
+                </div>
+
+
             </div>
         </nav>
     </div>

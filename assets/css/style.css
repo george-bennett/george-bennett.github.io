@@ -17,26 +17,25 @@
 }
 */
 
+/****** GENERAL ******/
 #overall-content{
     max-width: 85%;
     margin: 0 auto;
 }
 
 #nav-controller{
-    margin: 6%;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
 }
 
 body {
-    /*font-family: "Inconsolata", monospace;*/
     font-family: "Archivo", sans-serif;
-    /*color: #0d1e2d; */
     /*background: linear-gradient(180deg, rgba(43,174,111,1) 50%, rgba(59,212,138,1) 100%);*/ /*Green fade*/
     background: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(240,240,240,1) 100%); /*White/Grey fade*/
     height: 100%;
     background-repeat: no-repeat;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: #000;
 }
 
 /*Light Mode/ Dark Mode Accessability*/
@@ -46,40 +45,60 @@ body {
 }
 
 .dark-mode {
-    background: linear-gradient(180deg, #000 50%, rgba(240,240,240,1) 100%); /*White/Grey fade*/
+    background: linear-gradient(180deg, #000 50%, rgba(0,0,0,.90) 100%); /*Black fade*/
     color: white;
 }
 
-
-
 p {
-    color: #000; 
     font-size: larger;
 }
 
-a {
-    color: #777;
-    text-decoration: none;
-}
-
-    a:hover {
-        color: #000;
-    }
-
 h1, h2, h3, h4, h5, h6, .font-heading {
-    /*font-family: "Raleway", sans-serif;*/
     font-family: "Archivo", sans-serif;
     color: #000;
+}
+
+.light-mode h1, h2, h3, h4, h5, h6, .font-heading {
+    color: black;
+}
+
+.dark-mode h1, h2, h3, h4, h5, h6, .font-heading {
+    color: white;
 }
 
 .section {
     padding: 3rem 0;
 }
+/****** GENERAL  END ******/
 
-.filters a {
-    margin-top: 4em;
+
+
+/****** FILTERS  ******/
+/* Default */
+
+ .filters {
+    color: white;
+    }
+
+    .filters a {
+        margin-top: 2em;
+        text-decoration: none;
+        display: inline-block;
+        padding-left: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        position: relative;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+    }
+
+
+/*Accessability Options*/
+/*Light mode*/
+.light-mode .filters a {
+    margin-top: 2em;
     text-decoration: none;
-    color: #000;
     display: inline-block;
     padding-left: 10px;
     padding-left: 10px;
@@ -87,24 +106,64 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     position: relative;
     font-size: 24px;
     font-weight: bold;
+    color: black;
 }
 
-    .filters a:hover, .filters a:focus, .filters a:active {
-        text-decoration: none;
+/*Dark mode*/
+.dark-mode .filters a {
+    margin-top: 2em;
+    text-decoration: none;
+    display: inline-block;
+    padding-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/*Reszie on screen width*/
+@media screen and (max-width: 769px) {
+    .filters a {
+        font-size: 16px;
     }
 
-        .filters a:hover:before {
-            content: "";
-            position: absolute;
-            left: 10px;
-            right: 10px;
-            bottom: 0;
-            height: 1px;
-            background-color: #fff;
-        }
+    .light-mode .filters a {
+        font-size: 16px;
+    }
+
+    .dark-mode .filters a {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 569px) {
+    .filters a {
+        font-size: 12px;
+    }
+
+
+    .light-mode .filters a {
+        font-size: 12px;
+    }
+    .dark-mode .filters a {
+        font-size: 12px;
+    }
+}
+
+/* On Hover Behaviour*/
+.filters a:hover:before {
+     content: "";
+     position: absolute;
+     left: 10px;
+     right: 10px;
+     bottom: 0;
+     height: 1px;
+     background-color: #fff;
+}
 
     .filters a.active {
-        color: #000;
         text-decoration: underline
     }
 
@@ -118,23 +177,38 @@ h1, h2, h3, h4, h5, h6, .font-heading {
             background-color: #fff;
         }
 
-@media screen and (max-width: 469px) {
-    .filters a {
-        font-size: 12px;
-    }
-}
+/****** FILTERS END ******/
 
+/****** OVERLAY  ******/
 .overlay-title{
-    color: #fff;
+    color: white;
+    padding: 0.25rem;
+    font-weight: bold;
+}
+
+.light-mode .overlay-title {
+    color: white;
+    padding: 0.25rem
 }
 
 
+.dark-mode .overlay-title {
+    color: black;
+    padding: 0.25rem
+}
+
+/****** OVERLAY END******/
+
+/******PAGE NAVIGATION ELEMENTS ******/
 
 #left-arrow {
     width: 200%;
     height: 200%;
 }
 
+/******PAGE NAVIGATION ELEMENTS END ******/
+
+/****** IMAGE LOGIC ******/
 .item {
     border: none;
     margin: 0 auto;
@@ -158,6 +232,19 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     object-fit: cover; /* Ensure the image fills the box without distortion */
     padding: 0; /* Remove padding for consistency */
 }
+@media (max-width: 768px) {
+
+
+    .img-fluid-profile {
+        max-width: 100%; /* Responsive */
+        height: auto; /* Maintain aspect ratio */
+        aspect-ratio: 1; /* Ensures a square aspect ratio */
+        object-fit: cover; /* Ensure the image fills the box without distortion */
+        padding: 0; /* Remove padding for consistency */
+        margin-bottom: 2.5rem;
+    }
+}
+
 
 /* Homepage image-specific adjustments (optional depending on exact use case) */
 .img-fluid-homepage {
@@ -180,7 +267,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         overflow: hidden;
     }
 
-        /* Adjusting the overlay to match the exact size of the container */
+        /* DEFAULT Adjusting the overlay to match the exact size of the container */
         .item .item-wrap:after {
             z-index: 2;
             position: absolute;
@@ -194,6 +281,47 @@ h1, h2, h3, h4, h5, h6, .font-heading {
             opacity: 0;
             transition: .3s all ease-in-out;
         }
+
+        /* Adjusting the overlay to match the exact size of the container */
+        .light-mode .item .item-wrap:after {
+            z-index: 2;
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.75);
+            visibility: hidden;
+            opacity: 0;
+            transition: .3s all ease-in-out;
+        }
+
+
+        /* Adjusting the overlay to match the exact size of the container */
+        .dark-mode .item .item-wrap:after {
+            z-index: 2;
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255,255,255,0.70);
+            visibility: hidden;
+            opacity: 0;
+            transition: .3s all ease-in-out;
+        }
+
+
+
+
+
+
+
+
+
+
 
         /* Image styles for transition and scaling */
         .item .item-wrap img {
@@ -222,6 +350,8 @@ h1, h2, h3, h4, h5, h6, .font-heading {
                 font-size: 32px;
                 margin-bottom: 0;
             }
+
+
 @media (min-width: 991px) {
     /* Adding hover effects */
     .item .item-wrap:hover img {
@@ -240,7 +370,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 
-    @media (max-width: 991px) {
+@media (max-width: 991px) {
         /* Always show overlay and work-info */
         .item .item-wrap:after {
             visibility: visible !important; /* Ensure overlay is visible */
@@ -258,6 +388,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         }
     }
 
+/****** IMAGE LOGIC END ******/
 
     .testimonial-wrap {
         padding: 50px 50px 80px 50px;
@@ -939,13 +1070,23 @@ h1, h2, h3, h4, h5, h6, .font-heading {
             outline: none;
         }
 
-    /*--------------------------------------------------------------
+.dropdown-toggle {
+    color: white;
+    font-size: 1.5rem;
+
+}
+
+.dropdown-toggle, .dropdown-toggle:active, .dropdown-toggle:hover {
+    color: white;
+    font-size: 1.5rem;
+}
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-    .footer {
-        padding: 0 0 4rem 0;
-        margin: 0 auto;
-    }
+.footer {
+    padding: 0 0 4rem 0;
+    margin: 0 auto;
+}
 
         .footer a {
             color: #000;
