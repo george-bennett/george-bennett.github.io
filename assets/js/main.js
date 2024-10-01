@@ -388,6 +388,15 @@ closeBtn.onclick = function() {
         }
     }
 
+
+
+// Set initial theme
+document.addEventListener('DOMContentLoaded', (event) => {
+    document.body.classList.add('light-mode');
+});
+
+
+
 //Light Mode - Dark Mode
 function toggleTheme() {
     const body = document.body;
@@ -407,10 +416,6 @@ function toggleTheme() {
 
 
 
-// Set initial theme
-document.addEventListener('DOMContentLoaded', (event) => {
-    document.body.classList.add('light-mode');
-});
 
 
 document.addEventListener("DOMContentLoaded", function () {
