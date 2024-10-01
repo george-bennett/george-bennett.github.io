@@ -391,18 +391,21 @@ closeBtn.onclick = function() {
 //Light Mode - Dark Mode
 function toggleTheme() {
     const body = document.body;
-    const button = document.getElementById("theme-toggle");
+    const currentTheme = localStorage.getItem('theme'); // Get current theme from local storage
 
-    if (body.classList.contains("light-mode")) {
-        body.classList.remove("light-mode");
-        body.classList.add("dark-mode");
-        button.textContent = "Switch to Light Mode";
+    if (currentTheme === 'dark') {
+        body.classList.remove('dark-mode'); // Remove dark mode class
+        localStorage.setItem('theme', 'light'); // Set the theme to light in local storage
     } else {
-        body.classList.remove("dark-mode");
-        body.classList.add("light-mode");
-        button.textContent = "Switch to Dark Mode";
+        body.classList.add('dark-mode'); // Add dark mode class
+        localStorage.setItem('theme', 'dark'); // Set the theme to dark in local storage
     }
 }
+
+
+
+
+
 
 // Set initial theme
 document.addEventListener('DOMContentLoaded', (event) => {
