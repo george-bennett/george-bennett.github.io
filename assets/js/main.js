@@ -408,3 +408,15 @@ function toggleTheme() {
 document.addEventListener('DOMContentLoaded', (event) => {
     document.body.classList.add('light-mode');
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const body = document.body;
+    const savedTheme = localStorage.getItem('theme'); // Get the saved theme from local storage
+
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode'); // Apply dark mode class if it's saved as dark
+    } else {
+        body.classList.remove('dark-mode'); // Remove dark mode class otherwise
+    }
+});
