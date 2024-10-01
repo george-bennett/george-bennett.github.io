@@ -1,8 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets"
+    "\\assets",
+    "\\assets\\img",
+    "\\assets\\img\\photos",
+    "\\assets\\img\\photos\\me",
+    "\\assets\\img\\photos\\wildlife",
+    "\\assets\\js",
+    "\\assets\\vendor",
+    "\\assets\\vendor\\bootstrap-icons",
+    "\\assets\\vendor\\bootstrap-icons\\fonts"
   ],
-  "SelectedNode": "\\index.html",
+  "SelectedNode": "\\assets\\img\\photos\\landscape\\rocks_beach.jpg",
   "PreviewInSolutionExplorer": false
 }
