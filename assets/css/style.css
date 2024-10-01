@@ -227,6 +227,9 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     padding: 0; /* Remove padding to avoid spilling effects */
 }
 
+
+
+
 /* Specific class for profile images */
 .img-fluid-profile {
     max-width: 100%; /* Responsive */
@@ -285,6 +288,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
             transition: .3s all ease-in-out;
         }
 
+        /*Light Mode*/
         /* Adjusting the overlay to match the exact size of the container */
         .light-mode .item .item-wrap:after {
             z-index: 2;
@@ -300,7 +304,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
             transition: .3s all ease-in-out;
         }
 
-
+        /*Dark Mode*/
         /* Adjusting the overlay to match the exact size of the container */
         .dark-mode .item .item-wrap:after {
             z-index: 2;
@@ -576,20 +580,46 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25); /* Adds a subtle shadow */
     margin-bottom: 1.5em;
 }
-        /* Specific styling to remove the hover effect on modal images */
-        .modal-image:hover {
-            /* Remove any scaling effects on hover for modal images */
-            cursor: pointer;
-            transform: scale(1.05);
-            transition: .5s all ease;
-        }
+    /* Specific styling to remove the hover effect on modal images */
+    .modal-image:hover {
+        /* Remove any scaling effects on hover for modal images */
+        cursor: pointer;
+        transform: scale(1.05);
+        transition: .5s all ease;
+    }
 
-        /* Remove the dark overlay effect for modal images */
-        .modal-image::after {
-            visibility: hidden !important;
-            opacity: 0 !important;
-            transition: .5s all ease;
-        }
+    /* Remove the dark overlay effect for modal images */
+    .modal-image::after {
+        visibility: hidden !important;
+        opacity: 0 !important;
+        transition: .5s all ease;
+    }
+
+
+    /*LightMode*/
+    .light-mode .modal-image {
+        max-width: 100%; /* Allow image to scale */
+        max-height: 100%; /* Allow image to scale */
+        object-fit: contain; /* Ensure image fits within bounds */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+        padding: 0.5rem;
+    }
+    
+    
+    /*Dark Mode*/
+    .dark-mode .modal-image {
+        max-width: 100%; /* Allow image to scale */
+        max-height: 100%; /* Allow image to scale */
+        object-fit: contain; /* Ensure image fits within bounds */
+        padding: 0.5rem;
+        box-shadow: 0 2px 4px rgba(255, 255, 255, 1);
+        margin-bottom: 1.5em;
+        background-color: white;
+    }
+
+
+
+
 
 
 /*FullScreen Image Viewer*/
@@ -627,7 +657,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     background-color: white; /* White background for the box */
     padding: 15px; /* Space around the image */
 }
-
+    /*Default*/
     .image-container img {
         max-width: 100%; /* Allow image to scale */
         max-height: 100%; /* Allow image to scale */
@@ -635,6 +665,9 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
         padding: 0.5rem;
     }
+
+
+
 
 
     .description-container {
