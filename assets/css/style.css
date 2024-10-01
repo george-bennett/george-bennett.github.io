@@ -1131,13 +1131,13 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         }
 
 @media screen and (max-width: 425px) {
-    .navbar-brand, .burgerIcon, .dropdown-toggle {
-        font-size: 1.0rem;
+    .navbar-brand, .burgerIcon, .dropdown-toggle .dropdown-toggle:active .dropdown-toggle:hover {
+        font-size: 1.35rem;
     }
 }
 
-@media screen and (max-width: 321px) {
-    .navbar-brand, .burgerIcon, .dropdown-toggle {
+@media screen and (max-width: 403px) {
+    .navbar-brand, .burgerIcon, .dropdown-toggle .dropdown-toggle:active .dropdown-toggle:hover {
         font-size: 0.9rem;
     }
 }
