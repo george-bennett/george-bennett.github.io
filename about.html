@@ -61,6 +61,28 @@
             }
         }
     });
+  
+   function downloadCV() {
+        // Create an invisible link element
+        const link = document.createElement('a');
+        link.style.display = 'none';
+
+        // Set the link to point to your PDF file
+        link.href = 'assets/files/George_Bennett_CV_2024.pdf'; // Make sure this path is correct
+
+        // Add the 'download' attribute to force download
+        link.setAttribute('download', 'George_Bennett_CV_2024.pdf'); // Specify the filename for the download
+
+        // Append the link to the document body
+        document.body.appendChild(link);
+
+        // Programmatically click the link to trigger the download
+        link.click();
+
+        // Clean up by removing the link element from the document
+        document.body.removeChild(link);
+    }
+
 </script>
 <body>
     <!-- ======= Navbar ======= -->
@@ -135,8 +157,7 @@
                             Beyond work, I love capturing moments through photography which you can see here on its dedicated page, alongside my instagram, diving into immersive video games, and experimenting with video production.
                             I'm always excited by new technologies and love finding creative ways to use them to enhance both work and play.
                         </p>
-                        <p><a href="#" class="readmore">View my CV</a></p>
-
+                        <p><a href="assets/files/George_Bennett_CV_2024.pdf" class="readmore" onclick="downloadCV()">View my CV</a></p>
                     </div>
 
                     <div class="col-sm-12 col-md-6 mb-5 mb-md-0" data-aos="fade-up">

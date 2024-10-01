@@ -420,26 +420,49 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         font-size: 28px;
     }
 
-    .readmore {
-        display: inline-block;
-        border: 1px solid #fff;
-        padding: 10px 15px;
-        font-size: 12px;
-        text-transform: uppercase;
-        color: #fff;
-        transition: .2s all ease;
-        font-weight: 700;
+.light-mode .readmore {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 10px 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: black;
+    transition: .2s all ease;
+    font-weight: 700;
+}
+
+    .light-mode .readmore:hover {
+        color: black;
+        text-decoration: none;
+        background: white;
     }
+
+.dark-mode .readmore {
+    display: inline-block;
+    border: 1px solid white;
+    padding: 10px 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: white;
+    transition: .2s all ease;
+    font-weight: 700;
+}
+
+
+
+.dark-mode .readmore:hover {
+    color: white;
+    text-decoration: none;
+    background: black;
+}
 
         .readmore:active, .readmore:focus, .readmore:hover {
             outline: none;
         }
 
-        .readmore:hover {
-            color: #fff;
-            text-decoration: none;
-            background: #000;
-        }
+
+
+
 
     .testimonials-slider .swiper-pagination {
         margin-top: -60px;
