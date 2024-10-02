@@ -749,17 +749,36 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         font-weight:bold;
     }
 
-    .close {
-        color: white; /* Close button color */
-        font-size: 75px; /* Close button size */
-        position: fixed;
-        top: 0%; /* Position from the top */
-        right: 2.5%; /* Position from the right */
-        cursor: pointer; /* Pointer cursor for hover effect */
-        z-index: 1060; /* Above the content */
-    }
 
+.close {
+    color: black; /* Close button color */
+    font-size: 30px; /* Close button size */
+    position: absolute; /* Position absolutely within the description */
+    top: 10px; /* Adjust position from the top */
+    right: 10px; /* Adjust position from the right */
+    cursor: pointer; /* Pointer cursor for hover effect */
+    z-index: 10; /* Ensure it stays above other content */
+    background: none; /* Remove any background */
+    border: none; /* Remove border */
+    padding: 0; /* Remove padding */
+}
 
+.dark-mode .close {
+    color: white; /* Close button color in dark mode */
+}
+
+.image-container-background {
+    background-color: rgba(255, 255, 255, 0.9); /* Background color */
+    padding: 20px; /* Internal padding */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-height: 300px; /* Max height for the container */
+    overflow-y: auto; /* Scroll if content exceeds max height */
+    width: 100%; /* Full width */
+}
+
+.dark-mode .image-container-background {
+    background-color: rgba(0, 0, 0, 0.9); /* Background color in dark mode */
+}
 
 
     .carousel-inner img {
@@ -775,7 +794,17 @@ h1, h2, h3, h4, h5, h6, .font-heading {
             position: relative; /* Position relative for proper positioning of absolute elements inside */
         }
 
-       
+
+        .image-container {
+            padding: 5px; /* Reduce padding for better spacing on smaller screens */
+            position: relative; /* Set position to relative for proper positioning */
+            height: auto; /* Adjust to auto height to accommodate image sizes */
+            max-height: 50vh; /* Limit height to 50% of viewport height */
+            overflow: hidden; /* Hide overflow */
+        }
+            .image-container img {
+                max-width: 90%; /* Allow landscape images to take up more height */
+            }
     
         .image-container, .description-container {
             /* Each takes 50% of the height in a column layout */
@@ -783,15 +812,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
             width: 100%; /* Full width */
         }
 
-        .image-container {
-            padding: 10px; /* Reduce padding for better spacing on smaller screens */
-            position: relative; /* Set position to relative so close button can be positioned against this container */
-            height: 75%; /* Adjusted to take up 75% for the image container */
-        }
-            .image-container img {
-            max-width: 90%; /* Allow landscape images to take up more height */
-              
-            }
+
 
         .description-container {
             padding: 10px; /* Add padding for description */
@@ -802,23 +823,19 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
         .close {
             color: black; /* Close button color */
-            font-size: 60px; /* Close button size */
-            position: fixed; /* Ensures it stays in place as the page scrolls */
-            top: -10px; /* Adjusted for visibility on smaller screens */
-            right: 10px; /* Adjusted for visibility on smaller screens */
+            font-size: 30px; /* Close button size */
+            position: absolute; /* Position absolutely within the description */
+            top: 10px; /* Adjust position from the top */
+            right: 10px; /* Adjust position from the right */
             cursor: pointer; /* Pointer cursor for hover effect */
-            z-index: 1060; /* Ensure it stays above other content */
+            z-index: 10; /* Ensure it stays above other content */
+            background: none; /* Remove any background */
+            border: none; /* Remove border */
+            padding: 0; /* Remove padding */
         }
 
-
         .dark-mode .close {
-            color: white; /* Close button color */
-            font-size: 60px; /* Close button size */
-            position: fixed; /* Ensures it stays in place as the page scrolls */
-            top: -10px; /* Adjusted for visibility on smaller screens */
-            right: 10px; /* Adjusted for visibility on smaller screens */
-            cursor: pointer; /* Pointer cursor for hover effect */
-            z-index: 1060; /* Ensure it stays above other content */
+            color: white; /* Close button color in dark mode */
         }
     }
 
