@@ -2,37 +2,66 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>George Bennett - Individual Page</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <title>George Bennett - Individual Page</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="assets/img/gb_icon.png" rel="icon">
+    <!-- Favicons -->
+    <link href="assets/img/gb_icon.png" rel="icon">
 
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: MyPortfolio - v4.1.0
-  * Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <!-- =======================================================
+    * Template Name: MyPortfolio - v4.1.0
+    * Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
 </head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const body = document.body;
+        const savedTheme = localStorage.getItem('theme'); // Get the saved theme from local storage
+        const themeToggleText = document.getElementById('theme-button');
 
+        console.log("Current Theme on load is:" + savedTheme)
+
+        // If no theme is saved, set the default to Light Mode
+        if (!savedTheme) {
+            body.classList.add('light-mode'); // Apply light mode if no theme is saved
+            localStorage.setItem('theme', 'light'); // Save light mode as default in local storage
+            if (themeToggleText) {
+                themeToggleText.innerText = 'Switch to Dark Mode';
+            }
+        } else if (savedTheme === 'dark') {
+            // Apply Dark Mode if saved as dark
+            body.classList.add('dark-mode');
+            if (themeToggleText) {
+                themeToggleText.innerText = 'Switch to Light Mode';
+            }
+        } else {
+            // Apply Light Mode if saved as light
+            body.classList.add('light-mode');
+            if (themeToggleText) {
+                themeToggleText.innerText = 'Switch to Dark Mode';
+            }
+        }
+    });
+</script>
 <body>
 
     <!-- ======= Navbar ======= -->
