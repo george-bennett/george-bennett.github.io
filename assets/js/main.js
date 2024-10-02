@@ -459,6 +459,39 @@ function navigateImage(direction) {
 
 
 
+// Swipe detection
+let startX = 0;
+let startY = 0;
+
+fullScreenViewer.addEventListener('touchstart', function (e) {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+}, false);
+
+fullScreenViewer.addEventListener('touchmove', function (e) {
+    e.preventDefault(); // Prevent scrolling while swiping
+}, false);
+
+fullScreenViewer.addEventListener('touchend', function (e) {
+    let endX = e.changedTouches[0].clientX;
+    let endY = e.changedTouches[0].clientY;
+
+    let diffX = endX - startX;
+    let diffY = endY - startY;
+
+    // Only detect horizontal swipes if the movement is significantly larger in X than in Y
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+        if (Math.abs(diffX) > 50) { // Minimum distance to be considered a swipe
+            if (diffX > 0) {
+                // Swipe to the right
+                navigateImage('prev');
+            } else {
+                // Swipe to the left
+                navigateImage('next');
+            }
+        }
+    }
+}, false);
 
 
 
