@@ -19,10 +19,16 @@
 
 /****** GENERAL ******/
 #overall-content{
-    max-width: 85%;
-    margin: 0 auto;
+    max-width: 82.5%;
+
 }
 
+.section {
+    padding: 3rem 0;
+
+}
+
+}
 #nav-controller{
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
@@ -38,6 +44,18 @@ body {
     background-attachment: fixed;
 }
 
+
+body {
+}
+
+    body.large-text {
+       
+    }
+
+
+
+
+
 /*Light Mode/ Dark Mode Accessability*/
 .light-mode {
     background: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(240,240,240,1) 100%); /*White/Grey fade*/
@@ -50,9 +68,13 @@ body {
 }
 
 p {
-    font-size: larger;
+    font-size: 1.25rem;
 }
 
+.intro{
+    text-align: left;
+
+}
 
 /*
 h1, h2, h3, h4, h5, h6, .font-heading {
@@ -60,6 +82,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     color: #000;
 }
 */
+
 
 .light-mode h1 h2 h3 h4 h5 h6 .font-heading {
     color: black;
@@ -69,9 +92,6 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     color: white;
 }
 
-.section {
-    padding: 3rem 0;
-}
 /****** GENERAL  END ******/
 
 
@@ -680,6 +700,23 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     background-color: white; /* White background for the box */
     padding: 15px; /* Space around the image */
 }
+
+
+.dark-mode .image-container {
+    flex: 1; /* Take up 50% of the width */
+    display: flex; /* Center image vertically and horizontally */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    position: relative; /* Position relative for inner box styling */
+    background-color: black; /* White background for the box */
+    padding: 15px; /* Space around the image */
+}
+
+
+
+
+
+
     /*Default*/
     .image-container img {
         max-width: 100%; /* Allow image to scale */
@@ -689,6 +726,14 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         padding: 0.5rem;
     }
 
+.dark-mode .image-container img {
+    max-width: 100%; /* Allow image to scale */
+    max-height: 100%; /* Allow image to scale */
+    object-fit: contain; /* Ensure image fits within bounds */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, .5);
+    padding: 0.5rem;
+    background-color: white;
+}
 
 
 
@@ -701,6 +746,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         padding: 20px; /* Padding for the description area */
         color: white; /* Ensure text is visible */
         text-align: center; /* Optional: center-align text within container */
+        font-weight:bold;
     }
 
     .close {
@@ -712,6 +758,9 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         cursor: pointer; /* Pointer cursor for hover effect */
         z-index: 1060; /* Above the content */
     }
+
+
+
 
     .carousel-inner img {
         width: 100%; /* Make the images responsive */
@@ -747,11 +796,23 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         .description-container {
             padding: 10px; /* Add padding for description */
             text-align: center;
-            margin: 1%;
+            margin-bottom: 1.5%;
+
         }
 
         .close {
             color: black; /* Close button color */
+            font-size: 60px; /* Close button size */
+            position: fixed; /* Ensures it stays in place as the page scrolls */
+            top: -10px; /* Adjusted for visibility on smaller screens */
+            right: 10px; /* Adjusted for visibility on smaller screens */
+            cursor: pointer; /* Pointer cursor for hover effect */
+            z-index: 1060; /* Ensure it stays above other content */
+        }
+
+
+        .dark-mode .close {
+            color: white; /* Close button color */
             font-size: 60px; /* Close button size */
             position: fixed; /* Ensures it stays in place as the page scrolls */
             top: -10px; /* Adjusted for visibility on smaller screens */
@@ -777,26 +838,70 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         width: 100%;
     }
 
+.dark-mode .image-container-background {
+    background-color: rgba(0, 0, 0, 0.9); /* Slightly transparent black background */
+    padding: 20px; /* Internal padding */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-height: 300px; /* Max height for the container */
+    overflow-y: auto; /* Scroll if content exceeds max height */
+    width: 100%;
+}
 
     /* Style for the title */
-    .image-title {
+    .light-mode .image-title {
         font-size: 24px; /* Larger font size */
         font-weight: bold; /* Bold font */
         margin-bottom: 10px; /* Space below the title */
-        color: #2f855a; /* Example color from your palette */
+        color: black; /* Example color from your palette */
         text-align: left;
         text-decoration: underline;
     }
 
-    /* Style for details and camera settings */
-    .image-details,
-    .image-camera-settings {
+
+    .dark-mode .image-title {
+        font-size: 24px; /* Larger font size */
+        font-weight: bold; /* Bold font */
+        margin-bottom: 10px; /* Space below the title */
+        color: white; /* Example color from your palette */
+        text-align: left;
+        text-decoration: underline;
+    }
+
+
+   .light-mode .image-details {
         font-size: 16px; /* Normal font size */
-        color: #333; /* Dark gray for better readability */
+        color: black; /* black for better readability */
         line-height: 1.5; /* Increased line height for readability */
         margin-bottom: 5px; /* Space between paragraphs */
         text-align: left;
     }
+
+  
+    .dark-mode .image-details{
+        font-size: 16px; 
+        color: white; 
+        line-height: 1.5; 
+        margin-bottom: 5px; 
+        text-align: left;
+    }
+
+.light-mode .image-camera-settings {
+    font-size: 16px; /* Normal font size */
+    color: black; /* black for better readability */
+    line-height: 1.5; /* Increased line height for readability */
+    margin-bottom: 5px; /* Space between paragraphs */
+    text-align: left;
+}
+
+
+.dark-mode .image-camera-settings {
+    font-size: 16px;
+    color: white;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
 
     /* Responsive Design */
     @media (max-width: 767.98px) {
@@ -805,7 +910,8 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         }
 
         .image-title {
-            font-size: 20px; /* Slightly smaller font size on mobile */
+            font-weight: 600;
+            font-size: 24px; /* Slightly smaller font size on mobile */
         }
 
         .image-details,

@@ -467,4 +467,69 @@ function toggleTheme() {
     }
 }
 
-// Set the initial theme based on local storage
+
+/*
+This Implmentation needs looking into again, currently not the intended effects. 
+//Change Text Size
+function toggleTextSize() {
+    let isLargeText;
+    const body = document.body;
+    const originalSize = document.body.style.fontSize;
+    const textSizeButton = document.getElementById('text-size-button');
+
+        // Check if the body has the 'large-text' class applied
+    if (body.classList.contains('large-text')) {
+        // Toggle the text size state
+        // Revert to standard text size
+        body.classList.remove('large-text');
+        isLargeText = false;
+        textSizeButton.textContent = ' 🔼 Switch to Larger Text Size'; // Update button text
+        // Toggle the text size state
+
+        const scaleFactor = originalSize ? 1 / 2 : 2; // If currently large, shrink; if not, enlarge
+
+        const elements = document.querySelectorAll('body, h1, h2, h3, h4, p, span, a, li, button');
+
+        // Loop through each element and modify its font size
+        elements.forEach(element => {
+            // Get the current font size of the element
+            const currentFontSize = window.getComputedStyle(element).fontSize;
+
+            // Extract the numeric value from the current font size (removes 'px')
+            const currentSizeValue = parseFloat(currentFontSize);
+
+            // Calculate the new font size
+            const newSizeValue = currentSizeValue * scaleFactor;
+
+            // Apply the new font size to the element
+            element.style.fontSize = `${newSizeValue}px`;
+        });
+
+    } else {
+        // Apply larger text size
+        body.classList.add('large-text');
+        isLargeText = true;
+        textSizeButton.textContent = ' 🔽 Switch to Standard Text Size'; // Update button text
+
+        const scaleFactor = originalSize ? 1 / 2 : 2; // If currently large, shrink; if not, enlarge
+
+        // Select all the text elements that you want to modify
+        const elements = document.querySelectorAll('body, h1, h2, h3, h4, p, span, a, li, button');
+
+        // Loop through each element and modify its font size
+        elements.forEach(element => {
+            // Get the current font size of the element
+            const currentFontSize = window.getComputedStyle(element).fontSize;
+
+            // Extract the numeric value from the current font size (removes 'px')
+            const currentSizeValue = parseFloat(currentFontSize);
+
+            // Calculate the new font size
+            const newSizeValue = currentSizeValue * scaleFactor;
+
+            // Apply the new font size to the element
+            element.style.fontSize = `${newSizeValue}px`;
+        });
+    }
+}
+*/
