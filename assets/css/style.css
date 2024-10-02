@@ -965,6 +965,17 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     background: rgba(255, 255, 255, 0.2); /* Lighter background for dark mode */
 }
 
+
+.swiper-container {
+    width: 100%; /* Adjust as needed */
+    height: 100vh; /* or any height you prefer */
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/

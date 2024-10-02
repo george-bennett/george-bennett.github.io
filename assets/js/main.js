@@ -237,14 +237,6 @@ window.addEventListener('load', () => {
     });
 });
 
-
-
-
-
-
-
-
-
   /**
    * Helper function to add scroll event listeners.
    * @param {Element} el - The element to attach the scroll listener to.
@@ -296,87 +288,6 @@ function toggleDiv() {
         div.style.display = "none"; // Hide the div
     }
 }
-
-
-
-
-/*
-//Fullscreen Viewer
-var fullScreenViewer = document.getElementById("fullScreenViewer");
-var fullScreenImage = document.getElementById("fullScreenImage");
-var imageDescription = document.getElementById("imageDescription");
-var imageDetails = document.getElementById("imageDetails");
-
-var imageCamera = document.getElementById("imageCamera");
-var imageLens = document.getElementById("imageLens");
-var imageFocal = document.getElementById("imageFocal");
-var imgAperture = document.getElementById("imageAperture");
-
-
-// Get all images with the class "modal-image"
-var images = document.getElementsByClassName("modal-image");
-var index = -1;
-
-// Loop through all images and add an onclick event to open the full-screen viewer
-for (var i = 0; i < images.length; i++) {
-    images[i].onclick = function () {
-
-        currentIndex = Array.prototype.indexOf.call(images, this);
-
-        // Display the full-screen viewer
-        fullScreenViewer.style.display = "flex";
-        document.body.style.overflow = "hidden";
-        // Set the image source
-        fullScreenImage.src = this.getAttribute("data-src");
-
-        // Set description
-        imageDescription.innerText = this.getAttribute("data-description") || "Description not available";
-
-        // Set details
-        imageDetails.innerText = this.getAttribute("data-details") || "Details not available";
-
-        // Set camera  prefix
-        const camData = this.getAttribute("data-cam");
-        imageCamera.innerText = "Camera: " + (camData ? camData : "Not specified");
-
-        // Set lens  prefix
-        const lensData = this.getAttribute("data-lens");
-        imageLens.innerText = "Lens: " + (lensData ? lensData : "Not specified");
-
-        // Set focal prefix
-        const focalData = this.getAttribute("data-focal");
-        imageFocal.innerText = "Focal Length: " + (focalData ? focalData : "Not specified");
-
-        // Set aperture prefix
-        const apertureData = this.getAttribute("data-aperture");
-        imgAperture.innerText = "Aperture: " + (apertureData ? apertureData : "Not specified");
-
-        // Update the URL without changing the page or image name
-        const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
-        window.history.pushState({ path: newUrl }, '', newUrl);
-
-
-/*
-        fullScreenViewer.style.display = "flex";
-        fullScreenImage.src = this.getAttribute("data-src"); // Set image source
-        imageDescription.innerText = this.getAttribute("data-description"); // Set description
-        imageDetails.innerText = this.getAttribute("data-details"); // Set additional details
-        imageCamera.innerText = this.getAttribute("Camera:" + "data-cam");
-        imageLens.innerText = this.getAttribute("data-lens");
-        imageFocal.innerText = this.getAttribute("data-focal");
-        imgAperture.innerText = this.getAttribute("data-aperture");
-
-        // Update the URL without changing the page or including image name
-        const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
-        window.history.pushState({ path: newUrl }, '', newUrl);
-        */
-/*
-    }
-}
-
-*/
-
-
 
 
 //Fullscreen Viewer
@@ -457,8 +368,6 @@ function navigateImage(direction) {
 }
 
 
-
-
 // Swipe detection
 let startX = 0;
 let startY = 0;
@@ -494,48 +403,6 @@ fullScreenViewer.addEventListener('touchend', function (e) {
 }, false);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Get the <span> element that closes the viewer
 var closeBtn = document.getElementsByClassName("close")[0];
 
@@ -555,52 +422,6 @@ closeBtn.onclick = function() {
     }
 
 
-
-// Set initial theme - caused confusion in DOM loading.
-
-
-/*
-//Light Mode - Dark Mode
-function toggleTheme() {
-    const body = document.body;
-    const currentTheme = localStorage.getItem('theme'); // Get current theme from local storage
-    const themeToggleText = document.getElementById('theme-button')
-    console.log(currentTheme); // Log current theme for debugging
-    console.log(localStorage.getItem('theme'))
-
-    // Toggle the theme based on the current theme
-    if (currentTheme === 'dark') {
-        body.classList.remove('dark-mode'); // Remove dark mode class
-        body.classList.add('light-mode');
-        localStorage.setItem('theme', 'light'); // Set the theme to light in local storage
-        themeToggleText.innerText = 'Switch to Dark Mode';
-
-    } else {
-        body.classList.remove('light-mode'); // Add dark mode class
-        body.classList.add('dark-mode');
-        localStorage.setItem('theme', 'dark'); // Set the theme to dark in local storage
-        themeToggleText.innerText = 'Switch to Light Mode';
-    }
-}
-
-// Set initial theme based on local storage
-document.addEventListener("DOMContentLoaded", function () {
-    const body = document.body;
-    const savedTheme = localStorage.getItem('theme'); // Get the saved theme from local storage
-
-    // If no theme is saved, set to light mode by default
-    if (!savedTheme) {
-        //body.classList.add('light-mode'); // Ensure light mode is applied if no theme is saved
-        localStorage.setItem('theme', 'light'); // Save the default theme to local storage
-    } else if (savedTheme === 'dark') {
-        body.classList.add('dark-mode'); // Apply dark mode class if it's saved as dark
-
-    } else {
-        body.classList.add('light-mode'); // Apply light mode if saved as light
-
-    }
-});
-*/
 
 function toggleTheme() {
     const body = document.body;
@@ -633,69 +454,3 @@ function toggleTheme() {
     }
 }
 
-
-/*
-This Implmentation needs looking into again, currently not the intended effects. 
-//Change Text Size
-function toggleTextSize() {
-    let isLargeText;
-    const body = document.body;
-    const originalSize = document.body.style.fontSize;
-    const textSizeButton = document.getElementById('text-size-button');
-
-        // Check if the body has the 'large-text' class applied
-    if (body.classList.contains('large-text')) {
-        // Toggle the text size state
-        // Revert to standard text size
-        body.classList.remove('large-text');
-        isLargeText = false;
-        textSizeButton.textContent = ' 🔼 Switch to Larger Text Size'; // Update button text
-        // Toggle the text size state
-
-        const scaleFactor = originalSize ? 1 / 2 : 2; // If currently large, shrink; if not, enlarge
-
-        const elements = document.querySelectorAll('body, h1, h2, h3, h4, p, span, a, li, button');
-
-        // Loop through each element and modify its font size
-        elements.forEach(element => {
-            // Get the current font size of the element
-            const currentFontSize = window.getComputedStyle(element).fontSize;
-
-            // Extract the numeric value from the current font size (removes 'px')
-            const currentSizeValue = parseFloat(currentFontSize);
-
-            // Calculate the new font size
-            const newSizeValue = currentSizeValue * scaleFactor;
-
-            // Apply the new font size to the element
-            element.style.fontSize = `${newSizeValue}px`;
-        });
-
-    } else {
-        // Apply larger text size
-        body.classList.add('large-text');
-        isLargeText = true;
-        textSizeButton.textContent = ' 🔽 Switch to Standard Text Size'; // Update button text
-
-        const scaleFactor = originalSize ? 1 / 2 : 2; // If currently large, shrink; if not, enlarge
-
-        // Select all the text elements that you want to modify
-        const elements = document.querySelectorAll('body, h1, h2, h3, h4, p, span, a, li, button');
-
-        // Loop through each element and modify its font size
-        elements.forEach(element => {
-            // Get the current font size of the element
-            const currentFontSize = window.getComputedStyle(element).fontSize;
-
-            // Extract the numeric value from the current font size (removes 'px')
-            const currentSizeValue = parseFloat(currentFontSize);
-
-            // Calculate the new font size
-            const newSizeValue = currentSizeValue * scaleFactor;
-
-            // Apply the new font size to the element
-            element.style.fontSize = `${newSizeValue}px`;
-        });
-    }
-}
-*/
