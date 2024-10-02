@@ -215,7 +215,9 @@
                     <div class="viewer-content">
 
                         <div class="image-container col-xs-12 col-sm-12 col-md-6">
-                            <img id="fullScreenImage" class="img-fluid" alt="Full-Screen Image">
+                                <span id="prevImage" class="navigate-arrow left-arrow" onclick="navigateImage('prev')">&#10094;</span>
+                                <img id="fullScreenImage" class="img-fluid" alt="Full-Screen Image">
+                                <span id="nextImage" class="navigate-arrow right-arrow" onclick="navigateImage('next')">&#10095;</span>
                         </div>
                         <div class="description-container col-xs-12 col-sm-12 col-md-6">
                             <div class="image-container-background">
@@ -232,6 +234,9 @@
                                     <p id="imageFocal" class="image-camera-settings"></p>
                                     <p id="imageAperture" class="image-camera-settings"></p>
                                 </div>
+                                <!-- Add navigation buttons here -->
+                                <span id="prevImage" class="navigate-info left-nav-info" onclick="navigateImage('prev')">&#10094;</span>
+                                <span id="nextImage" class="navigate-info right-nav-info" onclick="navigateImage('next')">&#10095;</span>
                             </div>
                         </div>
                     </div>

@@ -300,7 +300,7 @@ function toggleDiv() {
 
 
 
-
+/*
 //Fullscreen Viewer
 var fullScreenViewer = document.getElementById("fullScreenViewer");
 var fullScreenImage = document.getElementById("fullScreenImage");
@@ -315,10 +315,13 @@ var imgAperture = document.getElementById("imageAperture");
 
 // Get all images with the class "modal-image"
 var images = document.getElementsByClassName("modal-image");
+var index = -1;
 
 // Loop through all images and add an onclick event to open the full-screen viewer
 for (var i = 0; i < images.length; i++) {
     images[i].onclick = function () {
+
+        currentIndex = Array.prototype.indexOf.call(images, this);
 
         // Display the full-screen viewer
         fullScreenViewer.style.display = "flex";
@@ -367,8 +370,138 @@ for (var i = 0; i < images.length; i++) {
         const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
         window.history.pushState({ path: newUrl }, '', newUrl);
         */
+/*
     }
 }
+
+*/
+
+
+
+
+//Fullscreen Viewer
+var fullScreenViewer = document.getElementById("fullScreenViewer");
+var fullScreenImage = document.getElementById("fullScreenImage");
+var imageDescription = document.getElementById("imageDescription");
+var imageDetails = document.getElementById("imageDetails");
+var imageCamera = document.getElementById("imageCamera");
+var imageLens = document.getElementById("imageLens");
+var imageFocal = document.getElementById("imageFocal");
+var imgAperture = document.getElementById("imageAperture");
+
+// Get all images with the class "modal-image"
+var images = document.getElementsByClassName("modal-image");
+var currentIndex = -1;
+
+// Loop through all images and add an onclick event to open the full-screen viewer
+for (var i = 0; i < images.length; i++) {
+    images[i].onclick = function () {
+        // Set the current index to the clicked image
+        currentIndex = Array.prototype.indexOf.call(images, this);
+
+        // Open the full-screen viewer with the clicked image
+        openFullScreen(this);
+    };
+}
+
+function openFullScreen(img) {
+    // Display the full-screen viewer
+    fullScreenViewer.style.display = "flex";
+    document.body.style.overflow = "hidden";
+
+    // Set the image source
+    fullScreenImage.src = img.getAttribute("data-src");
+
+    // Set description
+    imageDescription.innerText = img.getAttribute("data-description") || "Description not available";
+
+    // Set details
+    imageDetails.innerText = img.getAttribute("data-details") || "Details not available";
+
+    // Set camera prefix
+    const camData = img.getAttribute("data-cam");
+    imageCamera.innerText = "Camera: " + (camData ? camData : "Not specified");
+
+    // Set lens prefix
+    const lensData = img.getAttribute("data-lens");
+    imageLens.innerText = "Lens: " + (lensData ? lensData : "Not specified");
+
+    // Set focal prefix
+    const focalData = img.getAttribute("data-focal");
+    imageFocal.innerText = "Focal Length: " + (focalData ? focalData : "Not specified");
+
+    // Set aperture prefix
+    const apertureData = img.getAttribute("data-aperture");
+    imgAperture.innerText = "Aperture: " + (apertureData ? apertureData : "Not specified");
+
+    // Update the URL without changing the page or image name
+    const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+    window.history.pushState({ path: newUrl }, '', newUrl);
+}
+
+function closeFullScreen() {
+    fullScreenViewer.style.display = "none";
+    document.body.style.overflow = ""; // Restore scroll behavior
+}
+
+function navigateImage(direction) {
+    if (direction === 'next') {
+        currentIndex = (currentIndex + 1) % images.length; // Go to the next image, loop around
+    } else if (direction === 'prev') {
+        currentIndex = (currentIndex - 1 + images.length) % images.length; // Go to the previous image, loop around
+    }
+
+    // Get the new image and update the full-screen view
+    let newImg = images[currentIndex];
+    openFullScreen(newImg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Get the <span> element that closes the viewer
 var closeBtn = document.getElementsByClassName("close")[0];

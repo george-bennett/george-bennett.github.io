@@ -938,6 +938,32 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     }
 
 
+.navigate-arrow {
+    position: absolute;
+    top: 50%; /* Align vertically in the center of the container */
+    transform: translateY(-50%);
+    color: white; /* Choose a color that contrasts well with the image */
+    font-size: 40px; /* Make the arrows large enough for easy clicking */
+    cursor: pointer;
+    z-index: 10; /* Ensure arrows are above the image */
+    user-select: none; /* Prevent text selection on click */
+    background: rgba(0, 0, 0, 0.5); /* Slight background for better visibility */
+    padding: 10px; /* Add padding for clickability */
+}
+
+.left-arrow {
+    left: 10px; /* Position the left arrow 10px from the left edge */
+}
+
+.right-arrow {
+    right: 10px; /* Position the right arrow 10px from the right edge */
+}
+
+/* Adjust colors for dark mode if necessary */
+.dark-mode .navigate-arrow {
+    color: white;
+    background: rgba(255, 255, 255, 0.2); /* Lighter background for dark mode */
+}
 
 /*--------------------------------------------------------------
 # Header
