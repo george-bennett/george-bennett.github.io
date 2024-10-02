@@ -799,7 +799,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
             padding: 5px; /* Reduce padding for better spacing on smaller screens */
             position: relative; /* Set position to relative for proper positioning */
             height: auto; /* Adjust to auto height to accommodate image sizes */
-            max-height: 50vh; /* Limit height to 50% of viewport height */
+            max-height: 70vh; /* Limit height to 50% of viewport height */
             overflow: hidden; /* Hide overflow */
         }
             .image-container img {
