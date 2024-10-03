@@ -2567,6 +2567,39 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     gap: 0.75em; /* Ensures consistent spacing between the burger and gear icons */
 }
 
+/* Gear Icon Styles */
+.light-mode .settings-dropdown .dropdown-menu {
+    position: fixed; /* Ensures it aligns with the viewport */
+    right: 0; /* Aligns to the right side of the screen */
+    top: 3.65em; /* Adjust the top position based on where you want it to start */
+    background-color: black; /* Your existing color */
+    width: auto; /* Ensure width is appropriate for the content */
+    z-index: 1050; /* Higher z-index to prevent overlapping issues */
+}
+
+    /* Additional hover states for the dropdown toggle */
+.light-mode  .settings-dropdown .dropdown-toggle:hover,
+    .settings-dropdown .dropdown-toggle:active {
+        color: white;
+    }
+
+ .light-mode  .dropdown-item{
+        color: white;
+    }
+
+.dark-mode .settings-dropdown .dropdown-menu {
+    position: fixed; /* Ensures it aligns with the viewport */
+    right: 0; /* Aligns to the right side of the screen */
+    top: 3.65em; /* Adjust the top position based on where you want it to start */
+    width: auto; /* Ensure width is appropriate for the content */
+    z-index: 1050; /* Higher z-index to prevent overlapping issues */
+    background-color: white; /* Your existing color */
+}
+
+.dark-mode .dropdown-item {
+    color: black;
+}
+
 
 /* General styling for the navbar-toggler */
 .navbar-toggler {
@@ -2582,19 +2615,6 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 
 
-/* Gear Icon Styles */
-.settings-dropdown .dropdown-toggle {
-    color: white;
-    font-size: 1.5rem;
-    display: flex; /* Align icon and text vertically */
-    align-items: center; /* Vertically center the gear icon */
-}
-
-    /* Additional hover states for the dropdown toggle */
-    .settings-dropdown .dropdown-toggle:hover,
-    .settings-dropdown .dropdown-toggle:active {
-        color: white;
-    }
 
 
         .navbar-toggler:focus {
