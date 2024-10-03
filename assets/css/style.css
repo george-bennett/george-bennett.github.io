@@ -2854,27 +2854,27 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 /****** FILTERS  ******/
 /* Default */
 
-.filters {
+.lightmode.filters , #filters-date{
     color: white;
 }
 
-    .filters a {
-        margin-top: 2em;
-        text-decoration: none;
-        display: inline-block;
-        padding-left: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
-        position: relative;
-        font-size: 24px;
-        font-weight: bold;
-        color: white;
-    }
+.filters a, #filters-date a {
+    margin-top: 2em;
+    text-decoration: none;
+    display: inline-block;
+    padding-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
 
 
 /*Accessability Options*/
 /*Light mode*/
-.light-mode .filters a {
+.light-mode .filters a ,  #filters-date a {
     margin-top: 2em;
     text-decoration: none;
     display: inline-block;
@@ -2888,7 +2888,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 /*Dark mode*/
-.dark-mode .filters a {
+.dark-mode .filters a, #filters-date a {
     margin-top: 2em;
     text-decoration: none;
     display: inline-block;
@@ -2903,36 +2903,36 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 /*Reszie on screen width*/
 @media screen and (max-width: 769px) {
-    .filters a {
+    .filters a, .filters-date a {
         font-size: 16px;
     }
 
-    .light-mode .filters a {
+    .light-mode .filters a, .filters-date a {
         font-size: 16px;
     }
 
-    .dark-mode .filters a {
+    .dark-mode .filters a, .filters-date a {
         font-size: 16px;
     }
 }
 
 @media screen and (max-width: 569px) {
-    .filters a {
+    .filters a, .filters-date a {
         font-size: 12px;
     }
 
 
-    .light-mode .filters a {
+    .light-mode .filters a, .filters-date a {
         font-size: 12px;
     }
 
-    .dark-mode .filters a {
+    .dark-mode .filters a .filters-date a {
         font-size: 12px;
     }
 }
 
 /* On Hover Behaviour*/
-.filters a:hover:before {
+.filters a:hover:before .filters-date a:hover:before {
     content: "";
     position: absolute;
     left: 10px;
@@ -4295,3 +4295,58 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     .float-right {
         float: right !important;
     }
+
+
+    /*UX IN GAMES SECTION*/
+.portfolio-item {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center align items vertically */
+    margin-bottom: 2em; /* Add spacing between items */
+}
+
+    /* Ensure images are responsive */
+    .portfolio-item img {
+        max-width: 100%; /* Limit max width to prevent overflow */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 20px; /* Add space between image and text */
+    }
+
+    /* Adjust text styling */
+.dark-mode .portfolio-item h3 {
+    margin: 0; /* Remove default margin */
+    color: white;
+    font-weight: bold;
+}
+
+    /* Adjust text styling */
+    .light-mode .portfolio-item h3 {
+        margin: 0; /* Remove default margin */
+        color:black;
+        font-weight: bold;
+    }
+
+
+    .portfolio-item p {
+        margin: 5px 0 0; /* Add top margin for the paragraph */
+    }
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .portfolio-item {
+        flex-direction: column; /* Stack items on small screens */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+        .portfolio-item img {
+            margin-right: 0; /* Remove right margin when stacked */
+            margin-bottom: 15px; /* Add space below the image */
+        }
+}
+
+.light-mode #arrow-page-nav{
+    fill: black;
+}
+
+.dark-mode #arrow-page-nav{
+    fill: white;
+}

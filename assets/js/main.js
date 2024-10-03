@@ -43,36 +43,98 @@ This Page is responsible for the logic of images, navigation elements and page l
    * Porfolio isotope and filter
    */
     window.addEventListener('load', () => {
-      //Load at Top of Page // Prevents Refreshing Behaviour Inconsistencies. 
-      window.history.scrollRestoration = 'manual'; // Prevents scroll restoration
-      window.scrollTo(0, 0); // Scrolls to the top on load
-    
+        // Load at Top of Page // Prevents Refreshing Behaviour Inconsistencies.
+        window.history.scrollRestoration = 'manual'; // Prevents scroll restoration
+        window.scrollTo(0, 0); // Scrolls to the top on load
 
-    let portfolioContainer = select('#portfolio-grid');
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.item',
-      });
+        let portfolioContainer = select('#portfolio-grid');
+        if (portfolioContainer) {
+            let portfolioIsotope = new Isotope(portfolioContainer, {
+                itemSelector: '.item',
+            });
 
-      let portfolioFilters = select('#filters a', true);
+            let portfolioFilters = select('#filters a', true);
+            let dateFilters = select('.filters-date a', true); // Select date filter links
 
-      on('click', '#filters a', function(e) {
-        e.preventDefault();
-        portfolioFilters.forEach(function(el) {
-          el.classList.remove('active');
-        });
-        this.classList.add('active');
+            // Function to handle filtering
+            function filterPortfolio(filter) {
+                portfolioIsotope.arrange({
+                    filter: filter
+                });
+                portfolioIsotope.on('arrangeComplete', function () {
+                    AOS.refresh();
+                });
+            }
 
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
-        });
-      }, true);
-    }
+            // Click event for general filters
+            on('click', '#filters a', function (e) {
+                e.preventDefault();
+                portfolioFilters.forEach(function (el) {
+                    el.classList.remove('active');
+                });
+                this.classList.add('active');
 
-  });
+                // Combine the active class filter with the date filter
+                let classFilter = this.getAttribute('data-filter');
+                let dateFilter = getActiveDateFilter(dateFilters); // Get active date filter
+                let combinedFilter = combineFilters(classFilter, dateFilter);
+
+                filterPortfolio(combinedFilter);
+            }, true);
+
+            // Click event for date filters
+            on('click', '#filters-date a', function (e) { // Changed selector here
+                e.preventDefault();
+                dateFilters.forEach(function (el) {
+                    el.classList.remove('active');
+                });
+                this.classList.add('active');
+
+                // Combine the active date filter with the class filter
+                let dateFilter = this.getAttribute('data-filter');
+                let classFilter = getActiveClassFilter(portfolioFilters); // Get active class filter
+                let combinedFilter = combineFilters(classFilter, dateFilter);
+
+                filterPortfolio(combinedFilter);
+            }, true);
+        }
+
+        // Helper function to get the currently active class filter
+        function getActiveClassFilter(filters) {
+            let activeFilter = '';
+            filters.forEach(filter => {
+                if (filter.classList.contains('active')) {
+                    activeFilter = filter.getAttribute('data-filter');
+                }
+            });
+            return activeFilter;
+        }
+
+        // Helper function to get the currently active date filter
+        function getActiveDateFilter(filters) {
+            let activeFilter = '';
+            filters.forEach(filter => {
+                if (filter.classList.contains('active')) {
+                    activeFilter = filter.getAttribute('data-filter');
+                }
+            });
+            return activeFilter;
+        }
+
+        // Helper function to combine class and date filters
+        function combineFilters(classFilter, dateFilter) {
+            if (classFilter === '*' && dateFilter === '*') {
+                return '*'; // Show all
+            }
+            if (classFilter === '*') {
+                return dateFilter; // Only date filter
+            }
+            if (dateFilter === '*') {
+                return classFilter; // Only class filter
+            }
+            return classFilter + dateFilter; // Combine filters
+        }
+    });
 
   /**
    * Testimonials slider
