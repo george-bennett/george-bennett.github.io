@@ -1129,17 +1129,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     align-items: center;
     justify-content: flex-end;
     margin-left: auto; /* Aligns entire container to the right */
-    gap: 1.5em; /* Ensures consistent spacing between the burger and gear icons */
-}
-
-
-
-#toggle-and-settings-container {
-    display: flex;
-    align-items: center; /* Aligns items vertically centered */
-    justify-content: flex-end;
-    margin-left: auto; /* Aligns the entire container to the right */
-    gap: 1.5em; /* Ensures consistent spacing between the burger and gear icons */
+    gap: 0.75em; /* Ensures consistent spacing between the burger and gear icons */
 }
 
 /* General styling for the navbar-toggler */
