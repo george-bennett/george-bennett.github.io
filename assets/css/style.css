@@ -1124,6 +1124,1451 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 
 /* Settings dropdown - positioning for when the navbar is expanded */
+/**
+* Template Name: MyPortfolio - v4.1.0
+* Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+/*
+@font-face {
+    font-family: 'Archivo';
+    src:url('assets/fonts/archivo-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+
+/****** GENERAL ******/
+#overall-content {
+    max-width: 82.5%;
+}
+
+.section {
+    padding: 3rem 0;
+}
+
+}
+
+#nav-controller {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+body {
+    font-family: "Archivo", sans-serif;
+    /*background: linear-gradient(180deg, rgba(43,174,111,1) 50%, rgba(59,212,138,1) 100%);*/ /*Green fade*/
+    background: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(240,240,240,1) 100%); /*White/Grey fade*/
+    height: 100%;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+body {
+}
+
+    body.large-text {
+    }
+
+
+
+
+
+/*Light Mode/ Dark Mode Accessability*/
+.light-mode {
+    background: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(240,240,240,1) 100%); /*White/Grey fade*/
+    color: black;
+}
+
+.dark-mode {
+    background: linear-gradient(180deg, #000 50%, rgba(0,0,0,.90) 100%); /*Black fade*/
+    color: white;
+}
+
+p {
+    font-size: 1.25rem;
+}
+
+.intro {
+    text-align: left;
+    font-size: 1.5em;
+}
+
+/*
+h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: "Archivo", sans-serif;
+    color: #000;
+}
+*/
+
+
+.light-mode h1 h2 h3 h4 h5 h6 .font-heading {
+    color: black;
+}
+
+.dark-mode h1 h2 h3 h4 h5 h6 .font-heading {
+    color: white;
+}
+
+/****** GENERAL  END ******/
+
+
+
+/****** FILTERS  ******/
+/* Default */
+
+.filters {
+    color: white;
+}
+
+    .filters a {
+        margin-top: 2em;
+        text-decoration: none;
+        display: inline-block;
+        padding-left: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        position: relative;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+    }
+
+
+/*Accessability Options*/
+/*Light mode*/
+.light-mode .filters a {
+    margin-top: 2em;
+    text-decoration: none;
+    display: inline-block;
+    padding-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+/*Dark mode*/
+.dark-mode .filters a {
+    margin-top: 2em;
+    text-decoration: none;
+    display: inline-block;
+    padding-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/*Reszie on screen width*/
+@media screen and (max-width: 769px) {
+    .filters a {
+        font-size: 16px;
+    }
+
+    .light-mode .filters a {
+        font-size: 16px;
+    }
+
+    .dark-mode .filters a {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 569px) {
+    .filters a {
+        font-size: 12px;
+    }
+
+
+    .light-mode .filters a {
+        font-size: 12px;
+    }
+
+    .dark-mode .filters a {
+        font-size: 12px;
+    }
+}
+
+/* On Hover Behaviour*/
+.filters a:hover:before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 0;
+    height: 1px;
+    background-color: #fff;
+}
+
+.filters a.active {
+    text-decoration: underline
+}
+
+    .filters a.active:before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        bottom: 0;
+        height: 1px;
+        background-color: #fff;
+    }
+
+/****** FILTERS END ******/
+
+/****** OVERLAY  ******/
+.overlay-title {
+    color: white;
+    padding: 0.25rem;
+    font-weight: bold;
+}
+
+.light-mode .overlay-title {
+    color: white;
+    padding: 0.25rem
+}
+
+
+.dark-mode .overlay-title {
+    color: black;
+    padding: 0.25rem
+}
+
+/****** OVERLAY END******/
+
+/******PAGE NAVIGATION ELEMENTS ******/
+
+#left-arrow {
+    width: 200%;
+    height: 200%;
+}
+
+/******PAGE NAVIGATION ELEMENTS END ******/
+
+/****** IMAGE LOGIC ******/
+.item {
+    border: none;
+    margin: 0 auto;
+    position: relative;
+}
+
+    .item .img-fluid {
+    }
+
+.img-fluid {
+    display: block; /* Removes inline block spacing issue */
+    max-width: 100%; /* Makes image responsive */
+    height: auto; /* Maintain aspect ratio */
+    padding: 0; /* Remove padding to avoid spilling effects */
+}
+
+
+
+
+/* Specific class for profile images */
+.img-fluid-profile {
+    max-width: 100%; /* Responsive */
+    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 1; /* Ensures a square aspect ratio */
+    object-fit: cover; /* Ensure the image fills the box without distortion */
+    padding: 0; /* Remove padding for consistency */
+}
+
+@media (max-width: 768px) {
+
+
+    .img-fluid-profile {
+        max-width: 100%; /* Responsive */
+        height: auto; /* Maintain aspect ratio */
+        aspect-ratio: 1; /* Ensures a square aspect ratio */
+        object-fit: cover; /* Ensure the image fills the box without distortion */
+        padding: 0; /* Remove padding for consistency */
+        margin-bottom: 2.5rem;
+    }
+}
+
+
+/* Homepage image-specific adjustments (optional depending on exact use case) */
+.img-fluid-homepage {
+    max-width: 100%; /* Set to full width for responsiveness */
+    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 1; /* Ensures a square aspect ratio */
+    object-fit: cover; /* Make sure it fills its container appropriately */
+    padding: 0; /* Remove padding for consistency */
+}
+
+.item {
+    border: none;
+    margin: 0 auto;
+    position: relative;
+}
+
+    /* Removing unnecessary padding from item-wrap */
+    .item .item-wrap {
+        display: block;
+        position: relative;
+        overflow: hidden;
+    }
+
+        /* DEFAULT Adjusting the overlay to match the exact size of the container */
+        .item .item-wrap:after {
+            z-index: 2;
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.75);
+            visibility: hidden;
+            opacity: 0;
+            transition: .3s all ease-in-out;
+        }
+
+/*Light Mode*/
+/* Adjusting the overlay to match the exact size of the container */
+.light-mode .item .item-wrap:after {
+    z-index: 2;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s all ease-in-out;
+}
+
+/*Dark Mode*/
+/* Adjusting the overlay to match the exact size of the container */
+.dark-mode .item .item-wrap:after {
+    z-index: 2;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.70);
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s all ease-in-out;
+}
+
+/* Image styles for transition and scaling */
+.item .item-wrap img {
+    transition: .3s transform ease;
+    transform: scale(1);
+    width: 100%;
+    display: block;
+}
+
+/* Adjusting the work-info positioning */
+.item .item-wrap > .work-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s all ease;
+}
+
+    .item .item-wrap > .work-info h3 {
+        font-size: 32px;
+        margin-bottom: 0;
+    }
+
+
+@media (min-width: 991px) {
+    /* Adding hover effects */
+    .item .item-wrap:hover img {
+        transform: scale(1.05);
+    }
+
+    .item .item-wrap:hover:after {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .item .item-wrap:hover .work-info {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
+
+
+@media (max-width: 991px) {
+    /* Always show overlay and work-info */
+    .item .item-wrap:after {
+        visibility: visible !important; /* Ensure overlay is visible */
+        opacity: 1 !important; /* Fully opaque */
+    }
+
+    .item .item-wrap > .work-info {
+        visibility: visible !important; /* Show work-info */
+        opacity: 1 !important; /* Fully opaque */
+    }
+
+    /* Remove hover effect on mobile for image scaling */
+    .item .item-wrap:hover img {
+        transform: none; /* Disable scaling on hover */
+    }
+}
+
+/****** IMAGE LOGIC END ******/
+
+.testimonial-wrap {
+    padding: 50px 50px 80px 50px;
+    background: #eceff2;
+}
+
+    .testimonial-wrap .testimonial {
+        text-align: center;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+        .testimonial-wrap .testimonial img {
+            border-radius: 50%;
+            width: 120px;
+            margin: 0 auto 30px auto;
+        }
+
+        .testimonial-wrap .testimonial blockquote p {
+            font-size: 20px;
+        }
+
+.h3 {
+    font-size: 20px;
+}
+
+.h4 {
+    font-size: 16px;
+}
+
+.heading {
+    font-size: 28px;
+}
+
+.light-mode .readmore {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 10px 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: black;
+    transition: .2s all ease;
+    font-weight: 700;
+}
+
+    .light-mode .readmore:hover {
+        color: black;
+        text-decoration: none;
+        background: white;
+    }
+
+.dark-mode .readmore {
+    display: inline-block;
+    border: 1px solid white;
+    padding: 10px 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: white;
+    transition: .2s all ease;
+    font-weight: 700;
+}
+
+
+
+    .dark-mode .readmore:hover {
+        color: white;
+        text-decoration: none;
+        background: black;
+    }
+
+.readmore:active, .readmore:focus, .readmore:hover {
+    outline: none;
+}
+
+
+
+
+
+.testimonials-slider .swiper-pagination {
+    margin-top: -60px;
+    position: relative;
+}
+
+    .testimonials-slider .swiper-pagination .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background-color: rgba(13, 30, 45, 0.3);
+        opacity: 1;
+    }
+
+    .testimonials-slider .swiper-pagination .swiper-pagination-bullet-active {
+        background-color: rgba(13, 30, 45, 0.6);
+    }
+
+.sticky-content {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    /* required */
+}
+
+.list-line li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px;
+}
+
+    .list-line li:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: .7rem;
+        width: 10px;
+        height: 2px;
+        background: #000;
+    }
+
+.form-control {
+    border-radius: 0;
+    background: #f8f9fa;
+    border: 1px solid transparent;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+    .form-control:active, .form-control:focus {
+        background: #eff1f4;
+        outline: none;
+        box-shadow: none;
+        border: 1px solid transparent;
+    }
+
+.custom-progress {
+    height: 7px;
+    border-radius: 0;
+}
+
+    .custom-progress .progress-bar {
+        background: #000;
+    }
+
+.modal-overlay {
+    position: fixed; /* Cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* 90% black */
+    display: none; /* Initially hidden */
+    z-index: 1040; /* Positioned below the modal content */
+}
+
+/* Show overlay when modal is open */
+.modal.show .modal-overlay {
+    display: block; /* Show the overlay when the modal is active */
+}
+
+/* Ensure the modal does not exceed the viewport height */
+.modal-content {
+    max-height: 90vh; /* Keeps the modal at 90% of the viewport height */
+    width: 100%; /* Ensures the modal takes full width */
+    z-index: 1050; /* Positioned above the overlay */
+}
+
+.modal-dialog {
+    max-width: 1400px; /* Wider modal */
+    margin: auto; /* Centers the modal horizontally */
+    display: flex; /* Enable flexbox for vertical centering */
+    align-items: center; /* Center the content vertically */
+    height: 100vh; /* Full height for centering */
+}
+
+.modal-body {
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center the body content horizontally */
+    align-items: center; /* Center the body content vertically */
+}
+
+.modal-image-container {
+    height: 100%;
+    overflow: hidden;
+}
+
+    .modal-image-container img {
+        object-fit: contain; /* Ensure the entire image is contained within the box */
+        max-height: 90vh; /* Prevents the image from exceeding modal height */
+        width: 100%; /* Maintains full width to prevent overflow */
+        margin: 1%;
+    }
+
+/* Special treatment for landscape images */
+@media (min-aspect-ratio: 16/9) { /* Example for landscape images */
+    .modal-image-container img {
+        max-height: 100vh; /* Allow landscape images to take up more height */
+    }
+}
+
+#caption {
+    margin: 20px auto;
+    text-align: center;
+    color: #ccc;
+    font-size: 18px;
+    width: 80%;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.modal-image {
+    /* Remove any scaling effects on hover for modal images */
+    padding: 2.5%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25); /* Adds a subtle shadow */
+    margin-bottom: 1.5em;
+}
+    /* Specific styling to remove the hover effect on modal images */
+    .modal-image:hover {
+        /* Remove any scaling effects on hover for modal images */
+        cursor: pointer;
+        transform: scale(1.05);
+        transition: .5s all ease;
+    }
+
+    /* Remove the dark overlay effect for modal images */
+    .modal-image::after {
+        visibility: hidden !important;
+        opacity: 0 !important;
+        transition: .5s all ease;
+    }
+
+
+/*LightMode*/
+.light-mode .modal-image {
+    max-width: 100%; /* Allow image to scale */
+    max-height: 100%; /* Allow image to scale */
+    object-fit: contain; /* Ensure image fits within bounds */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+    padding: 0.5rem;
+}
+
+
+/*Dark Mode*/
+.dark-mode .modal-image {
+    max-width: 100%; /* Allow image to scale */
+    max-height: 100%; /* Allow image to scale */
+    object-fit: contain; /* Ensure image fits within bounds */
+    padding: 0.5rem;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 1);
+    margin-bottom: 1.5em;
+    background-color: white;
+}
+
+
+
+
+
+
+/*FullScreen Image Viewer*/
+.fullscreen-viewer {
+    position: fixed; /* Cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.95); /* 90% black */
+    background-color: rgba(47, 133, 90, 0.95);
+    display: flex; /* Flexbox for layout */
+    z-index: 1050; /* Above all other content */
+}
+
+
+.viewer-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row; /* Default: image and description side by side */
+}
+
+.image-container-bkground {
+    background-color: white;
+    padding: 10px
+}
+
+.image-container {
+    flex: 1; /* Take up 50% of the width */
+    display: flex; /* Center image vertically and horizontally */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    position: relative; /* Position relative for inner box styling */
+    background-color: white; /* White background for the box */
+    padding: 15px; /* Space around the image */
+}
+
+
+.dark-mode .image-container {
+    flex: 1; /* Take up 50% of the width */
+    display: flex; /* Center image vertically and horizontally */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    position: relative; /* Position relative for inner box styling */
+    background-color: black; /* White background for the box */
+    padding: 15px; /* Space around the image */
+}
+
+
+
+
+
+
+/*Default*/
+.image-container img {
+    max-width: 100%; /* Allow image to scale */
+    max-height: 100%; /* Allow image to scale */
+    object-fit: contain; /* Ensure image fits within bounds */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+    padding: 0.5rem;
+}
+
+.dark-mode .image-container img {
+    max-width: 100%; /* Allow image to scale */
+    max-height: 100%; /* Allow image to scale */
+    object-fit: contain; /* Ensure image fits within bounds */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, .5);
+    padding: 0.5rem;
+    background-color: white;
+}
+
+
+
+
+.description-container {
+    display: flex; /* Enable flexbox layout */
+    align-items: center; /* Center content vertically */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center content horizontally */
+    padding: 20px; /* Padding for the description area */
+    color: white; /* Ensure text is visible */
+    text-align: center; /* Optional: center-align text within container */
+    font-weight: bold;
+}
+
+
+.close {
+    color: black; /* Close button color */
+    font-size: 30px; /* Close button size */
+    position: absolute; /* Position absolutely within the description */
+    top: 10px; /* Adjust position from the top */
+    right: 10px; /* Adjust position from the right */
+    cursor: pointer; /* Pointer cursor for hover effect */
+    z-index: 10; /* Ensure it stays above other content */
+    background: none; /* Remove any background */
+    border: none; /* Remove border */
+    padding: 0; /* Remove padding */
+}
+
+.dark-mode .close {
+    color: white; /* Close button color in dark mode */
+}
+
+.image-container-background {
+    background-color: rgba(255, 255, 255, 0.9); /* Background color */
+    padding: 20px; /* Internal padding */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-height: 300px; /* Max height for the container */
+    overflow-y: auto; /* Scroll if content exceeds max height */
+    width: 100%; /* Full width */
+}
+
+.dark-mode .image-container-background {
+    background-color: rgba(0, 0, 0, 0.9); /* Background color in dark mode */
+}
+
+
+.carousel-inner img {
+    width: 100%; /* Make the images responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+
+@media (max-width: 767.98px) { /* Targets xs and sm screens (Bootstrap breakpoints) */
+    .viewer-content {
+        flex-direction: column; /* Stack vertically for small screens */
+        position: relative; /* Position relative for proper positioning of absolute elements inside */
+    }
+
+
+    .image-container {
+        padding: 5px; /* Reduce padding for better spacing on smaller screens */
+        position: relative; /* Set position to relative for proper positioning */
+        height: auto; /* Adjust to auto height to accommodate image sizes */
+        max-height: 70vh; /* Limit height to 50% of viewport height */
+        overflow: hidden; /* Hide overflow */
+    }
+
+        .image-container img {
+            max-width: 90%; /* Allow landscape images to take up more height */
+        }
+
+    .image-container, .description-container {
+        /* Each takes 50% of the height in a column layout */
+
+        width: 100%; /* Full width */
+    }
+
+
+
+    .description-container {
+        padding: 10px; /* Add padding for description */
+        text-align: center;
+        margin-bottom: 1.5%;
+    }
+
+    .close {
+        color: black; /* Close button color */
+        font-size: 30px; /* Close button size */
+        position: absolute; /* Position absolutely within the description */
+        top: 10px; /* Adjust position from the top */
+        right: 10px; /* Adjust position from the right */
+        cursor: pointer; /* Pointer cursor for hover effect */
+        z-index: 10; /* Ensure it stays above other content */
+        background: none; /* Remove any background */
+        border: none; /* Remove border */
+        padding: 0; /* Remove padding */
+    }
+
+    .dark-mode .close {
+        color: white; /* Close button color in dark mode */
+    }
+}
+
+.description-container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    padding: 20px; /* Padding around the container */
+}
+
+.image-container-background {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    padding: 20px; /* Internal padding */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-height: 300px; /* Max height for the container */
+    overflow-y: auto; /* Scroll if content exceeds max height */
+    width: 100%;
+}
+
+.dark-mode .image-container-background {
+    background-color: rgba(0, 0, 0, 0.9); /* Slightly transparent black background */
+    padding: 20px; /* Internal padding */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-height: 300px; /* Max height for the container */
+    overflow-y: auto; /* Scroll if content exceeds max height */
+    width: 100%;
+}
+
+/* Style for the title */
+.light-mode .image-title {
+    font-size: 24px; /* Larger font size */
+    font-weight: bold; /* Bold font */
+    margin-bottom: 10px; /* Space below the title */
+    color: black; /* Example color from your palette */
+    text-align: left;
+    text-decoration: underline;
+}
+
+
+.dark-mode .image-title {
+    font-size: 24px; /* Larger font size */
+    font-weight: bold; /* Bold font */
+    margin-bottom: 10px; /* Space below the title */
+    color: white; /* Example color from your palette */
+    text-align: left;
+    text-decoration: underline;
+}
+
+
+.light-mode .image-details {
+    font-size: 16px; /* Normal font size */
+    color: black; /* black for better readability */
+    line-height: 1.5; /* Increased line height for readability */
+    margin-bottom: 5px; /* Space between paragraphs */
+    text-align: left;
+}
+
+
+.dark-mode .image-details {
+    font-size: 16px;
+    color: white;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.light-mode .image-camera-settings {
+    font-size: 16px; /* Normal font size */
+    color: black; /* black for better readability */
+    line-height: 1.5; /* Increased line height for readability */
+    margin-bottom: 5px; /* Space between paragraphs */
+    text-align: left;
+}
+
+
+.dark-mode .image-camera-settings {
+    font-size: 16px;
+    color: white;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+
+/* Responsive Design */
+@media (max-width: 767.98px) {
+    .image-container-background {
+        padding: 15px; /* Less padding on mobile */
+    }
+
+    .image-title {
+        font-weight: 600;
+        font-size: 24px; /* Slightly smaller font size on mobile */
+    }
+
+    .image-details,
+    .image-camera-settings {
+        font-size: 14px; /* Smaller text on mobile */
+    }
+}
+
+
+.navigate-arrow {
+    position: absolute;
+    top: 50%; /* Align vertically in the center of the container */
+    transform: translateY(-50%);
+    color: white; /* Choose a color that contrasts well with the image */
+    font-size: 40px; /* Make the arrows large enough for easy clicking */
+    cursor: pointer;
+    z-index: 10; /* Ensure arrows are above the image */
+    user-select: none; /* Prevent text selection on click */
+    background: rgba(0, 0, 0, 0.5); /* Slight background for better visibility */
+    padding: 10px; /* Add padding for clickability */
+}
+
+.left-arrow {
+    left: 10px; /* Position the left arrow 10px from the left edge */
+}
+
+.right-arrow {
+    right: 10px; /* Position the right arrow 10px from the right edge */
+}
+
+/* Adjust colors for dark mode if necessary */
+.dark-mode .navigate-arrow {
+    color: white;
+    background: rgba(255, 255, 255, 0.2); /* Lighter background for dark mode */
+}
+
+
+.swiper-container {
+    width: 100%; /* Adjust as needed */
+    height: 100vh; /* or any height you prefer */
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+/* Custom Navmenu */
+.custom-navmenu {
+    /*background: #0d1e2d;*/
+    background-color: #fff;
+}
+
+    .custom-navmenu .custom-menu, .custom-navmenu .custom-menu li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+        .custom-navmenu .custom-menu li {
+            margin-bottom: 0;
+            font-size: 20px;
+        }
+
+            .custom-navmenu .custom-menu li a {
+                /*color: #fff;*/
+                color: #2BAE66FF;
+                padding: 10px 0 !important;
+            }
+
+                .custom-navmenu .custom-menu li a:hover {
+                    text-decoration: none;
+                }
+
+            .custom-navmenu .custom-menu li.active a {
+                text-decoration: underline;
+            }
+
+    .custom-navmenu h3 {
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .custom-navmenu p {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .custom-navmenu a {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+        .custom-navmenu a:hover {
+            color: #fff;
+        }
+
+.sticky-top {
+    z-index: 900;
+}
+
+/* Custom Navbar */
+.custom-navbar {
+    width: 100%;
+    background-color: #fff;
+}
+
+@media (max-width: 780px) {
+    .custom-navbar > .container {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.custom-navbar .navbar-brand {
+    font-size: 1.7rem;
+}
+
+/*New Nav-bar*/
+#nav-master {
+    padding: 0;
+    font-weight: 800;
+}
+
+
+.navbar {
+    /* background-color: #FCF6F5FF; */
+    /*background-color: rgba(235, 235, 235, 1);*/
+    background-color: #2f855a;
+    font-size: large;
+    padding-right: var(--bs-gutter-x, .75rem);
+    padding-left: var(--bs-gutter-x, .75rem);
+}
+
+    .navbar .navbar-nav .nav-item {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+
+        .navbar .navbar-nav .nav-item .nav-link {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text li {
+    /*color: #FCF6F5FF;*/
+    /* color: #2BAE66FF; */
+    color: white;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    /*color: #FCF6F5FF;*/
+    /*color: #2BAE66FF;*/
+    color: white;
+}
+
+    .navbar-custom .navbar-nav .nav-link.active {
+        /*color: #FCF6F5FF;*/
+        color: white;
+        background-color: #2BAE66FF;
+    }
+
+#navbarToggler {
+    margin-top: 1em;
+    border: none;
+}
+
+.navbar-toggler {
+    outline: none !important; /* Removes the default outline */
+    border: none !important; /* Ensures no border appears */
+    border-radius: 0 !important;
+    transition: none !important;
+    box-shadow: 0 0 0 0rem !important;
+}
+
+
+    /* Specific styles for the navbar-toggler when the navbar is expanded */
+    .navbar-toggler[aria-expanded="true"] {
+        outline: none !important; /* Removes the default outline */
+        border: none !important; /* Ensures no border appears */
+        border-radius: 0 !important;
+        transition: none !important;
+        box-shadow: 0 0 0 0rem !important;
+        position: absolute;
+        right: 4em; /* Provides space for the gear icon to the right */
+        background-color: #2f855a; /* Optional: background color when expanded */
+        z-index: 1050; /* Ensure it's on top of other elements */
+    }
+
+
+
+
+/* Settings dropdown - positioning for when the navbar is expanded */
+#settingsDropdownContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto; /* Aligns entire container to the right */
+    gap: 1.5em; /* Ensures consistent spacing between the burger and gear icons */
+}
+
+
+
+#toggle-and-settings-container {
+    display: flex;
+    align-items: center; /* Aligns items vertically centered */
+    justify-content: flex-end;
+    margin-left: auto; /* Aligns the entire container to the right */
+    gap: 1.5em; /* Ensures consistent spacing between the burger and gear icons */
+}
+
+/* General styling for the navbar-toggler */
+.navbar-toggler {
+    outline: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    transition: none !important;
+    box-shadow: 0 0 0 0rem !important;
+    position: relative;
+    background-color: transparent; /* No background color by default */
+    margin: 0; /* Ensures no unwanted margin affects alignment */
+}
+
+
+
+/* Gear Icon Styles */
+.settings-dropdown .dropdown-toggle {
+    color: white;
+    font-size: 1.5rem;
+    display: flex; /* Align icon and text vertically */
+    align-items: center; /* Vertically center the gear icon */
+}
+
+    /* Additional hover states for the dropdown toggle */
+    .settings-dropdown .dropdown-toggle:hover,
+    .settings-dropdown .dropdown-toggle:active {
+        color: white;
+    }
+
+
+
+
+
+
+
+
+.navbar-toggler:focus {
+    outline: none !important; /* Removes the default outline */
+    border: none !important; /* Ensures no border appears */
+    border-radius: 0 !important;
+    transition: none !important;
+    box-shadow: 0 0 0 0rem !important;
+}
+
+
+
+.navbar-toggler:active {
+    outline: none !important; /* Removes the default outline */
+    border: none !important; /* Ensures no border appears */
+    border-radius: 0 !important;
+    transition: none !important;
+    box-shadow: 0 0 0 0rem !important;
+}
+
+
+
+@media screen and (min-width: 992px) {
+    .navbar {
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 62px;
+    }
+
+
+    .navbar-toggler {
+        outline: none !important; /* Removes the default outline */
+        border: none !important; /* Ensures no border appears */
+        border-radius: 0 !important;
+        transition: none !important;
+        box-shadow: 0 0 0 0rem !important;
+    }
+
+        .navbar-toggler:focus {
+            outline: none !important; /* Removes the default outline */
+            border: none !important; /* Ensures no border appears */
+            border-radius: 0 !important;
+            transition: none !important;
+            box-shadow: 0 0 0 0rem !important;
+        }
+
+
+
+        .navbar-toggler:active {
+            outline: none !important; /* Removes the default outline */
+            border: none !important; /* Ensures no border appears */
+            border-radius: 0 !important;
+            transition: none !important;
+            box-shadow: 0 0 0 0rem !important;
+        }
+
+
+
+    .navbar .container-xxl {
+        height: 62px;
+    }
+
+    #navbarToggler {
+        margin-top: 0em;
+        height: 62px;
+        border: none;
+        outline: none;
+    }
+
+    .navbar-custom .navbar-nav .nav-link {
+        /*color: #FCF6F5FF;*/
+        /*color: #2BAE66FF;*/
+        height: 62px;
+        padding-top: 1em;
+    }
+}
+
+
+.burgerIcon {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    /*background-color: #2BAE66FF;*/
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-7px, 5px);
+    transform: rotate(-45deg) translate(-7px, 5px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -6px);
+    transform: rotate(45deg) translate(-8px, -6px);
+}
+
+/* Burger */
+.burger {
+    width: 28px;
+    height: 32px;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+}
+
+    .burger:before, .burger span, .burger:after {
+        width: 100%;
+        height: 2px;
+        display: block;
+        background: #000;
+        border-radius: 2px;
+        position: relative;
+        opacity: 1;
+    }
+
+    .burger:before, .burger:after {
+        transition: top 0.35s cubic-bezier(0.23, 1, 0.32, 1), transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.35s cubic-bezier(0.23, 1, 0.32, 1), background-color 1.15s cubic-bezier(0.86, 0, 0.07, 1);
+        -webkit-transition: top 0.35s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.35s cubic-bezier(0.23, 1, 0.32, 1), background-color 1.15s cubic-bezier(0.86, 0, 0.07, 1);
+        content: "";
+    }
+
+    .burger:before {
+        top: 4px;
+    }
+
+    .burger span {
+        top: 15px;
+    }
+
+    .burger:after {
+        top: 26px;
+    }
+
+    /* Hover */
+    .burger:hover:before {
+        top: 7px;
+    }
+
+    .burger:hover:after {
+        top: 23px;
+    }
+
+    /* Click */
+    .burger.active span {
+        opacity: 0;
+    }
+
+    .burger.active:before, .burger.active:after {
+        top: 40%;
+    }
+
+    .burger.active:before {
+        top: 50%; /* Center the first bar */
+        transform: rotate(45deg);
+    }
+
+    .burger.active:after {
+        top: 50%; /* Center the first bar */
+        transform: rotate(-45deg);
+    }
+
+    .burger:focus {
+        outline: none;
+    }
+
+
+.dropdown-toggle {
+    color: white;
+    font-size: 1.5rem;
+}
+
+    .dropdown-toggle, .dropdown-toggle:active, .dropdown-toggle:hover {
+        color: white;
+        font-size: 1.5rem;
+    }
+
+@media screen and (max-width: 425px) {
+    .navbar-brand, .burgerIcon, .dropdown-toggle .dropdown-toggle:active .dropdown-toggle:hover {
+        font-size: 1.35rem;
+    }
+}
+
+@media screen and (max-width: 403px) {
+    .navbar-brand, .burgerIcon, .dropdown-toggle .dropdown-toggle:active .dropdown-toggle:hover {
+        font-size: 0.9rem;
+    }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer {
+    padding: 0 0 4rem 0;
+    margin: 0 auto;
+}
+
+    .footer a {
+        color: #000;
+    }
+
+.footer-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    text-align: center; /* Centers text within elements, useful for links */
+    height: 100%; /* Adjust height if necessary to ensure vertical centering */
+}
+
+
+.social a {
+    display: inline-block;
+    margin: .5%;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: #2f855a;
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+}
+
+    .social a span {
+        display: inline-block;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .social a:hover {
+        transform: scale(1.05);
+    }
+
+
+#socialMedia {
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 992px) {
+
+
+    .social a {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+}
+
+/*========Floats=========*/
+.float-right {
+    float: right !important;
+}
+
 #settingsDropdownContainer {
     display: flex;
     align-items: center;
@@ -1131,6 +2576,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     margin-left: auto; /* Aligns entire container to the right */
     gap: 0.75em; /* Ensures consistent spacing between the burger and gear icons */
 }
+
 
 /* General styling for the navbar-toggler */
 .navbar-toggler {
