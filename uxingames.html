@@ -31,6 +31,7 @@
     * License: https://bootstrapmade.com/license/
     ======================================================== -->
     <script>
+
         document.addEventListener("DOMContentLoaded", function () {
             const body = document.body;
             const savedTheme = localStorage.getItem('theme'); // Get the saved theme from local storage
@@ -42,23 +43,18 @@
             if (!savedTheme) {
                 body.classList.add('light-mode'); // Apply light mode if no theme is saved
                 localStorage.setItem('theme', 'light'); // Save light mode as default in local storage
-                if (themeToggleText) {
-                    themeToggleText.innerText = 'Switch to Dark Mode';
-                }
+
             } else if (savedTheme === 'dark') {
                 // Apply Dark Mode if saved as dark
                 body.classList.add('dark-mode');
-                if (themeToggleText) {
-                    themeToggleText.innerText = 'Switch to Light Mode';
-                }
+
             } else {
                 // Apply Light Mode if saved as light
                 body.classList.add('light-mode');
-                if (themeToggleText) {
-                    themeToggleText.innerText = 'Switch to Dark Mode';
-                }
+
             }
         });
+
     </script>
 
 </head>
@@ -104,13 +100,15 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingsDropdown">
                             <li>
-                                <button class="dropdown-item" id="theme-button" onclick="toggleTheme()">Switch to Dark Mode</button>
+                                <button class="dropdown-item" id="theme-button" onclick="toggleTheme()">🌙 Dark Mode </button>
                             </li>
-                            <li>
-                                <button class="dropdown-item" id="text-size-button" onclick="toggleTextSize()">
-                                    <span id="text-size-icon"> 🔼 Switch to Larger Text Size</span>
-                                </button>
-                            </li>
+                            <!--
+    <li>
+        <button class="dropdown-item" id="text-size-button" onclick="toggleTextSize()">
+            <span id="text-size-icon"> 🔼 Switch to Larger Text Size</span>
+        </button>
+    </li>
+    -->
                         </ul>
                     </div>
                 </div>

@@ -484,7 +484,7 @@ closeBtn.onclick = function() {
     }
 
 
-
+    
 function toggleTheme() {
     const body = document.body;
     const currentTheme = localStorage.getItem('theme'); // Get the current theme from local storage
@@ -501,7 +501,7 @@ function toggleTheme() {
         body.classList.add('light-mode');
         localStorage.setItem('theme', 'light'); // Update theme in local storage
         if (themeToggleText) {
-            themeToggleText.innerText = 'Switch to Dark Mode';
+            themeToggleText.innerText = '🌙 Dark Mode';
             console.log("Theme has change localStorage, Now:", localStorage.getItem('theme'));
         }
     } else {
@@ -510,9 +510,10 @@ function toggleTheme() {
         body.classList.add('dark-mode');
         localStorage.setItem('theme', 'dark'); // Update theme in local storage
         if (themeToggleText) {
-            themeToggleText.innerText = 'Switch to Light Mode';
+            themeToggleText.innerText = '☀️ Light Mode';
             console.log("Theme has change localStorage, Now:", localStorage.getItem('theme'));
         }
     }
 }
+
 
