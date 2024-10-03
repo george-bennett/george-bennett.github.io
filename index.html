@@ -44,16 +44,17 @@
         // If no theme is saved, set the default to Light Mode
         if (!savedTheme) {
         body.classList.add('light-mode'); // Apply light mode if no theme is saved
-        localStorage.setItem('theme', 'light'); // Save light mode as default in local storage
-
+            localStorage.setItem('theme', 'light'); // Save light mode as default in local storage
+            themeToggleText.innerText = '☀️ Light Mode';
         } else if (savedTheme === 'dark') {
         // Apply Dark Mode if saved as dark
         body.classList.add('dark-mode');
-
+            themeToggleText.innerText = '☀️ Light Mode';
         } else {
         // Apply Light Mode if saved as light
         body.classList.add('light-mode');
-
+        
+            themeToggleText.innerText = '🌙 Dark Mode';
         }
         });
  
@@ -101,7 +102,7 @@
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingsDropdown">
                                         <li>
-                                            <button class="dropdown-item" id="theme-button" onclick="toggleTheme()">🌙 Dark Mode</button>
+                                            <button class="dropdown-item" id="theme-button" onclick="toggleTheme()"></button>
                                         </li>
                                         <!--
                                         <li>
