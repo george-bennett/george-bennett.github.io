@@ -1106,6 +1106,77 @@ h1, h2, h3, h4, h5, h6, .font-heading {
         box-shadow: 0 0 0 0rem !important;
     }
 
+
+/* Specific styles for the navbar-toggler when the navbar is expanded */
+.navbar-toggler[aria-expanded="true"] {
+    outline: none !important; /* Removes the default outline */
+    border: none !important; /* Ensures no border appears */
+    border-radius: 0 !important;
+    transition: none !important;
+    box-shadow: 0 0 0 0rem !important;
+    position: absolute;
+    right: 4em; /* Provides space for the gear icon to the right */
+    background-color: #2f855a; /* Optional: background color when expanded */
+    z-index: 1050; /* Ensure it's on top of other elements */
+}
+
+
+
+
+/* Settings dropdown - positioning for when the navbar is expanded */
+#settingsDropdownContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto; /* Aligns entire container to the right */
+    gap: 1.5em; /* Ensures consistent spacing between the burger and gear icons */
+}
+
+
+
+#toggle-and-settings-container {
+    display: flex;
+    align-items: center; /* Aligns items vertically centered */
+    justify-content: flex-end;
+    margin-left: auto; /* Aligns the entire container to the right */
+    gap: 1.5em; /* Ensures consistent spacing between the burger and gear icons */
+}
+
+/* General styling for the navbar-toggler */
+.navbar-toggler {
+    outline: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    transition: none !important;
+    box-shadow: 0 0 0 0rem !important;
+    position: relative;
+    background-color: transparent; /* No background color by default */
+    margin: 0; /* Ensures no unwanted margin affects alignment */
+}
+
+
+
+/* Gear Icon Styles */
+.settings-dropdown .dropdown-toggle {
+    color: white;
+    font-size: 1.5rem;
+    display: flex; /* Align icon and text vertically */
+    align-items: center; /* Vertically center the gear icon */
+}
+
+    /* Additional hover states for the dropdown toggle */
+    .settings-dropdown .dropdown-toggle:hover,
+    .settings-dropdown .dropdown-toggle:active {
+        color: white;
+    }
+
+
+
+
+
+
+
+
         .navbar-toggler:focus {
             outline: none !important; /* Removes the default outline */
             border: none !important; /* Ensures no border appears */
@@ -1225,7 +1296,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
             display: block;
             background: #000;
             border-radius: 2px;
-            position: absolute;
+            position: relative;
             opacity: 1;
         }
 

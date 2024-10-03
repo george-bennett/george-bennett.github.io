@@ -88,9 +88,9 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center position-relative" id="toggle-and-settings-container">
                                 <!-- Button for mobile toggle -->
-                                <button class="navbar-toggler me-2" type="button" onclick="toggleMenu()" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                                <button class="navbar-toggler me-2" type="button" onclick="toggleMenu()" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                                     <div class="burgerIcon" id="bIcon">
                                         <div class="bar1"></div>
                                         <div class="bar2"></div>
@@ -99,13 +99,13 @@
                                 </button>
 
                                 <!-- Settings Dropdown -->
-                                <div class="settings-dropdown">
+                                <div class="settings-dropdown" id="settingsDropdownContainer">
                                     <a class="nav-link dropdown-toggle" href="#" id="settingsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="bi bi-gear"></i> <!-- Bootstrap gear icon -->
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingsDropdown">
                                         <li>
-                                        <button class="dropdown-item" id="theme-button" onclick="toggleTheme()">Switch to Dark Mode</button>
+                                            <button class="dropdown-item" id="theme-button" onclick="toggleTheme()">Switch to Dark Mode</button>
                                         </li>
                                         <li>
                                             <button class="dropdown-item" id="text-size-button" onclick="toggleTextSize()">
@@ -115,8 +115,6 @@
                                     </ul>
                                 </div>
                             </div>
-
-
                         </div>
                     </nav>
                 </div>
