@@ -30,37 +30,39 @@
     * Author: BootstrapMade.com
     * License: https://bootstrapmade.com/license/
     ======================================================== -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const body = document.body;
+            const savedTheme = localStorage.getItem('theme'); // Get the saved theme from local storage
+            const themeToggleText = document.getElementById('theme-button');
+
+            console.log("Current Theme on load is:" + savedTheme)
+
+            // If no theme is saved, set the default to Light Mode
+            if (!savedTheme) {
+                body.classList.add('light-mode'); // Apply light mode if no theme is saved
+                localStorage.setItem('theme', 'light'); // Save light mode as default in local storage
+                if (themeToggleText) {
+                    themeToggleText.innerText = 'Switch to Dark Mode';
+                }
+            } else if (savedTheme === 'dark') {
+                // Apply Dark Mode if saved as dark
+                body.classList.add('dark-mode');
+                if (themeToggleText) {
+                    themeToggleText.innerText = 'Switch to Light Mode';
+                }
+            } else {
+                // Apply Light Mode if saved as light
+                body.classList.add('light-mode');
+                if (themeToggleText) {
+                    themeToggleText.innerText = 'Switch to Dark Mode';
+                }
+            }
+        });
+    </script>
+
 </head>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const body = document.body;
-        const savedTheme = localStorage.getItem('theme'); // Get the saved theme from local storage
-        const themeToggleText = document.getElementById('theme-button');
 
-        console.log("Current Theme on load is:" + savedTheme)
-
-        // If no theme is saved, set the default to Light Mode
-        if (!savedTheme) {
-            body.classList.add('light-mode'); // Apply light mode if no theme is saved
-            localStorage.setItem('theme', 'light'); // Save light mode as default in local storage
-            if (themeToggleText) {
-                themeToggleText.innerText = 'Switch to Dark Mode';
-            }
-        } else if (savedTheme === 'dark') {
-            // Apply Dark Mode if saved as dark
-            body.classList.add('dark-mode');
-            if (themeToggleText) {
-                themeToggleText.innerText = 'Switch to Light Mode';
-            }
-        } else {
-            // Apply Light Mode if saved as light
-            body.classList.add('light-mode');
-            if (themeToggleText) {
-                themeToggleText.innerText = 'Switch to Dark Mode';
-            }
-        }
-    });
-</script>
 <body>
     <!-- ======= Navbar ======= -->
     <div class="container-fluid sticky-top" id="nav-master">
@@ -123,47 +125,99 @@
         <section class="section site-portfolio">
             <div class="container-fluid" id="overall-content">
                 <div class="row mb-5 align-items-center" id="items-row">
-                    <div class="col-md-12 col-lg-12 text-center text-start" data-aos="fade-up" data-aos-delay="50">
+                    <div class="col-md-12 col-lg-12  text-start" data-aos="fade-up" data-aos-delay="50">
                         <p>
                             This section of the website will be a blog discussing UX within gaming.
-                            For example, I will analyze "Ghost of Tsushima" by Sucker Punch Productions, originally released for PlayStation 4 in 2020 and expanded upon and remmastered for PlayStation 5. 
+                            For example, I will analyze "Ghost of Tsushima" by Sucker Punch Productions, originally released for PlayStation 4 in 2020 and expanded upon and remmastered for PlayStation 5.
                             My evaluation will cover key aspects such as game mechanics, player accommodation through menus, combat systems, item usage, and accessibility features.
                             Please note that this content is currently a placeholder and will be updated soon.
                         </p>
                     </div>
                     <div class="col-md-12 col-lg-6 mb-4 mb-lg-0" data-aos="fade-up">
                     </div>
-                    <div class="col-md-12 col-lg-12 text-center" data-aos="fade-up" data-aos-delay="75">
+
+                    <!-- FOR FUTURE IMPLEMTATION
+                    <div class="col-md-12 col-lg-12" data-aos="fade-up" data-aos-delay="75">
+                        <div id="filters-date" class="filters">
+                            <a href="#" data-filter="*" class="active">All</a>
+                            <a href="#" data-filter=".yr-2024">2024</a>
+                            <a href="#" data-filter=".yr-2025">2025</a>
+                        </div>
+                    </div>
+                    -->
+                    <div class="col-md-12 col-lg-12" data-aos="fade-up" data-aos-delay="75">
                         <div id="filters" class="filters">
                             <a href="#" data-filter="*" class="active">All</a>
                             <a href="#" data-filter=".playstation">Playstation</a>
                             <a href="#" data-filter=".pc">PC</a>
                         </div>
+                        <br>
                     </div>
-                </div>
-                <div id="portfolio-grid" class="row no-gutter" data-aos="fade-up" data-aos-delay="100">
-                    <div class="item playstation col-sm-12 col-md-6 col-lg-6 mb-4">
-                        <a href="work-single.html" class="item-wrap fancybox">
-                            <div class="work-info">
-                                <h3>Ghost of Tsushima</h3>
-                                <span>Playstation 5</span>
+
+                    <div id="portfolio-grid" class="row no-gutter no-gutter " data-aos="fade-up" data-aos-delay="100">
+                        <div class="row" data-aos="fade-up">
+                            <div class="container">
+                                <div class="row  item playstation portfolio-item ">
+                                    <div class="col-md-4 ">
+                                        <a href="work-single.html">
+                                            <img src="assets/img/games/got_title.jpg" alt="Ghost of Tsushima" class="img-fluid">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <a href="work-single.html" class="">
+                                            <h3>Ghost of Tsushima</h3>
+                                        </a>
+                                        <p>
+                                            Ghost of Tsushima is an action-adventure game set in feudal Japan, where players take on the role of a samurai, fighting against the Mongol invasion.
+                                            This blog will explore various aspects of the game including its mechanics, storyline, and the immersive world it presents.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row item pc portfolio-item">
+                                    <div class="col-md-4 ">
+                                        <a href="work-single.html">
+                                            <img src="assets/img/games/ETG_title.png" alt="Enter the Gungeon" class="img-fluid">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-8 ">
+                                        <a href="work-single.html" class="">
+                                            <h3>Enter the Gungeon</h3>
+                                        </a>
+                                        <p>
+                                            ETG placeholder.
+                                            This blog will explore various aspects of the game including its mechanics, storyline, and the immersive world it presents.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <img class="img-fluid" src="assets/img/games/got_title.jpg">
-                        </a>
-                    </div>
-                    <div class="item pc col-sm-12 col-md-6 col-lg-6 mb-4">
-                        <a href="work-single.html" class="item-wrap fancybox">
-                            <div class="work-info">
-                                <h3>Enter the Gungeon</h3>
-                                <span>PC</span>
-                            </div>
-                            <img class="img-fluid" src="assets/img/games/ETG_title.png">
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!--
+            <div class="container">
+                <div class="row portfolio-item" data-aos="fade-up">
+                    <div class="col-md-6">
+                        <img src="assets/img/games/got_title.jpg" alt="Ghost of Tsushima" class="img-fluid">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Ghost of Tsushima</h3>
+                        <p>Playstation 5</p>
+                    </div>
+                </div>
+                <div class="row portfolio-item" data-aos="fade-up">
+                    <div class="col-md-6">
+                        <img src="assets/img/games/ETG_title.png" alt="Enter the Gungeon" class="img-fluid">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Enter the Gungeon</h3>
+                        <p>PC</p>
+                    </div>
+                </div>
+            </div>
+        -->
         <!-- End  Works Section -->
     </main><!-- End #main -->
     <!-- ======= Footer ======= -->
