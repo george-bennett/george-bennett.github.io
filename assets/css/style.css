@@ -68,7 +68,7 @@ body {
 }
 
 p {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
 }
 
 .intro{
@@ -1119,106 +1119,6 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     background-color: #2f855a; /* Optional: background color when expanded */
     z-index: 1050; /* Ensure it's on top of other elements */
 }
-
-
-
-
-/* Settings dropdown - positioning for when the navbar is expanded */
-/**
-* Template Name: MyPortfolio - v4.1.0
-* Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
-/*
-@font-face {
-    font-family: 'Archivo';
-    src:url('assets/fonts/archivo-regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-*/
-
-/****** GENERAL ******/
-#overall-content {
-    max-width: 82.5%;
-}
-
-.section {
-    padding: 3rem 0;
-}
-
-}
-
-#nav-controller {
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
-}
-
-body {
-    font-family: "Archivo", sans-serif;
-    /*background: linear-gradient(180deg, rgba(43,174,111,1) 50%, rgba(59,212,138,1) 100%);*/ /*Green fade*/
-    background: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(240,240,240,1) 100%); /*White/Grey fade*/
-    height: 100%;
-    background-repeat: no-repeat;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-
-body {
-}
-
-    body.large-text {
-    }
-
-
-
-
-
-/*Light Mode/ Dark Mode Accessability*/
-.light-mode {
-    background: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(240,240,240,1) 100%); /*White/Grey fade*/
-    color: black;
-}
-
-.dark-mode {
-    background: linear-gradient(180deg, #000 50%, rgba(0,0,0,.90) 100%); /*Black fade*/
-    color: white;
-}
-
-p {
-    font-size: 1.25rem;
-}
-
-.intro {
-    text-align: left;
-    font-size: 1.5em;
-}
-
-/*
-h1, h2, h3, h4, h5, h6, .font-heading {
-    font-family: "Archivo", sans-serif;
-    color: #000;
-}
-*/
-
-
-.light-mode h1 h2 h3 h4 h5 h6 .font-heading {
-    color: black;
-}
-
-.dark-mode h1 h2 h3 h4 h5 h6 .font-heading {
-    color: white;
-}
-
-/****** GENERAL  END ******/
-
-
 
 /****** FILTERS  ******/
 /* Default */
@@ -2794,80 +2694,6 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 */
 
-/****** GENERAL ******/
-#overall-content {
-    max-width: 82.5%;
-}
-
-.section {
-    padding: 3rem 0;
-}
-
-}
-
-#nav-controller {
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
-}
-
-body {
-    font-family: "Archivo", sans-serif;
-    /*background: linear-gradient(180deg, rgba(43,174,111,1) 50%, rgba(59,212,138,1) 100%);*/ /*Green fade*/
-    background: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(240,240,240,1) 100%); /*White/Grey fade*/
-    height: 100%;
-    background-repeat: no-repeat;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-
-body {
-}
-
-    body.large-text {
-    }
-
-
-
-
-
-/*Light Mode/ Dark Mode Accessability*/
-.light-mode {
-    background: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(240,240,240,1) 100%); /*White/Grey fade*/
-    color: black;
-}
-
-.dark-mode {
-    background: linear-gradient(180deg, #000 50%, rgba(0,0,0,.90) 100%); /*Black fade*/
-    color: white;
-}
-
-p {
-    font-size: 1.25rem;
-}
-
-.intro {
-    text-align: left;
-    font-size: 1.5em;
-}
-
-/*
-h1, h2, h3, h4, h5, h6, .font-heading {
-    font-family: "Archivo", sans-serif;
-    color: #000;
-}
-*/
-
-
-.light-mode h1 h2 h3 h4 h5 h6 .font-heading {
-    color: black;
-}
-
-.dark-mode h1 h2 h3 h4 h5 h6 .font-heading {
-    color: white;
-}
-
-/****** GENERAL  END ******/
 
 
 
@@ -2888,15 +2714,15 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     position: relative;
     font-size: 24px;
     font-weight: bold;
+.light-mode.filters , #filters-date{
     color: white;
 }
-
 
 /*Accessability Options*/
 /*Light mode*/
 .light-mode .filters a ,  #filters-date a {
     margin-top: 2em;
-    text-decoration: none;
+    text-decoration: underline;
     display: inline-block;
     padding-left: 10px;
     padding-left: 10px;
@@ -2910,7 +2736,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 /*Dark mode*/
 .dark-mode .filters a, #filters-date a {
     margin-top: 2em;
-    text-decoration: none;
+    text-decoration: underline;
     display: inline-block;
     padding-left: 10px;
     padding-left: 10px;
@@ -2963,7 +2789,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 .filters a.active {
-    text-decoration: underline
+    text-decoration: none;
 }
 
     .filters a.active:before {
@@ -3941,11 +3767,6 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 
 
-
-
-
-
-
 .navbar-toggler:focus {
     outline: none !important; /* Removes the default outline */
     border: none !important; /* Ensures no border appears */
@@ -4248,75 +4069,6 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     }
 }
 
-    /*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-    .footer {
-        padding: 0 0 4rem 0;
-        margin: 0 auto;
-    }
-
-        .footer a {
-            color: #000;
-        }
-
-    .footer-container {
-        display: flex;
-        justify-content: center; /* Centers horizontally */
-        align-items: center; /* Centers vertically */
-        text-align: center; /* Centers text within elements, useful for links */
-        height: 100%; /* Adjust height if necessary to ensure vertical centering */
-    }
-
-
-    .social a {
-        display: inline-block;
-        margin: .5%;
-        width: 75px;
-        height: 75px;
-        border-radius: 50%;
-        background: #2f855a;
-        position: relative;
-        text-align: center;
-        color: white;
-        font-size: 2.5rem;
-    }
-
-        .social a span {
-            display: inline-block;
-            left: 50%;
-            position: absolute;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .social a:hover {
-            transform: scale(1.05);
-        }
-
-
-    #socialMedia {
-        padding: 5%;
-        display: flex;
-        justify-content: center;
-    }
-
-    @media screen and (max-width: 992px) {
-
-
-        .social a {
-            width: 50px;
-            height: 50px;
-            font-size: 1.25rem;
-        }
-    }
-
-    /*========Floats=========*/
-    .float-right {
-        float: right !important;
-    }
-
-
     /*UX IN GAMES SECTION*/
 .portfolio-item {
     display: flex; /* Use flexbox for layout */
@@ -4332,6 +4084,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     }
 
     /* Adjust text styling */
+
 .dark-mode .portfolio-item h3 {
     margin: 0; /* Remove default margin */
     color: white;

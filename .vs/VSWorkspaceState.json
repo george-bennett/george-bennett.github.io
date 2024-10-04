@@ -3,14 +3,13 @@
     "",
     "\\assets",
     "\\assets\\img",
+    "\\assets\\img\\games",
     "\\assets\\img\\photos",
-    "\\assets\\img\\photos\\me",
+    "\\assets\\img\\photos\\other",
     "\\assets\\img\\photos\\wildlife",
-    "\\assets\\js",
-    "\\assets\\vendor",
-    "\\assets\\vendor\\bootstrap-icons",
-    "\\assets\\vendor\\bootstrap-icons\\fonts"
+    "\\assets\\vendor\\bootstrap-icons\\fonts",
+    "\\assets\\vendor\\php-email-form"
   ],
-  "SelectedNode": "\\sql.html",
+  "SelectedNode": "\\contact.php",
   "PreviewInSolutionExplorer": false
 }
