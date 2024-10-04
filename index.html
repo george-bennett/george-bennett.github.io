@@ -23,38 +23,39 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
+
+    
     <!-- =======================================================
+    This Project was inspired by the following: 
     * Template Name: MyPortfolio - v4.1.0
     * Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
     * Author: BootstrapMade.com
     * License: https://bootstrapmade.com/license/
     ======================================================== -->
     <script>
-        
         document.addEventListener("DOMContentLoaded", function () {
-        const body = document.body;
-        const savedTheme = localStorage.getItem('theme'); // Get the saved theme from local storage
-        const themeToggleText = document.getElementById('theme-button');
+            const body = document.body;
+            const savedTheme = localStorage.getItem('theme'); // Get the saved theme from local storage
+            const themeToggleText = document.getElementById('theme-button');
 
-        console.log("Current Theme on load is:" + savedTheme)
+            console.log("Current Theme on load is:" + savedTheme)
 
-        // If no theme is saved, set the default to Light Mode
-        if (!savedTheme) {
-        body.classList.add('light-mode'); // Apply light mode if no theme is saved
-            localStorage.setItem('theme', 'light'); // Save light mode as default in local storage
-            themeToggleText.innerText = '🌙 Dark Mode';
-        } else if (savedTheme === 'dark') {
-        // Apply Dark Mode if saved as dark
-        body.classList.add('dark-mode');
-            themeToggleText.innerText = '☀️ Light Mode';
-        } else {
-        // Apply Light Mode if saved as light
-        body.classList.add('light-mode');
-        
-            themeToggleText.innerText = '🌙 Dark Mode';
-        }
+            // If no theme is saved, set the default to Light Mode
+            if (!savedTheme) {
+                body.classList.add('light-mode'); // Apply light mode if no theme is saved
+                localStorage.setItem('theme', 'light'); // Save light mode as default in local storage
+                themeToggleText.innerText = '🌙 Dark Mode';
+            } else if (savedTheme === 'dark') {
+                // Apply Dark Mode if saved as dark
+                body.classList.add('dark-mode');
+                themeToggleText.innerText = '☀️ Light Mode';
+            } else {
+                // Apply Light Mode if saved as light
+                body.classList.add('light-mode');
+
+                themeToggleText.innerText = '🌙 Dark Mode';
+            }
         });
- 
     </script>
 </head>
             <body class="">
